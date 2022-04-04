@@ -5,7 +5,6 @@ module somador_subitrator7bts (A, B, Cin, S, Cout);
 	input Cin;
 	output [6:0] S;
 	output Cout;
-	assign x = 1'b0;
 	
 	wire c1, c2, c3, c4, c5, c6;
 	
@@ -13,11 +12,11 @@ module somador_subitrator7bts (A, B, Cin, S, Cout);
 	
 	xor xor0(B1, Cin, B[0]);
 	xor xor1(B2, Cin, B[1]);
-	xor xor2(B3, Cin, x);
-	xor xor3(B4, Cin, x);
-	xor xor4(B5, Cin, x);
-	xor xor5(B6, Cin, x);
-	xor xor6(B7, Cin, x);	
+	xor xor2(B3, Cin, 0);
+	xor xor3(B4, Cin, 0);
+	xor xor4(B5, Cin, 0);
+	xor xor5(B6, Cin, 0);
+	xor xor6(B7, Cin, 0);	
 	
 	somador1bt r1 (.A(A[0]), .B(B1), .Cin(Cin), .S(S[0]), .Cout(c1));
 	somador1bt r2 (.A(A[1]), .B(B2), .Cin(c1), .S(S[1]), .Cout(c2));
