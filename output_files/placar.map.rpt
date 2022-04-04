@@ -1,5 +1,5 @@
-Analysis & Elaboration report for placar
-Mon Apr 04 13:15:15 2022
+Analysis & Synthesis report for placar
+Mon Apr 04 13:27:29 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -7,10 +7,14 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Analysis & Elaboration Settings
-  5. Analysis & Elaboration Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Analysis & Synthesis Messages
 
 
 
@@ -33,40 +37,28 @@ refer to the applicable agreement for further details.
 
 
 
-+-----------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                              ;
-+-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Mon Apr 04 13:15:15 2022       ;
-; Quartus Prime Version         ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
-; Revision Name                 ; placar                                      ;
-; Top-level Entity Name         ; btnsEntrada                                 ;
-; Family                        ; MAX II                                      ;
-+-------------------------------+---------------------------------------------+
-
-
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                              ;
++-----------------------------+---------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Mon Apr 04 13:27:29 2022       ;
+; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name               ; placar                                      ;
+; Top-level Entity Name       ; somador1bt                                  ;
+; Family                      ; MAX II                                      ;
+; Total logic elements        ; 2                                           ;
+; Total pins                  ; 5                                           ;
+; Total virtual pins          ; 0                                           ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
++-----------------------------+---------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                            ;
+; Analysis & Synthesis Settings                                                                              ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EPM570T100C5       ;                    ;
-; Top-level entity name                                            ; btnsEntrada        ; placar             ;
+; Top-level entity name                                            ; somador1bt         ; placar             ;
 ; Family name                                                      ; MAX II             ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -131,30 +123,118 @@ refer to the applicable agreement for further details.
 +------------------------------------------------------------------+--------------------+--------------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                             ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                               ; Library ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------+---------+
+; somador1bt.v                     ; yes             ; User Verilog HDL File  ; C:/intelFPGA_lite/Circuitos_Digitais_PlacarJogoBasquete_PBL01/somador1bt.v ;         ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Total logic elements                        ; 2     ;
+;     -- Combinational with no register       ; 2     ;
+;     -- Register only                        ; 0     ;
+;     -- Combinational with a register        ; 0     ;
+;                                             ;       ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 2     ;
+;     -- 2 input functions                    ; 0     ;
+;     -- 1 input functions                    ; 0     ;
+;     -- 0 input functions                    ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 2     ;
+;     -- arithmetic mode                      ; 0     ;
+;     -- qfbk mode                            ; 0     ;
+;     -- register cascade mode                ; 0     ;
+;     -- synchronous clear/load mode          ; 0     ;
+;     -- asynchronous clear/load mode         ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+; I/O pins                                    ; 5     ;
+; Maximum fan-out node                        ; A     ;
+; Maximum fan-out                             ; 2     ;
+; Total fan-out                               ; 8     ;
+; Average fan-out                             ; 1.14  ;
++---------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
+; |somador1bt                ; 2 (2)       ; 0            ; 0          ; 5    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |somador1bt         ; somador1bt  ; work         ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Apr 04 13:15:01 2022
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off placar -c placar --analysis_and_elaboration
+    Info: Processing started: Mon Apr 04 13:27:17 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off placar -c placar
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file somador1bt.v
-    Info (12023): Found entity 1: somador1bt File: C:/Users/silas/Documents/Quartus/PBL01/somador1bt.v Line: 1
+    Info (12023): Found entity 1: somador1bt File: C:/intelFPGA_lite/Circuitos_Digitais_PlacarJogoBasquete_PBL01/somador1bt.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file btnsentrada.v
-    Info (12023): Found entity 1: btnsEntrada File: C:/Users/silas/Documents/Quartus/PBL01/btnsEntrada.v Line: 1
+    Info (12023): Found entity 1: btnsEntrada File: C:/intelFPGA_lite/Circuitos_Digitais_PlacarJogoBasquete_PBL01/btnsEntrada.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file entradas_soma.v
-    Info (12023): Found entity 1: Entradas_soma File: C:/Users/silas/Documents/Quartus/PBL01/Entradas_soma.v Line: 1
+    Info (12023): Found entity 1: Entradas_soma File: C:/intelFPGA_lite/Circuitos_Digitais_PlacarJogoBasquete_PBL01/Entradas_soma.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file somador_subitrator7bts.v
-    Info (12023): Found entity 1: somador_subitrator7bts File: C:/Users/silas/Documents/Quartus/PBL01/somador_subitrator7bts.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at somador_subitrator7bts.v(8): created implicit net for "x" File: C:/Users/silas/Documents/Quartus/PBL01/somador_subitrator7bts.v Line: 8
-Info (12127): Elaborating entity "btnsEntrada" for the top level hierarchy
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4693 megabytes
-    Info: Processing ended: Mon Apr 04 13:15:15 2022
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:36
+    Info (12023): Found entity 1: somador_subitrator7bts File: C:/intelFPGA_lite/Circuitos_Digitais_PlacarJogoBasquete_PBL01/somador_subitrator7bts.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at somador_subitrator7bts.v(8): created implicit net for "x" File: C:/intelFPGA_lite/Circuitos_Digitais_PlacarJogoBasquete_PBL01/somador_subitrator7bts.v Line: 8
+Info (12127): Elaborating entity "somador1bt" for the top level hierarchy
+Info (21057): Implemented 7 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 2 output pins
+    Info (21061): Implemented 2 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4687 megabytes
+    Info: Processing ended: Mon Apr 04 13:27:29 2022
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:25
 
 

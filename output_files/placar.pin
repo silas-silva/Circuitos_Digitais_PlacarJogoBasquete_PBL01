@@ -152,13 +152,13 @@ GND*                         : 87        :        :                   :         
 VCCINT                       : 88        : power  :                   : 2.5V/3.3V :           :                
 GND*                         : 89        :        :                   :         : 2         :                
 GNDINT                       : 90        : gnd    :                   :         :           :                
-N[1]                         : 91        : output : 3.3-V LVTTL       :         : 2         : N              
+Cout                         : 91        : output : 3.3-V LVTTL       :         : 2         : N              
 GND*                         : 92        :        :                   :         : 2         :                
 GNDIO                        : 93        : gnd    :                   :         :           :                
 VCCIO2                       : 94        : power  :                   : 3.3V    : 2         :                
 A                            : 95        : input  : 3.3-V LVTTL       :         : 2         : N              
-C                            : 96        : input  : 3.3-V LVTTL       :         : 2         : N              
+Cin                          : 96        : input  : 3.3-V LVTTL       :         : 2         : N              
 B                            : 97        : input  : 3.3-V LVTTL       :         : 2         : N              
 GND*                         : 98        :        :                   :         : 2         :                
-N[0]                         : 99        : output : 3.3-V LVTTL       :         : 2         : N              
+S                            : 99        : output : 3.3-V LVTTL       :         : 2         : N              
 GND*                         : 100       :        :                   :         : 2         :                

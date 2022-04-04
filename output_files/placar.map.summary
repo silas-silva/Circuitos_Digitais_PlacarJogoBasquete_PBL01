@@ -1,5 +1,9 @@
-Analysis & Elaboration Status : Successful - Mon Apr 04 13:15:15 2022
+Analysis & Synthesis Status : Successful - Mon Apr 04 13:27:29 2022
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : placar
-Top-level Entity Name : btnsEntrada
+Top-level Entity Name : somador1bt
 Family : MAX II
+Total logic elements : 2
+Total pins : 5
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

@@ -1,0 +1,16 @@
+vendor_name = ModelSim
+source_file = 1, C:/intelFPGA_lite/Circuitos_Digitais_PlacarJogoBasquete_PBL01/somador1bt.v
+source_file = 1, C:/intelFPGA_lite/Circuitos_Digitais_PlacarJogoBasquete_PBL01/btnsEntrada.v
+source_file = 1, C:/intelFPGA_lite/Circuitos_Digitais_PlacarJogoBasquete_PBL01/Entradas_soma.v
+source_file = 1, C:/intelFPGA_lite/Circuitos_Digitais_PlacarJogoBasquete_PBL01/somador_subitrator7bts.v
+source_file = 1, C:/intelFPGA_lite/Circuitos_Digitais_PlacarJogoBasquete_PBL01/btnsEntradasTest.vwf
+source_file = 1, C:/intelFPGA_lite/Circuitos_Digitais_PlacarJogoBasquete_PBL01/somador1btTest.vwf
+source_file = 1, C:/intelFPGA_lite/Circuitos_Digitais_PlacarJogoBasquete_PBL01/db/placar.cbx.xml
+design_name = somador1bt
+instance = comp, \Cin~I , Cin, somador1bt, 1
+instance = comp, \A~I , A, somador1bt, 1
+instance = comp, \B~I , B, somador1bt, 1
+instance = comp, \Xor1~0 , Xor1~0, somador1bt, 1
+instance = comp, \Or0~0 , Or0~0, somador1bt, 1
+instance = comp, \S~I , S, somador1bt, 1
+instance = comp, \Cout~I , Cout, somador1bt, 1

@@ -1,11 +1,11 @@
-|btnsEntrada
+|somador1bt
 A => Xor0.IN0
-A => Xor1.IN0
+A => And0.IN0
 B => Xor0.IN1
-B => And1.IN1
-C => Xor1.IN1
-C => And0.IN1
-N[0] <= And0.DB_MAX_OUTPUT_PORT_TYPE
-N[1] <= And1.DB_MAX_OUTPUT_PORT_TYPE
+B => And0.IN1
+Cin => Xor1.IN1
+Cin => And1.IN1
+S << Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout << Or0.DB_MAX_OUTPUT_PORT_TYPE
 
 

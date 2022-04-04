@@ -1,5 +1,5 @@
 Fitter report for placar
-Mon Apr 04 13:13:05 2022
+Mon Apr 04 13:27:31 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -53,10 +53,10 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------+
 ; Fitter Summary                                                      ;
 +-----------------------+---------------------------------------------+
-; Fitter Status         ; Successful - Mon Apr 04 13:13:05 2022       ;
+; Fitter Status         ; Successful - Mon Apr 04 13:27:31 2022       ;
 ; Quartus Prime Version ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name         ; placar                                      ;
-; Top-level Entity Name ; btnsEntrada                                 ;
+; Top-level Entity Name ; somador1bt                                  ;
 ; Family                ; MAX II                                      ;
 ; Device                ; EPM570T100C5                                ;
 ; Timing Models         ; Final                                       ;
@@ -135,7 +135,7 @@ refer to the applicable agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/silas/Documents/Quartus/PBL01/output_files/placar.pin.
+The pin-out file can be found in C:/intelFPGA_lite/Circuitos_Digitais_PlacarJogoBasquete_PBL01/output_files/placar.pin.
 
 
 +------------------------------------------------------------------+
@@ -194,7 +194,7 @@ The pin-out file can be found in C:/Users/silas/Documents/Quartus/PBL01/output_f
 +------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+----------------+
 ; A    ; 95    ; 2        ; 5            ; 8            ; 0           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
 ; B    ; 97    ; 2        ; 5            ; 8            ; 2           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
-; C    ; 96    ; 2        ; 5            ; 8            ; 1           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; Cin  ; 96    ; 2        ; 5            ; 8            ; 1           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
 +------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+----------------+
 
 
@@ -203,8 +203,8 @@ The pin-out file can be found in C:/Users/silas/Documents/Quartus/PBL01/output_f
 +------+-------+----------+--------------+--------------+-------------+-----------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
 ; Name ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Output Register ; Slow Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Fast Output Connection ; Location assigned by ; Load  ; Output Enable Source ; Output Enable Group ;
 +------+-------+----------+--------------+--------------+-------------+-----------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
-; N[0] ; 99    ; 2        ; 4            ; 8            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
-; N[1] ; 91    ; 2        ; 6            ; 8            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; Cout ; 91    ; 2        ; 6            ; 8            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; S    ; 99    ; 2        ; 4            ; 8            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
 +------+-------+----------+--------------+--------------+-------------+-----------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
 
 
@@ -313,15 +313,15 @@ The pin-out file can be found in C:/Users/silas/Documents/Quartus/PBL01/output_f
 ; 88       ;            ;          ; VCCINT         ; power  ;              ; 2.5V/3.3V ; --         ;                 ; --       ; --           ;
 ; 89       ; 144        ; 2        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 90       ;            ;          ; GNDINT         ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
-; 91       ; 149        ; 2        ; N[1]           ; output ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
+; 91       ; 149        ; 2        ; Cout           ; output ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
 ; 92       ; 150        ; 2        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 93       ;            ;          ; GNDIO          ; gnd    ;              ;           ; --         ;                 ; --       ; --           ;
 ; 94       ;            ; 2        ; VCCIO2         ; power  ;              ; 3.3V      ; --         ;                 ; --       ; --           ;
 ; 95       ; 151        ; 2        ; A              ; input  ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
-; 96       ; 152        ; 2        ; C              ; input  ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
+; 96       ; 152        ; 2        ; Cin            ; input  ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
 ; 97       ; 153        ; 2        ; B              ; input  ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
 ; 98       ; 155        ; 2        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
-; 99       ; 156        ; 2        ; N[0]           ; output ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
+; 99       ; 156        ; 2        ; S              ; output ; 3.3-V LVTTL  ;           ; Column I/O ; N               ; no       ; Off          ;
 ; 100      ; 158        ; 2        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
 +----------+------------+----------+----------------+--------+--------------+-----------+------------+-----------------+----------+--------------+
 Note: Pin directions (input, output or bidir) are based on device operating in user mode.
@@ -348,11 +348,11 @@ Note: User assignments will override these defaults. The user specified values a
 +----------+-----------------------------+
 ; Pin Name ; Reason                      ;
 +----------+-----------------------------+
-; N[0]     ; Missing location assignment ;
-; N[1]     ; Missing location assignment ;
+; S        ; Missing location assignment ;
+; Cout     ; Missing location assignment ;
 ; A        ; Missing location assignment ;
 ; B        ; Missing location assignment ;
-; C        ; Missing location assignment ;
+; Cin      ; Missing location assignment ;
 +----------+-----------------------------+
 
 
@@ -361,7 +361,7 @@ Note: User assignments will override these defaults. The user specified values a
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
-; |btnsEntrada               ; 2 (2)       ; 0            ; 0          ; 5    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |btnsEntrada        ; btnsEntrada ; work         ;
+; |somador1bt                ; 2 (2)       ; 0            ; 0          ; 5    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |somador1bt         ; somador1bt  ; work         ;
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -371,11 +371,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------+----------+---------------+
 ; Name ; Pin Type ; Pad to Core 0 ;
 +------+----------+---------------+
-; N[0] ; Output   ; --            ;
-; N[1] ; Output   ; --            ;
+; S    ; Output   ; --            ;
+; Cout ; Output   ; --            ;
 ; A    ; Input    ; (1)           ;
 ; B    ; Input    ; (1)           ;
-; C    ; Input    ; (1)           ;
+; Cin  ; Input    ; (1)           ;
 +------+----------+---------------+
 
 
@@ -515,17 +515,17 @@ Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (11888): Total time spent on timing analysis during the Fitter is 0.03 seconds.
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
-Info (144001): Generated suppressed messages file C:/Users/silas/Documents/Quartus/PBL01/output_files/placar.fit.smsg
+Info (144001): Generated suppressed messages file C:/intelFPGA_lite/Circuitos_Digitais_PlacarJogoBasquete_PBL01/output_files/placar.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 5319 megabytes
-    Info: Processing ended: Mon Apr 04 13:13:05 2022
-    Info: Elapsed time: 00:00:04
+    Info: Peak virtual memory: 5231 megabytes
+    Info: Processing ended: Mon Apr 04 13:27:31 2022
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:02
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/silas/Documents/Quartus/PBL01/output_files/placar.fit.smsg.
+The suppressed messages can be found in C:/intelFPGA_lite/Circuitos_Digitais_PlacarJogoBasquete_PBL01/output_files/placar.fit.smsg.
 
 
