@@ -10,16 +10,16 @@ N1[3] => N1[3].IN1
 N1[4] => N1[4].IN1
 N1[5] => N1[5].IN1
 N1[6] => N1[6].IN1
-SaidaBtns[0] <= SaidaBtns[0].DB_MAX_OUTPUT_PORT_TYPE
-SaidaBtns[1] <= SaidaBtns[1].DB_MAX_OUTPUT_PORT_TYPE
-S[0] <= somador7bts:r1.S
-S[1] <= somador7bts:r1.S
-S[2] <= somador7bts:r1.S
-S[3] <= somador7bts:r1.S
-S[4] <= somador7bts:r1.S
-S[5] <= somador7bts:r1.S
-S[6] <= somador7bts:r1.S
-Cout <= somador7bts:r1.Cout
+SaidaBtns[0] << SaidaBtns[0].DB_MAX_OUTPUT_PORT_TYPE
+SaidaBtns[1] << SaidaBtns[1].DB_MAX_OUTPUT_PORT_TYPE
+S[0] << somador7bts:r1.S
+S[1] << somador7bts:r1.S
+S[2] << somador7bts:r1.S
+S[3] << somador7bts:r1.S
+S[4] << somador7bts:r1.S
+S[5] << somador7bts:r1.S
+S[6] << somador7bts:r1.S
+Cout << somador7bts:r1.Cout
 
 
 |Entradas_soma|btnsEntrada:entradas

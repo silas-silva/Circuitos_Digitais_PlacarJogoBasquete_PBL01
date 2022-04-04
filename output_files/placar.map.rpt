@@ -1,5 +1,5 @@
 Analysis & Synthesis report for placar
-Mon Apr 04 11:41:02 2022
+Mon Apr 04 11:55:21 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -45,7 +45,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Mon Apr 04 11:41:02 2022       ;
+; Analysis & Synthesis Status ; Successful - Mon Apr 04 11:55:21 2022       ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; placar                                      ;
 ; Top-level Entity Name       ; Entradas_soma                               ;
@@ -280,7 +280,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Apr 04 11:40:52 2022
+    Info: Processing started: Mon Apr 04 11:55:12 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off placar -c placar
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -297,7 +297,7 @@ Info (12127): Elaborating entity "Entradas_soma" for the top level hierarchy
 Info (12128): Elaborating entity "btnsEntrada" for hierarchy "btnsEntrada:entradas" File: C:/Users/silas/Documents/Quartus/PBL01/Entradas_soma.v Line: 9
 Warning (10030): Net "t4" at btnsEntrada.v(15) has no driver or initial value, using a default initial value '0' File: C:/Users/silas/Documents/Quartus/PBL01/btnsEntrada.v Line: 15
 Info (12128): Elaborating entity "somador7bts" for hierarchy "somador7bts:r1" File: C:/Users/silas/Documents/Quartus/PBL01/Entradas_soma.v Line: 10
-Info (12128): Elaborating entity "somador1bt" for hierarchy "somador7bts:r1|somador1bt:r1" File: C:/Users/silas/Documents/Quartus/PBL01/somador7bts.v Line: 14
+Info (12128): Elaborating entity "somador1bt" for hierarchy "somador7bts:r1|somador1bt:r1" File: C:/Users/silas/Documents/Quartus/PBL01/somador7bts.v Line: 11
 Warning (12241): 5 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "SaidaBtns[1]" is stuck at GND File: C:/Users/silas/Documents/Quartus/PBL01/Entradas_soma.v Line: 4
@@ -306,9 +306,9 @@ Info (21057): Implemented 33 device resources after synthesis - the final resour
     Info (21059): Implemented 10 output pins
     Info (21061): Implemented 12 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4703 megabytes
-    Info: Processing ended: Mon Apr 04 11:41:02 2022
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:21
+    Info: Peak virtual memory: 4701 megabytes
+    Info: Processing ended: Mon Apr 04 11:55:21 2022
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:20
 
 

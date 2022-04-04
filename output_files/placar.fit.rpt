@@ -1,5 +1,5 @@
 Fitter report for placar
-Mon Apr 04 11:41:03 2022
+Mon Apr 04 11:55:23 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -53,7 +53,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------+
 ; Fitter Summary                                                      ;
 +-----------------------+---------------------------------------------+
-; Fitter Status         ; Successful - Mon Apr 04 11:41:03 2022       ;
+; Fitter Status         ; Successful - Mon Apr 04 11:55:23 2022       ;
 ; Quartus Prime Version ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name         ; placar                                      ;
 ; Top-level Entity Name ; Entradas_soma                               ;
@@ -590,7 +590,7 @@ Warning (169174): The Reserve All Unused Pins setting has not been specified, an
 Info (144001): Generated suppressed messages file C:/Users/silas/Documents/Quartus/PBL01/output_files/placar.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 7 warnings
     Info: Peak virtual memory: 5321 megabytes
-    Info: Processing ended: Mon Apr 04 11:41:03 2022
+    Info: Processing ended: Mon Apr 04 11:55:23 2022
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

@@ -6,10 +6,7 @@ module somador7bts (A, B, Cin, S, Cout);
 	output [6:0] S;
 	output Cout;
 	
-	
-	
 	wire c1, c2, c3, c4, c5, c6;
-	
 	
 	somador1bt r1 (.A(A[0]), .B(B[0]), .Cin(Cin), .S(S[0]), .Cout(c1));
 	somador1bt r2 (.A(A[1]), .B(B[1]), .Cin(c1), .S(S[1]), .Cout(c2));
