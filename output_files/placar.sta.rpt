@@ -1,5 +1,5 @@
 Timing Analyzer report for placar
-Mon Apr 04 10:43:58 2022
+Mon Apr 04 11:28:41 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -144,10 +144,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 3     ; 3    ;
-; Unconstrained Input Port Paths  ; 3     ; 3    ;
-; Unconstrained Output Ports      ; 1     ; 1    ;
-; Unconstrained Output Port Paths ; 3     ; 3    ;
+; Unconstrained Input Ports       ; 10    ; 10   ;
+; Unconstrained Input Port Paths  ; 58    ; 58   ;
+; Unconstrained Output Ports      ; 8     ; 8    ;
+; Unconstrained Output Port Paths ; 58    ; 58   ;
 +---------------------------------+-------+------+
 
 
@@ -156,9 +156,16 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +------------+--------------------------------------------------------------------------------------+
 ; Input Port ; Comment                                                                              ;
 +------------+--------------------------------------------------------------------------------------+
-; A          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; B          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; C          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; A[0]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; A[1]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; A[2]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; A[3]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; A[4]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; A[5]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; A[6]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; B[0]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; B[1]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Cin        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------+--------------------------------------------------------------------------------------+
 
 
@@ -167,7 +174,14 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +-------------+---------------------------------------------------------------------------------------+
 ; Output Port ; Comment                                                                               ;
 +-------------+---------------------------------------------------------------------------------------+
-; N[0]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Cout        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; S[0]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; S[1]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; S[2]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; S[3]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; S[4]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; S[5]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; S[6]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +-------------+---------------------------------------------------------------------------------------+
 
 
@@ -176,9 +190,16 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +------------+--------------------------------------------------------------------------------------+
 ; Input Port ; Comment                                                                              ;
 +------------+--------------------------------------------------------------------------------------+
-; A          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; B          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; C          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; A[0]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; A[1]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; A[2]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; A[3]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; A[4]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; A[5]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; A[6]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; B[0]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; B[1]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Cin        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------+--------------------------------------------------------------------------------------+
 
 
@@ -187,7 +208,14 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +-------------+---------------------------------------------------------------------------------------+
 ; Output Port ; Comment                                                                               ;
 +-------------+---------------------------------------------------------------------------------------+
-; N[0]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Cout        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; S[0]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; S[1]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; S[2]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; S[3]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; S[4]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; S[5]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; S[6]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +-------------+---------------------------------------------------------------------------------------+
 
 
@@ -197,7 +225,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Apr 04 10:43:57 2022
+    Info: Processing started: Mon Apr 04 11:28:40 2022
 Info: Command: quartus_sta placar -c placar
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -223,8 +251,8 @@ Info (332001): The selected device family is not supported by the report_metasta
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4670 megabytes
-    Info: Processing ended: Mon Apr 04 10:43:58 2022
+    Info: Peak virtual memory: 4669 megabytes
+    Info: Processing ended: Mon Apr 04 11:28:41 2022
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
