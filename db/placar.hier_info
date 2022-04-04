@@ -1,4 +1,36 @@
-|somador7bts
+|Entradas_soma
+A => A.IN1
+B => B.IN1
+C => C.IN1
+Chave => Chave.IN1
+N1[0] => N1[0].IN1
+N1[1] => N1[1].IN1
+N1[2] => N1[2].IN1
+N1[3] => N1[3].IN1
+N1[4] => N1[4].IN1
+N1[5] => N1[5].IN1
+N1[6] => N1[6].IN1
+SaidaBtns[0] <= SaidaBtns[0].DB_MAX_OUTPUT_PORT_TYPE
+SaidaBtns[1] <= SaidaBtns[1].DB_MAX_OUTPUT_PORT_TYPE
+S[0] <= somador7bts:r1.S
+S[1] <= somador7bts:r1.S
+S[2] <= somador7bts:r1.S
+S[3] <= somador7bts:r1.S
+S[4] <= somador7bts:r1.S
+S[5] <= somador7bts:r1.S
+S[6] <= somador7bts:r1.S
+Cout <= somador7bts:r1.Cout
+
+
+|Entradas_soma|btnsEntrada:entradas
+A => Xor0.IN0
+B => Xor0.IN1
+C => And0.IN1
+N[0] <= And0.DB_MAX_OUTPUT_PORT_TYPE
+N[1] <= <GND>
+
+
+|Entradas_soma|somador7bts:r1
 A[0] => A[0].IN1
 A[1] => A[1].IN1
 A[2] => A[2].IN1
@@ -19,7 +51,7 @@ S[6] <= somador1bt:r7.S
 Cout <= somador1bt:r7.Cout
 
 
-|somador7bts|somador1bt:r1
+|Entradas_soma|somador7bts:r1|somador1bt:r1
 A => Xor0.IN0
 A => And0.IN0
 B => Xor0.IN1
@@ -30,7 +62,7 @@ S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|somador7bts|somador1bt:r2
+|Entradas_soma|somador7bts:r1|somador1bt:r2
 A => Xor0.IN0
 A => And0.IN0
 B => Xor0.IN1
@@ -41,7 +73,7 @@ S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|somador7bts|somador1bt:r3
+|Entradas_soma|somador7bts:r1|somador1bt:r3
 A => Xor0.IN0
 A => And0.IN0
 B => Xor0.IN1
@@ -52,7 +84,7 @@ S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|somador7bts|somador1bt:r4
+|Entradas_soma|somador7bts:r1|somador1bt:r4
 A => Xor0.IN0
 A => And0.IN0
 B => Xor0.IN1
@@ -63,7 +95,7 @@ S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|somador7bts|somador1bt:r5
+|Entradas_soma|somador7bts:r1|somador1bt:r5
 A => Xor0.IN0
 A => And0.IN0
 B => Xor0.IN1
@@ -74,7 +106,7 @@ S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|somador7bts|somador1bt:r6
+|Entradas_soma|somador7bts:r1|somador1bt:r6
 A => Xor0.IN0
 A => And0.IN0
 B => Xor0.IN1
@@ -85,7 +117,7 @@ S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|somador7bts|somador1bt:r7
+|Entradas_soma|somador7bts:r1|somador1bt:r7
 A => Xor0.IN0
 A => And0.IN0
 B => Xor0.IN1
