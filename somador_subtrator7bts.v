@@ -1,4 +1,4 @@
-module somador_subitrator7bts (A, B, Cin, S, Cout);
+module somador_subtrator7bts (A, B, Cin, S, Cout);
 	
 	input [6:0] A;
 	input [1:0] B;
@@ -26,8 +26,6 @@ module somador_subitrator7bts (A, B, Cin, S, Cout);
 	somador1bt r5 (.A(A[4]), .B(B5), .Cin(c4), .S(S[4]), .Cout(c5));
 	somador1bt r6 (.A(A[5]), .B(B6), .Cin(c5), .S(S[5]), .Cout(c6));
 	somador1bt r7 (.A(A[6]), .B(B7), .Cin(c6), .S(S[6]), .Cout(Cout));
-	
-	
 	
 
 endmodule 
