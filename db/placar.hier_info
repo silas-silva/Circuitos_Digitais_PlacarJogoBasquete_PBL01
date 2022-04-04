@@ -1,8 +1,129 @@
-|btnsEntrada
+|Entradas_soma
+A => A.IN1
+B => B.IN1
+C => C.IN1
+Chave => Chave.IN1
+N1[0] => N1[0].IN1
+N1[1] => N1[1].IN1
+N1[2] => N1[2].IN1
+N1[3] => N1[3].IN1
+N1[4] => N1[4].IN1
+N1[5] => N1[5].IN1
+N1[6] => N1[6].IN1
+Nbtoes[0] => Nbtoes[0].IN2
+Nbtoes[1] => Nbtoes[1].IN2
+S[0] << somador7bts:soma.S
+S[1] << somador7bts:soma.S
+S[2] << somador7bts:soma.S
+S[3] << somador7bts:soma.S
+S[4] << somador7bts:soma.S
+S[5] << somador7bts:soma.S
+S[6] << somador7bts:soma.S
+
+
+|Entradas_soma|btnsEntrada:entradas
 A => Xor0.IN0
 B => Xor0.IN1
 C => And0.IN1
 N[0] <= And0.DB_MAX_OUTPUT_PORT_TYPE
 N[1] <= <GND>
+
+
+|Entradas_soma|somador7bts:soma
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+A[4] => A[4].IN1
+A[5] => A[5].IN1
+A[6] => A[6].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+Cin => ~NO_FANOUT~
+S[0] <= somador1bt:r1.S
+S[1] <= somador1bt:r2.S
+S[2] <= somador1bt:r3.S
+S[3] <= somador1bt:r4.S
+S[4] <= somador1bt:r5.S
+S[5] <= somador1bt:r6.S
+S[6] <= somador1bt:r7.S
+Cout <= somador1bt:r7.Cout
+
+
+|Entradas_soma|somador7bts:soma|somador1bt:r1
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => Xor1.IN1
+Cin => And1.IN1
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Entradas_soma|somador7bts:soma|somador1bt:r2
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => Xor1.IN1
+Cin => And1.IN1
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Entradas_soma|somador7bts:soma|somador1bt:r3
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => Xor1.IN1
+Cin => And1.IN1
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Entradas_soma|somador7bts:soma|somador1bt:r4
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => Xor1.IN1
+Cin => And1.IN1
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Entradas_soma|somador7bts:soma|somador1bt:r5
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => Xor1.IN1
+Cin => And1.IN1
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Entradas_soma|somador7bts:soma|somador1bt:r6
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => Xor1.IN1
+Cin => And1.IN1
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Entradas_soma|somador7bts:soma|somador1bt:r7
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => Xor1.IN1
+Cin => And1.IN1
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
 
 
