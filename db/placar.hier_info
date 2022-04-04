@@ -1,0 +1,8 @@
+|btnsEntrada
+A => Xor0.IN0
+B => Xor0.IN1
+C => And0.IN1
+N[0] <= And0.DB_MAX_OUTPUT_PORT_TYPE
+N[1] <= <GND>
+
+
