@@ -7,7 +7,7 @@ module Entradas_soma ( A, B, C, Chave, N1, SaidaBtns, S, Cout);
 	
 		
 	btnsEntrada entradas (.A(A), .B(B), .C(C), .N(SaidaBtns));
-	somador7bts r1 (.A(N1), .B(SaidaBtns), .Cin(Chave), .S(S), .Cout(Cout));
+	somador_subitrator7bts r1 (.A(N1), .B(SaidaBtns), .Cin(Chave), .S(S), .Cout(Cout));
 	
 	
 	

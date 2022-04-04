@@ -1,5 +1,5 @@
 Analysis & Synthesis report for placar
-Mon Apr 04 11:55:21 2022
+Mon Apr 04 12:10:20 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -14,12 +14,7 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Port Connectivity Checks: "somador7bts:r1|somador1bt:r7"
- 10. Port Connectivity Checks: "somador7bts:r1|somador1bt:r6"
- 11. Port Connectivity Checks: "somador7bts:r1|somador1bt:r5"
- 12. Port Connectivity Checks: "somador7bts:r1|somador1bt:r4"
- 13. Port Connectivity Checks: "somador7bts:r1|somador1bt:r3"
- 14. Analysis & Synthesis Messages
+  9. Analysis & Synthesis Messages
 
 
 
@@ -45,12 +40,12 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Mon Apr 04 11:55:21 2022       ;
+; Analysis & Synthesis Status ; Successful - Mon Apr 04 12:10:20 2022       ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; placar                                      ;
 ; Top-level Entity Name       ; Entradas_soma                               ;
 ; Family                      ; MAX II                                      ;
-; Total logic elements        ; 12                                          ;
+; Total logic elements        ; 15                                          ;
 ; Total pins                  ; 21                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
@@ -144,16 +139,16 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                         ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                           ; Library ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------+---------+
-; somador1bt.v                     ; yes             ; User Verilog HDL File  ; C:/Users/silas/Documents/Quartus/PBL01/somador1bt.v    ;         ;
-; somador7bts.v                    ; yes             ; User Verilog HDL File  ; C:/Users/silas/Documents/Quartus/PBL01/somador7bts.v   ;         ;
-; btnsEntrada.v                    ; yes             ; User Verilog HDL File  ; C:/Users/silas/Documents/Quartus/PBL01/btnsEntrada.v   ;         ;
-; Entradas_soma.v                  ; yes             ; User Verilog HDL File  ; C:/Users/silas/Documents/Quartus/PBL01/Entradas_soma.v ;         ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                  ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                    ; Library ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------+---------+
+; somador1bt.v                     ; yes             ; User Verilog HDL File  ; C:/Users/silas/Documents/Quartus/PBL01/somador1bt.v             ;         ;
+; btnsEntrada.v                    ; yes             ; User Verilog HDL File  ; C:/Users/silas/Documents/Quartus/PBL01/btnsEntrada.v            ;         ;
+; Entradas_soma.v                  ; yes             ; User Verilog HDL File  ; C:/Users/silas/Documents/Quartus/PBL01/Entradas_soma.v          ;         ;
+; somador_subitrator7bts.v         ; yes             ; User Verilog HDL File  ; C:/Users/silas/Documents/Quartus/PBL01/somador_subitrator7bts.v ;         ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -161,20 +156,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Total logic elements                        ; 12    ;
-;     -- Combinational with no register       ; 12    ;
+; Total logic elements                        ; 15    ;
+;     -- Combinational with no register       ; 15    ;
 ;     -- Register only                        ; 0     ;
 ;     -- Combinational with a register        ; 0     ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 6     ;
-;     -- 3 input functions                    ; 3     ;
-;     -- 2 input functions                    ; 3     ;
+;     -- 4 input functions                    ; 8     ;
+;     -- 3 input functions                    ; 7     ;
+;     -- 2 input functions                    ; 0     ;
 ;     -- 1 input functions                    ; 0     ;
 ;     -- 0 input functions                    ; 0     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 12    ;
+;     -- normal mode                          ; 15    ;
 ;     -- arithmetic mode                      ; 0     ;
 ;     -- qfbk mode                            ; 0     ;
 ;     -- register cascade mode                ; 0     ;
@@ -183,29 +178,29 @@ refer to the applicable agreement for further details.
 ;                                             ;       ;
 ; Total registers                             ; 0     ;
 ; I/O pins                                    ; 21    ;
-; Maximum fan-out node                        ; N1[1] ;
-; Maximum fan-out                             ; 4     ;
-; Total fan-out                               ; 48    ;
-; Average fan-out                             ; 1.45  ;
+; Maximum fan-out node                        ; Chave ;
+; Maximum fan-out                             ; 13    ;
+; Total fan-out                               ; 62    ;
+; Average fan-out                             ; 1.72  ;
 +---------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                          ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------+---------------+--------------+
-; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                         ; Entity Name   ; Library Name ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------+---------------+--------------+
-; |Entradas_soma             ; 12 (0)      ; 0            ; 0          ; 21   ; 0            ; 12 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Entradas_soma                              ; Entradas_soma ; work         ;
-;    |btnsEntrada:entradas|  ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Entradas_soma|btnsEntrada:entradas         ; btnsEntrada   ; work         ;
-;    |somador7bts:r1|        ; 10 (0)      ; 0            ; 0          ; 0    ; 0            ; 10 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Entradas_soma|somador7bts:r1               ; somador7bts   ; work         ;
-;       |somador1bt:r1|      ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Entradas_soma|somador7bts:r1|somador1bt:r1 ; somador1bt    ; work         ;
-;       |somador1bt:r2|      ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Entradas_soma|somador7bts:r1|somador1bt:r2 ; somador1bt    ; work         ;
-;       |somador1bt:r3|      ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Entradas_soma|somador7bts:r1|somador1bt:r3 ; somador1bt    ; work         ;
-;       |somador1bt:r4|      ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Entradas_soma|somador7bts:r1|somador1bt:r4 ; somador1bt    ; work         ;
-;       |somador1bt:r5|      ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Entradas_soma|somador7bts:r1|somador1bt:r5 ; somador1bt    ; work         ;
-;       |somador1bt:r6|      ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Entradas_soma|somador7bts:r1|somador1bt:r6 ; somador1bt    ; work         ;
-;       |somador1bt:r7|      ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Entradas_soma|somador7bts:r1|somador1bt:r7 ; somador1bt    ; work         ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------+---------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                  ;
++--------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------+------------------------+--------------+
+; Compilation Hierarchy Node     ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                    ; Entity Name            ; Library Name ;
++--------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------+------------------------+--------------+
+; |Entradas_soma                 ; 15 (0)      ; 0            ; 0          ; 21   ; 0            ; 15 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Entradas_soma                                         ; Entradas_soma          ; work         ;
+;    |btnsEntrada:entradas|      ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Entradas_soma|btnsEntrada:entradas                    ; btnsEntrada            ; work         ;
+;    |somador_subitrator7bts:r1| ; 14 (0)      ; 0            ; 0          ; 0    ; 0            ; 14 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Entradas_soma|somador_subitrator7bts:r1               ; somador_subitrator7bts ; work         ;
+;       |somador1bt:r1|          ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Entradas_soma|somador_subitrator7bts:r1|somador1bt:r1 ; somador1bt             ; work         ;
+;       |somador1bt:r2|          ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Entradas_soma|somador_subitrator7bts:r1|somador1bt:r2 ; somador1bt             ; work         ;
+;       |somador1bt:r3|          ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Entradas_soma|somador_subitrator7bts:r1|somador1bt:r3 ; somador1bt             ; work         ;
+;       |somador1bt:r4|          ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Entradas_soma|somador_subitrator7bts:r1|somador1bt:r4 ; somador1bt             ; work         ;
+;       |somador1bt:r5|          ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Entradas_soma|somador_subitrator7bts:r1|somador1bt:r5 ; somador1bt             ; work         ;
+;       |somador1bt:r6|          ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Entradas_soma|somador_subitrator7bts:r1|somador1bt:r6 ; somador1bt             ; work         ;
+;       |somador1bt:r7|          ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Entradas_soma|somador_subitrator7bts:r1|somador1bt:r7 ; somador1bt             ; work         ;
++--------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------+------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -224,91 +219,45 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "somador7bts:r1|somador1bt:r7"                                                                                                                                                      ;
-+-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port  ; Type  ; Severity ; Details                                                                                                                                                                            ;
-+-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; B     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; B[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-+-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "somador7bts:r1|somador1bt:r6"                                                                                                                                                      ;
-+-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port  ; Type  ; Severity ; Details                                                                                                                                                                            ;
-+-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; B     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; B[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-+-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "somador7bts:r1|somador1bt:r5"                                                                                                                                                      ;
-+-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port  ; Type  ; Severity ; Details                                                                                                                                                                            ;
-+-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; B     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; B[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-+-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "somador7bts:r1|somador1bt:r4"                                                                                                                                                      ;
-+-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port  ; Type  ; Severity ; Details                                                                                                                                                                            ;
-+-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; B     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; B[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-+-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "somador7bts:r1|somador1bt:r3"                                                                                                                                                      ;
-+-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port  ; Type  ; Severity ; Details                                                                                                                                                                            ;
-+-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; B     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; B[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-+-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Apr 04 11:55:12 2022
+    Info: Processing started: Mon Apr 04 12:10:11 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off placar -c placar
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file somador1bt.v
     Info (12023): Found entity 1: somador1bt File: C:/Users/silas/Documents/Quartus/PBL01/somador1bt.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file somador7bts.v
-    Info (12023): Found entity 1: somador7bts File: C:/Users/silas/Documents/Quartus/PBL01/somador7bts.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file btnsentrada.v
     Info (12023): Found entity 1: btnsEntrada File: C:/Users/silas/Documents/Quartus/PBL01/btnsEntrada.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file entradas_soma.v
     Info (12023): Found entity 1: Entradas_soma File: C:/Users/silas/Documents/Quartus/PBL01/Entradas_soma.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file somador_subitrator7bts.v
+    Info (12023): Found entity 1: somador_subitrator7bts File: C:/Users/silas/Documents/Quartus/PBL01/somador_subitrator7bts.v Line: 1
 Warning (10236): Verilog HDL Implicit Net warning at btnsEntrada.v(15): created implicit net for "t4" File: C:/Users/silas/Documents/Quartus/PBL01/btnsEntrada.v Line: 15
 Info (12127): Elaborating entity "Entradas_soma" for the top level hierarchy
 Info (12128): Elaborating entity "btnsEntrada" for hierarchy "btnsEntrada:entradas" File: C:/Users/silas/Documents/Quartus/PBL01/Entradas_soma.v Line: 9
 Warning (10030): Net "t4" at btnsEntrada.v(15) has no driver or initial value, using a default initial value '0' File: C:/Users/silas/Documents/Quartus/PBL01/btnsEntrada.v Line: 15
-Info (12128): Elaborating entity "somador7bts" for hierarchy "somador7bts:r1" File: C:/Users/silas/Documents/Quartus/PBL01/Entradas_soma.v Line: 10
-Info (12128): Elaborating entity "somador1bt" for hierarchy "somador7bts:r1|somador1bt:r1" File: C:/Users/silas/Documents/Quartus/PBL01/somador7bts.v Line: 11
-Warning (12241): 5 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (12128): Elaborating entity "somador_subitrator7bts" for hierarchy "somador_subitrator7bts:r1" File: C:/Users/silas/Documents/Quartus/PBL01/Entradas_soma.v Line: 10
+Warning (10739): Verilog HDL warning at somador_subitrator7bts.v(15): actual bit length 32 differs from formal bit length 1 File: C:/Users/silas/Documents/Quartus/PBL01/somador_subitrator7bts.v Line: 15
+Warning (10739): Verilog HDL warning at somador_subitrator7bts.v(16): actual bit length 32 differs from formal bit length 1 File: C:/Users/silas/Documents/Quartus/PBL01/somador_subitrator7bts.v Line: 16
+Warning (10739): Verilog HDL warning at somador_subitrator7bts.v(17): actual bit length 32 differs from formal bit length 1 File: C:/Users/silas/Documents/Quartus/PBL01/somador_subitrator7bts.v Line: 17
+Warning (10739): Verilog HDL warning at somador_subitrator7bts.v(18): actual bit length 32 differs from formal bit length 1 File: C:/Users/silas/Documents/Quartus/PBL01/somador_subitrator7bts.v Line: 18
+Warning (10739): Verilog HDL warning at somador_subitrator7bts.v(19): actual bit length 32 differs from formal bit length 1 File: C:/Users/silas/Documents/Quartus/PBL01/somador_subitrator7bts.v Line: 19
+Info (12128): Elaborating entity "somador1bt" for hierarchy "somador_subitrator7bts:r1|somador1bt:r1" File: C:/Users/silas/Documents/Quartus/PBL01/somador_subitrator7bts.v Line: 21
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "SaidaBtns[1]" is stuck at GND File: C:/Users/silas/Documents/Quartus/PBL01/Entradas_soma.v Line: 4
-Info (21057): Implemented 33 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 36 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
     Info (21059): Implemented 10 output pins
-    Info (21061): Implemented 12 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4701 megabytes
-    Info: Processing ended: Mon Apr 04 11:55:21 2022
+    Info (21061): Implemented 15 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
+    Info: Peak virtual memory: 4704 megabytes
+    Info: Processing ended: Mon Apr 04 12:10:20 2022
     Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:20
+    Info: Total CPU time (on all processors): 00:00:21
 
 

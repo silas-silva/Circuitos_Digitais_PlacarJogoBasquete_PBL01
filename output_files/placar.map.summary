@@ -1,9 +1,9 @@
-Analysis & Synthesis Status : Successful - Mon Apr 04 11:55:21 2022
+Analysis & Synthesis Status : Successful - Mon Apr 04 12:10:20 2022
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : placar
 Top-level Entity Name : Entradas_soma
 Family : MAX II
-Total logic elements : 12
+Total logic elements : 15
 Total pins : 21
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )

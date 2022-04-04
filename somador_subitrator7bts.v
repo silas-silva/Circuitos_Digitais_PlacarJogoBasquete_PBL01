@@ -1,4 +1,4 @@
-module somador (A, B, Cin, S, Cout);
+module somador_subitrator7bts (A, B, Cin, S, Cout);
 	
 	input [6:0] A;
 	input [1:0] B;
