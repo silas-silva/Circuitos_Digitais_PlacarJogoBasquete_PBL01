@@ -1,5 +1,5 @@
 Analysis & Synthesis report for placar
-Mon Apr 04 23:41:10 2022
+Tue Apr 05 00:16:30 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -11,7 +11,11 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
   5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Messages
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Analysis & Synthesis Messages
 
 
 
@@ -37,11 +41,15 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Mon Apr 04 23:41:10 2022           ;
+; Analysis & Synthesis Status ; Successful - Tue Apr 05 00:16:30 2022       ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; placar                                      ;
-; Top-level Entity Name       ; Entradas_soma                               ;
+; Top-level Entity Name       ; comparador                                  ;
 ; Family                      ; MAX II                                      ;
+; Total logic elements        ; 5                                           ;
+; Total pins                  ; 10                                          ;
+; Total virtual pins          ; 0                                           ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
 +-----------------------------+---------------------------------------------+
 
 
@@ -51,7 +59,7 @@ refer to the applicable agreement for further details.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EPM570T100C5       ;                    ;
-; Top-level entity name                                            ; Entradas_soma      ; placar             ;
+; Top-level entity name                                            ; comparador         ; placar             ;
 ; Family name                                                      ; MAX II             ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -132,15 +140,83 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                          ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                            ; Library ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------+---------+
-; btnsEntrada.v                    ; yes             ; User Verilog HDL File  ; C:/Users/silas/Documents/Quartus/PBL01/btnsEntrada.v                    ;         ;
-; Entradas_soma.v                  ; yes             ; User Verilog HDL File  ; C:/Users/silas/Documents/Quartus/PBL01/Entradas_soma.v                  ;         ;
-; decodificadorDisplay7Segmentos.v ; yes             ; User Verilog HDL File  ; C:/Users/silas/Documents/Quartus/PBL01/decodificadorDisplay7Segmentos.v ;         ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                      ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                        ; Library ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------+---------+
+; comparador.v                     ; yes             ; User Verilog HDL File  ; C:/Users/silas/Documents/Quartus/PBL01/comparador.v ;         ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Total logic elements                        ; 5     ;
+;     -- Combinational with no register       ; 5     ;
+;     -- Register only                        ; 0     ;
+;     -- Combinational with a register        ; 0     ;
+;                                             ;       ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 3     ;
+;     -- 3 input functions                    ; 1     ;
+;     -- 2 input functions                    ; 1     ;
+;     -- 1 input functions                    ; 0     ;
+;     -- 0 input functions                    ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 5     ;
+;     -- arithmetic mode                      ; 0     ;
+;     -- qfbk mode                            ; 0     ;
+;     -- register cascade mode                ; 0     ;
+;     -- synchronous clear/load mode          ; 0     ;
+;     -- asynchronous clear/load mode         ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+; I/O pins                                    ; 10    ;
+; Maximum fan-out node                        ; N1[0] ;
+; Maximum fan-out                             ; 3     ;
+; Total fan-out                               ; 18    ;
+; Average fan-out                             ; 1.20  ;
++---------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
+; |comparador                ; 5 (5)       ; 0            ; 0          ; 10   ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |comparador         ; comparador  ; work         ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; R$latch                                            ; Selector0           ; yes                    ;
+; Number of user-specified and inferred latches = 1  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
 
 
 +-------------------------------+
@@ -149,7 +225,7 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Apr 04 23:40:58 2022
+    Info: Processing started: Tue Apr 05 00:16:17 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off placar -c placar
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -163,15 +239,25 @@ Info (12021): Found 1 design units, including 1 entities, in source file somador
     Info (12023): Found entity 1: somador_subtrator7bts File: C:/Users/silas/Documents/Quartus/PBL01/somador_subtrator7bts.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file decodificadordisplay7segmentos.v
     Info (12023): Found entity 1: decodificadorDisplay7Segmentos File: C:/Users/silas/Documents/Quartus/PBL01/decodificadorDisplay7Segmentos.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file comparador.v
+    Info (12023): Found entity 1: comparador File: C:/Users/silas/Documents/Quartus/PBL01/comparador.v Line: 1
 Warning (10236): Verilog HDL Implicit Net warning at somador_subtrator7bts.v(8): created implicit net for "x" File: C:/Users/silas/Documents/Quartus/PBL01/somador_subtrator7bts.v Line: 8
-Info (12127): Elaborating entity "Entradas_soma" for the top level hierarchy
-Info (12128): Elaborating entity "btnsEntrada" for hierarchy "btnsEntrada:entradas" File: C:/Users/silas/Documents/Quartus/PBL01/Entradas_soma.v Line: 10
-Info (12128): Elaborating entity "decodificadorDisplay7Segmentos" for hierarchy "decodificadorDisplay7Segmentos:display" File: C:/Users/silas/Documents/Quartus/PBL01/Entradas_soma.v Line: 19
-Error (12006): Node instance "r1" instantiates undefined entity "somador_subitrator7bts". Ensure that required library paths are specified correctly, define the specified entity, or change the instantiation. If this entity represents Intel FPGA or third-party IP, generate the synthesis files for the IP. File: C:/Users/silas/Documents/Quartus/PBL01/Entradas_soma.v Line: 14
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 2 warnings
-    Error: Peak virtual memory: 4692 megabytes
-    Error: Processing ended: Mon Apr 04 23:41:10 2022
-    Error: Elapsed time: 00:00:12
-    Error: Total CPU time (on all processors): 00:00:30
+Info (12127): Elaborating entity "comparador" for the top level hierarchy
+Warning (10270): Verilog HDL Case Statement warning at comparador.v(9): incomplete case statement has no default case item File: C:/Users/silas/Documents/Quartus/PBL01/comparador.v Line: 9
+Warning (10270): Verilog HDL Case Statement warning at comparador.v(15): incomplete case statement has no default case item File: C:/Users/silas/Documents/Quartus/PBL01/comparador.v Line: 15
+Info (10264): Verilog HDL Case Statement information at comparador.v(7): all case item expressions in this case statement are onehot File: C:/Users/silas/Documents/Quartus/PBL01/comparador.v Line: 7
+Warning (10240): Verilog HDL Always Construct warning at comparador.v(7): inferring latch(es) for variable "R", which holds its previous value in one or more paths through the always construct File: C:/Users/silas/Documents/Quartus/PBL01/comparador.v Line: 7
+Info (10041): Inferred latch for "R" at comparador.v(7) File: C:/Users/silas/Documents/Quartus/PBL01/comparador.v Line: 7
+Warning (13012): Latch R$latch has unsafe behavior File: C:/Users/silas/Documents/Quartus/PBL01/comparador.v Line: 7
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal N1[0] File: C:/Users/silas/Documents/Quartus/PBL01/comparador.v Line: 3
+Info (21057): Implemented 15 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 9 input pins
+    Info (21059): Implemented 1 output pins
+    Info (21061): Implemented 5 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 4703 megabytes
+    Info: Processing ended: Tue Apr 05 00:16:30 2022
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:30
 
 
