@@ -4,6 +4,7 @@ module Entradas_soma ( A, B, C, ChaveNegativaPositiva, MudarTime, N1, SaidaBtns,
 	output [1:0] SaidaBtns;
 	output [6:0] S;
 	output Cout;
+	output [10:0] time1d1, time1d2, time2d1, time2d2;
 	
 	
 	btnsEntrada entradas (.A(A), .B(B), .C(C), .N(SaidaBtns));	
