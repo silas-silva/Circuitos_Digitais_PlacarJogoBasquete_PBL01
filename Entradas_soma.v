@@ -15,16 +15,15 @@ module Entradas_soma ( A, B, C, ChaveNegativaPositiva, MudarTime, N1, SaidaBtns,
 	comparador comparar (SaidaBtns, S, valido);
 	//Saida com a resposta 1 para numero valido 0 para invalido
 	
-	//Verificar se o valor de 'N1' é maior que o de 'SaidaBtns'
 	always @* begin 
-		case (ChaveNegativaPositiva)
+		case (ChaveNegativaPositiva) // Se for negativo
 			1'b1 : begin 
-				case (valido)
+				case (valido) // Se o numero for invalido
 					1'b0 : begin 
 						//Se não 'Ligar led ou busina'
 						buzzer = 1'b1;
 					end	
-					default: buzzer = 1'b0;  
+					default: buzzer = 1'b0;
 				endcase
 			end
 		endcase 
@@ -32,8 +31,11 @@ module Entradas_soma ( A, B, C, ChaveNegativaPositiva, MudarTime, N1, SaidaBtns,
 	
 	//Se for verdade 'Soma' e mostra
 	somador_subtrator7bts resultado (.A(N1), .B(SaidaBtns), .Cin(ChaveNegativaPositiva), .S(S), .Cout(Cout));
-	//Decodificador para mostrar no display
+	
+	//Comparar se é maior que 99 para alertar com buzina e led
 	compararMais99 comparar99 (.N(S), .Buzzer(buzzer), .led(led));
+	
+	//Decodificador para mostrar no display
 	decodificadorDisplay7Segmentos display (.pontos(S), .timeBasquete(MudarTime), .display1Time0(time1d1),.display2Time0(time1d2), .display1Time1(time2d1), .display2Time1(time2d2));	
 	
 

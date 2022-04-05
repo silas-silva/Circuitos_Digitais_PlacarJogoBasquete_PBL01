@@ -1,5 +1,5 @@
 Flow report for placar
-Tue Apr 05 12:37:51 2022
+Tue Apr 05 12:43:24 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------+
 ; Flow Summary                                                        ;
 +-----------------------+---------------------------------------------+
-; Flow Status           ; Flow Failed - Tue Apr 05 12:37:51 2022      ;
+; Flow Status           ; Flow Failed - Tue Apr 05 12:43:24 2022      ;
 ; Quartus Prime Version ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name         ; placar                                      ;
 ; Top-level Entity Name ; Entradas_soma                               ;
@@ -55,7 +55,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/05/2022 12:37:43 ;
+; Start date & time ; 04/05/2022 12:43:15 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; placar              ;
 +-------------------+---------------------+
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------+---------------------------------+---------------+-------------+------------+
 ; Assignment Name                       ; Value                           ; Default Value ; Entity Name ; Section Id ;
 +---------------------------------------+---------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID                 ; 110168740017899.164917306310772 ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID                 ; 110168740017899.164917339518896 ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP                ; 85                              ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP                ; 0                               ; --            ; --          ; --         ;
 ; POWER_EXT_SUPPLY_VOLTAGE_TO_REGULATOR ; 3.3V                            ; --            ; --          ; --         ;
