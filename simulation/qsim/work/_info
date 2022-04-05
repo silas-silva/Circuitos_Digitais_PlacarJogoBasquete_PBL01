@@ -52,8 +52,8 @@ R7
 R10
 R11
 nbtns@entrada_vlg_vec_tst
-Edecodificadordisplay7segmentos
-Z13 w1649125825
+Ecomparador
+Z13 w1649132056
 Z14 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
 Z15 DPx5 maxii 15 maxii_atom_pack 0 22 YKbF;Xz>AMfIeW9BZZ=^R1
 Z16 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
@@ -65,18 +65,104 @@ Z21 8placar.vho
 Z22 Fplacar.vho
 l0
 L34
-V<mK?h@=TZ6^j0NK;b_nUh3
-!s100 `9GlK3j=d>=9=0RnGDAOa2
+V:@7NgE:=YUDGVaB4;=<0W3
+!s100 4]G>n6aAdSZ55XM^OoWHQ2
 Z23 OV;C;10.5b;63
 32
-Z24 !s110 1649125826
+Z24 !s110 1649132057
 !i10b 1
-Z25 !s108 1649125826.000000
+Z25 !s108 1649132057.000000
 Z26 !s90 -work|work|placar.vho|
 Z27 !s107 placar.vho|
 !i113 1
 R10
 Z28 tExplicit 1 CvgOpt 0
+Astructure
+R14
+R15
+R16
+R17
+R18
+R19
+DEx4 work 10 comparador 0 22 :@7NgE:=YUDGVaB4;=<0W3
+l64
+L45
+VZRKZAEIWL[gfNhJ6bc^0l2
+!s100 O5iGbIdaQ?gK[WoIlQNcz3
+R23
+32
+R24
+!i10b 1
+R25
+R26
+R27
+!i113 1
+R10
+R28
+Ecomparador_vhd_vec_tst
+R13
+R18
+R19
+R20
+Z29 8comparadorTest.vwf.vht
+Z30 FcomparadorTest.vwf.vht
+l0
+L31
+VLjU>WfaW89JE5X9TSfYTZ3
+!s100 7Mjj[>QfPiAofDW6KV]aW3
+R23
+32
+R24
+!i10b 1
+R25
+Z31 !s90 -work|work|comparadorTest.vwf.vht|
+Z32 !s107 comparadorTest.vwf.vht|
+!i113 1
+R10
+R28
+Acomparador_arch
+R18
+R19
+DEx4 work 22 comparador_vhd_vec_tst 0 22 LjU>WfaW89JE5X9TSfYTZ3
+l46
+L33
+V_=N8KgV1SKWl:A8?7naQa2
+!s100 0bJ1QGJESC4ODN38?Z_Qz1
+R23
+32
+R24
+!i10b 1
+R25
+R31
+R32
+!i113 1
+R10
+R28
+Edecodificadordisplay7segmentos
+Z33 w1649125825
+R14
+R15
+R16
+R17
+R18
+R19
+R20
+R21
+R22
+l0
+L34
+V<mK?h@=TZ6^j0NK;b_nUh3
+!s100 `9GlK3j=d>=9=0RnGDAOa2
+R23
+32
+Z34 !s110 1649125826
+!i10b 1
+Z35 !s108 1649125826.000000
+R26
+R27
+!i113 1
+R10
+R28
 Astructure
 R14
 R15
@@ -91,32 +177,32 @@ Vc`BbIkF3dO5]]m:JI@z@:2
 !s100 L_1Ro5fdOg9:<BEam^]5=1
 R23
 32
-R24
+R34
 !i10b 1
-R25
+R35
 R26
 R27
 !i113 1
 R10
 R28
 Edecodificadordisplay7segmentos_vhd_vec_tst
-Z29 w1649125824
+Z36 w1649125824
 R18
 R19
 R20
-Z30 8decodificadorDisplay7Segmentos.vwf.vht
-Z31 FdecodificadorDisplay7Segmentos.vwf.vht
+Z37 8decodificadorDisplay7Segmentos.vwf.vht
+Z38 FdecodificadorDisplay7Segmentos.vwf.vht
 l0
 L31
 V^XFjDH;YjaW8J6?`9SH4K1
 !s100 H?1IZcPncUzaG2F165GUC3
 R23
 32
-R24
+R34
 !i10b 1
-R25
-Z32 !s90 -work|work|decodificadorDisplay7Segmentos.vwf.vht|
-Z33 !s107 decodificadorDisplay7Segmentos.vwf.vht|
+R35
+Z39 !s90 -work|work|decodificadorDisplay7Segmentos.vwf.vht|
+Z40 !s107 decodificadorDisplay7Segmentos.vwf.vht|
 !i113 1
 R10
 R28
@@ -130,16 +216,16 @@ VJTfidL=7UE;TZG3bdG4`n2
 !s100 9579fnf3j>D:RBWIgPSn>1
 R23
 32
-R24
+R34
 !i10b 1
-R25
-R32
-R33
+R35
+R39
+R40
 !i113 1
 R10
 R28
 vsomador1bt
-Z34 !s110 1649089785
+Z41 !s110 1649089785
 !i10b 1
 !s100 KmQMZUkHg?[U640a=[ijI2
 IOF4H[i5^SJeBC7@_8UFnj3
@@ -153,14 +239,14 @@ R6
 r1
 !s85 0
 31
-Z35 !s108 1649089785.000000
+Z42 !s108 1649089785.000000
 R8
 R9
 !i113 1
 R10
 R11
 vsomador1bt_vlg_vec_tst
-R34
+R41
 !i10b 1
 !s100 3ZCHVZNSoOin::N`cJ>mb1
 IN]nV[X`G_kK6`L;JP4[ml3
@@ -174,14 +260,14 @@ R6
 r1
 !s85 0
 31
-R35
+R42
 !s107 somador1btTest.vwf.vt|
 !s90 -work|work|somador1btTest.vwf.vt|
 !i113 1
 R10
 R11
 vsomador_subtrator7bts
-Z36 !s110 1649124845
+Z43 !s110 1649124845
 !i10b 1
 !s100 U8a==9>B9;Sc03NCFdz=i0
 I?<WjE>YI]_oPY:c<DX2HO0
@@ -195,14 +281,14 @@ R6
 r1
 !s85 0
 31
-Z37 !s108 1649124845.000000
+Z44 !s108 1649124845.000000
 R8
 R9
 !i113 1
 R10
 R11
 vsomador_subtrator7bts_vlg_vec_tst
-R36
+R43
 !i10b 1
 !s100 Vj=ZL>637_G@5^cC:]=a51
 IQE7hG9N>@>_C_dn9RNCml2
@@ -216,7 +302,7 @@ R6
 r1
 !s85 0
 31
-R37
+R44
 !s107 somadorSubtrator.vwf.vt|
 !s90 -work|work|somadorSubtrator.vwf.vt|
 !i113 1

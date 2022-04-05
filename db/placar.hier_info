@@ -1,22 +1,22 @@
 |comparador
-N1[0] => Equal2.IN13
-N1[0] => Equal3.IN13
-N1[1] => Equal2.IN12
-N1[1] => Equal3.IN12
-N2[0] => Equal0.IN13
-N2[0] => Equal1.IN13
-N2[1] => Equal0.IN12
-N2[1] => Equal1.IN12
-N2[2] => Equal0.IN11
-N2[2] => Equal1.IN11
-N2[3] => Equal0.IN10
-N2[3] => Equal1.IN10
-N2[4] => Equal0.IN9
-N2[4] => Equal1.IN9
-N2[5] => Equal0.IN8
-N2[5] => Equal1.IN8
-N2[6] => Equal0.IN7
-N2[6] => Equal1.IN7
-R <= R$latch.DB_MAX_OUTPUT_PORT_TYPE
+N1[0] => Equal0.IN3
+N1[0] => Equal1.IN3
+N1[1] => Equal0.IN2
+N1[1] => Equal1.IN2
+N2[0] => Equal2.IN13
+N2[0] => Equal3.IN13
+N2[1] => Equal2.IN12
+N2[1] => Equal3.IN12
+N2[2] => Equal2.IN11
+N2[2] => Equal3.IN11
+N2[3] => Equal2.IN10
+N2[3] => Equal3.IN10
+N2[4] => Equal2.IN9
+N2[4] => Equal3.IN9
+N2[5] => Equal2.IN8
+N2[5] => Equal3.IN8
+N2[6] => Equal2.IN7
+N2[6] => Equal3.IN7
+R <= Selector0.DB_MAX_OUTPUT_PORT_TYPE
 
 
