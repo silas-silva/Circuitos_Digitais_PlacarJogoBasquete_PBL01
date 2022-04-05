@@ -33,6 +33,7 @@ module Entradas_soma ( A, B, C, ChaveNegativaPositiva, MudarTime, N1, SaidaBtns,
 	//Se for verdade 'Soma' e mostra
 	somador_subtrator7bts resultado (.A(N1), .B(SaidaBtns), .Cin(ChaveNegativaPositiva), .S(S), .Cout(Cout));
 	//Decodificador para mostrar no display
+	compararMais99 comparar99 (.N(S), .Buzzer(buzzer), .led(led));
 	decodificadorDisplay7Segmentos display (.pontos(S), .timeBasquete(MudarTime), .display1Time0(time1d1),.display2Time0(time1d2), .display1Time1(time2d1), .display2Time1(time2d2));	
 	
 

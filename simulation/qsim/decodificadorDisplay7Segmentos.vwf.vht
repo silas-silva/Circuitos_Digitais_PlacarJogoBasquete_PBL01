@@ -18,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "04/04/2022 23:30:24"
+-- Generated on "04/05/2022 12:31:59"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          decodificadorDisplay7Segmentos
 -- 
@@ -41,10 +41,10 @@ SIGNAL pontos : STD_LOGIC_VECTOR(6 DOWNTO 0);
 SIGNAL timeBasquete : STD_LOGIC;
 COMPONENT decodificadorDisplay7Segmentos
 	PORT (
-	display1Time0 : BUFFER STD_LOGIC_VECTOR(10 DOWNTO 0);
-	display1Time1 : BUFFER STD_LOGIC_VECTOR(10 DOWNTO 0);
-	display2Time0 : BUFFER STD_LOGIC_VECTOR(10 DOWNTO 0);
-	display2Time1 : BUFFER STD_LOGIC_VECTOR(10 DOWNTO 0);
+	display1Time0 : OUT STD_LOGIC_VECTOR(10 DOWNTO 0);
+	display1Time1 : OUT STD_LOGIC_VECTOR(10 DOWNTO 0);
+	display2Time0 : OUT STD_LOGIC_VECTOR(10 DOWNTO 0);
+	display2Time1 : OUT STD_LOGIC_VECTOR(10 DOWNTO 0);
 	pontos : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
 	timeBasquete : IN STD_LOGIC
 	);

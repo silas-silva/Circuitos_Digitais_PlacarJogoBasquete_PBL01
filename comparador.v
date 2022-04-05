@@ -4,7 +4,15 @@ module comparador (N1, N2, R);
    output reg R;
    
    always @* begin 
-		case (N2)  
+		case (N2)
+			7'b0000000 : begin 
+				case (N1)
+					2'b01 : R = 1'b0;
+					2'b10 : R = 1'b0;
+					2'b11 : R = 1'b0;
+					default : R =  1'b1;
+				endcase
+			end
          7'b0000001 : begin 
 				case (N1)
 					2'b10 : R = 1'b0;
@@ -18,7 +26,7 @@ module comparador (N1, N2, R);
 					default : R =  1'b1;
 				endcase
 			end 
-			default: R = 1;   
+			default: R = 1'b1;   
 		endcase 
 	end 
 

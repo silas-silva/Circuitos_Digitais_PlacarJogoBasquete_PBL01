@@ -1,0 +1,30 @@
+module compararMais99 (N, Buzzer, led, );
+   input [6:0] N;
+   output reg R, led;
+   
+   always @* begin 
+		case (N)
+			7'b1100100 : begin  // N = 100
+				R = 1'b1;
+				led = 1'b1;
+			end
+         7'b1100101 : begin  // N = 101
+				R = 1'b1;
+				led = 1'b1;
+			end
+			7'b1100110 : begin  // N = 102
+				R = 1'b1;
+				led = 1'b1;
+			end
+			7'b1100111 : begin  // N = 103
+				R = 1'b1;
+				led = 1'b1;
+			end
+			default: begin 
+				R = 1'b0;
+				led = 1'b0;
+			end 
+		endcase 
+	end 
+
+endmodule 
