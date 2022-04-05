@@ -1,4 +1,86 @@
-|comparador
+|Entradas_soma
+A => A.IN1
+B => B.IN1
+C => C.IN1
+ChaveNegativaPositiva => ChaveNegativaPositiva.IN1
+MudarTime => MudarTime.IN1
+N1[0] => N1[0].IN1
+N1[1] => N1[1].IN1
+N1[2] => N1[2].IN1
+N1[3] => N1[3].IN1
+N1[4] => N1[4].IN1
+N1[5] => N1[5].IN1
+N1[6] => N1[6].IN1
+SaidaBtns[0] <= SaidaBtns[0].DB_MAX_OUTPUT_PORT_TYPE
+SaidaBtns[1] <= SaidaBtns[1].DB_MAX_OUTPUT_PORT_TYPE
+S[0] <= S[0].DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= S[1].DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= S[2].DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= S[3].DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= S[4].DB_MAX_OUTPUT_PORT_TYPE
+S[5] <= S[5].DB_MAX_OUTPUT_PORT_TYPE
+S[6] <= S[6].DB_MAX_OUTPUT_PORT_TYPE
+Cout <= somador_subtrator7bts:resultado.Cout
+time1d1[0] <= decodificadorDisplay7Segmentos:display.display1Time0
+time1d1[1] <= decodificadorDisplay7Segmentos:display.display1Time0
+time1d1[2] <= decodificadorDisplay7Segmentos:display.display1Time0
+time1d1[3] <= decodificadorDisplay7Segmentos:display.display1Time0
+time1d1[4] <= decodificadorDisplay7Segmentos:display.display1Time0
+time1d1[5] <= decodificadorDisplay7Segmentos:display.display1Time0
+time1d1[6] <= decodificadorDisplay7Segmentos:display.display1Time0
+time1d1[7] <= decodificadorDisplay7Segmentos:display.display1Time0
+time1d1[8] <= decodificadorDisplay7Segmentos:display.display1Time0
+time1d1[9] <= decodificadorDisplay7Segmentos:display.display1Time0
+time1d1[10] <= decodificadorDisplay7Segmentos:display.display1Time0
+time1d2[0] <= decodificadorDisplay7Segmentos:display.display2Time0
+time1d2[1] <= decodificadorDisplay7Segmentos:display.display2Time0
+time1d2[2] <= decodificadorDisplay7Segmentos:display.display2Time0
+time1d2[3] <= decodificadorDisplay7Segmentos:display.display2Time0
+time1d2[4] <= decodificadorDisplay7Segmentos:display.display2Time0
+time1d2[5] <= decodificadorDisplay7Segmentos:display.display2Time0
+time1d2[6] <= decodificadorDisplay7Segmentos:display.display2Time0
+time1d2[7] <= decodificadorDisplay7Segmentos:display.display2Time0
+time1d2[8] <= decodificadorDisplay7Segmentos:display.display2Time0
+time1d2[9] <= decodificadorDisplay7Segmentos:display.display2Time0
+time1d2[10] <= decodificadorDisplay7Segmentos:display.display2Time0
+time2d1[0] <= decodificadorDisplay7Segmentos:display.display1Time1
+time2d1[1] <= decodificadorDisplay7Segmentos:display.display1Time1
+time2d1[2] <= decodificadorDisplay7Segmentos:display.display1Time1
+time2d1[3] <= decodificadorDisplay7Segmentos:display.display1Time1
+time2d1[4] <= decodificadorDisplay7Segmentos:display.display1Time1
+time2d1[5] <= decodificadorDisplay7Segmentos:display.display1Time1
+time2d1[6] <= decodificadorDisplay7Segmentos:display.display1Time1
+time2d1[7] <= decodificadorDisplay7Segmentos:display.display1Time1
+time2d1[8] <= decodificadorDisplay7Segmentos:display.display1Time1
+time2d1[9] <= decodificadorDisplay7Segmentos:display.display1Time1
+time2d1[10] <= decodificadorDisplay7Segmentos:display.display1Time1
+time2d2[0] <= decodificadorDisplay7Segmentos:display.display2Time1
+time2d2[1] <= decodificadorDisplay7Segmentos:display.display2Time1
+time2d2[2] <= decodificadorDisplay7Segmentos:display.display2Time1
+time2d2[3] <= decodificadorDisplay7Segmentos:display.display2Time1
+time2d2[4] <= decodificadorDisplay7Segmentos:display.display2Time1
+time2d2[5] <= decodificadorDisplay7Segmentos:display.display2Time1
+time2d2[6] <= decodificadorDisplay7Segmentos:display.display2Time1
+time2d2[7] <= decodificadorDisplay7Segmentos:display.display2Time1
+time2d2[8] <= decodificadorDisplay7Segmentos:display.display2Time1
+time2d2[9] <= decodificadorDisplay7Segmentos:display.display2Time1
+time2d2[10] <= decodificadorDisplay7Segmentos:display.display2Time1
+buzzer <= buzzer$latch.DB_MAX_OUTPUT_PORT_TYPE
+led <= <GND>
+
+
+|Entradas_soma|btnsEntrada:entradas
+A => Xor0.IN0
+A => Xor1.IN0
+B => Xor0.IN1
+B => And1.IN1
+C => Xor1.IN1
+C => And0.IN1
+N[0] <= And0.DB_MAX_OUTPUT_PORT_TYPE
+N[1] <= And1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Entradas_soma|comparador:comparar
 N1[0] => Equal0.IN3
 N1[0] => Equal1.IN3
 N1[1] => Equal0.IN2
@@ -18,5 +100,268 @@ N2[5] => Equal3.IN8
 N2[6] => Equal2.IN7
 N2[6] => Equal3.IN7
 R <= Selector0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Entradas_soma|somador_subtrator7bts:resultado
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+A[4] => A[4].IN1
+A[5] => A[5].IN1
+A[6] => A[6].IN1
+B[0] => xor0.IN0
+B[1] => xor1.IN0
+Cin => Cin.IN1
+S[0] <= somador1bt:r1.S
+S[1] <= somador1bt:r2.S
+S[2] <= somador1bt:r3.S
+S[3] <= somador1bt:r4.S
+S[4] <= somador1bt:r5.S
+S[5] <= somador1bt:r6.S
+S[6] <= somador1bt:r7.S
+Cout <= somador1bt:r7.Cout
+
+
+|Entradas_soma|somador_subtrator7bts:resultado|somador1bt:r1
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => Xor1.IN1
+Cin => And1.IN1
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Entradas_soma|somador_subtrator7bts:resultado|somador1bt:r2
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => Xor1.IN1
+Cin => And1.IN1
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Entradas_soma|somador_subtrator7bts:resultado|somador1bt:r3
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => Xor1.IN1
+Cin => And1.IN1
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Entradas_soma|somador_subtrator7bts:resultado|somador1bt:r4
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => Xor1.IN1
+Cin => And1.IN1
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Entradas_soma|somador_subtrator7bts:resultado|somador1bt:r5
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => Xor1.IN1
+Cin => And1.IN1
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Entradas_soma|somador_subtrator7bts:resultado|somador1bt:r6
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => Xor1.IN1
+Cin => And1.IN1
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Entradas_soma|somador_subtrator7bts:resultado|somador1bt:r7
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => Xor1.IN1
+Cin => And1.IN1
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Entradas_soma|decodificadorDisplay7Segmentos:display
+pontos[0] => Mux0.IN134
+pontos[0] => Mux1.IN134
+pontos[0] => Mux2.IN134
+pontos[0] => Mux3.IN134
+pontos[0] => Mux4.IN134
+pontos[0] => Mux5.IN134
+pontos[0] => Mux6.IN134
+pontos[0] => Mux7.IN134
+pontos[0] => Mux8.IN134
+pontos[0] => Mux9.IN134
+pontos[0] => Mux10.IN134
+pontos[0] => Mux11.IN134
+pontos[0] => Mux12.IN134
+pontos[0] => Mux13.IN134
+pontos[0] => Ram0.RADDR
+pontos[0] => Ram1.RADDR
+pontos[1] => Mux0.IN133
+pontos[1] => Mux1.IN133
+pontos[1] => Mux2.IN133
+pontos[1] => Mux3.IN133
+pontos[1] => Mux4.IN133
+pontos[1] => Mux5.IN133
+pontos[1] => Mux6.IN133
+pontos[1] => Mux7.IN133
+pontos[1] => Mux8.IN133
+pontos[1] => Mux9.IN133
+pontos[1] => Mux10.IN133
+pontos[1] => Mux11.IN133
+pontos[1] => Mux12.IN133
+pontos[1] => Mux13.IN133
+pontos[1] => Ram0.RADDR1
+pontos[1] => Ram1.RADDR1
+pontos[2] => Mux0.IN132
+pontos[2] => Mux1.IN132
+pontos[2] => Mux2.IN132
+pontos[2] => Mux3.IN132
+pontos[2] => Mux4.IN132
+pontos[2] => Mux5.IN132
+pontos[2] => Mux6.IN132
+pontos[2] => Decoder1.IN4
+pontos[2] => Mux7.IN132
+pontos[2] => Mux8.IN132
+pontos[2] => Mux9.IN132
+pontos[2] => Mux10.IN132
+pontos[2] => Mux11.IN132
+pontos[2] => Mux12.IN132
+pontos[2] => Mux13.IN132
+pontos[2] => Ram0.RADDR2
+pontos[2] => Ram1.RADDR2
+pontos[3] => Mux0.IN131
+pontos[3] => Mux1.IN131
+pontos[3] => Mux2.IN131
+pontos[3] => Mux3.IN131
+pontos[3] => Mux4.IN131
+pontos[3] => Mux5.IN131
+pontos[3] => Mux6.IN131
+pontos[3] => Decoder1.IN3
+pontos[3] => Mux7.IN131
+pontos[3] => Mux8.IN131
+pontos[3] => Mux9.IN131
+pontos[3] => Mux10.IN131
+pontos[3] => Mux11.IN131
+pontos[3] => Mux12.IN131
+pontos[3] => Mux13.IN131
+pontos[3] => Ram0.RADDR3
+pontos[3] => Ram1.RADDR3
+pontos[4] => Mux0.IN130
+pontos[4] => Mux1.IN130
+pontos[4] => Mux2.IN130
+pontos[4] => Mux3.IN130
+pontos[4] => Mux4.IN130
+pontos[4] => Mux5.IN130
+pontos[4] => Mux6.IN130
+pontos[4] => Decoder1.IN2
+pontos[4] => Mux7.IN130
+pontos[4] => Mux8.IN130
+pontos[4] => Mux9.IN130
+pontos[4] => Mux10.IN130
+pontos[4] => Mux11.IN130
+pontos[4] => Mux12.IN130
+pontos[4] => Mux13.IN130
+pontos[4] => Ram0.RADDR4
+pontos[4] => Ram1.RADDR4
+pontos[5] => Mux0.IN129
+pontos[5] => Mux1.IN129
+pontos[5] => Mux2.IN129
+pontos[5] => Mux3.IN129
+pontos[5] => Mux4.IN129
+pontos[5] => Mux5.IN129
+pontos[5] => Mux6.IN129
+pontos[5] => Decoder1.IN1
+pontos[5] => Mux7.IN129
+pontos[5] => Mux8.IN129
+pontos[5] => Mux9.IN129
+pontos[5] => Mux10.IN129
+pontos[5] => Mux11.IN129
+pontos[5] => Mux12.IN129
+pontos[5] => Mux13.IN129
+pontos[5] => Ram0.RADDR5
+pontos[5] => Ram1.RADDR5
+pontos[6] => Mux0.IN128
+pontos[6] => Mux1.IN128
+pontos[6] => Mux2.IN128
+pontos[6] => Mux3.IN128
+pontos[6] => Mux4.IN128
+pontos[6] => Mux5.IN128
+pontos[6] => Mux6.IN128
+pontos[6] => Decoder1.IN0
+pontos[6] => Mux7.IN128
+pontos[6] => Mux8.IN128
+pontos[6] => Mux9.IN128
+pontos[6] => Mux10.IN128
+pontos[6] => Mux11.IN128
+pontos[6] => Mux12.IN128
+pontos[6] => Mux13.IN128
+pontos[6] => Ram0.RADDR6
+pontos[6] => Ram1.RADDR6
+timeBasquete => Decoder0.IN0
+display1Time0[0] <= Ram0.DATAOUT
+display1Time0[1] <= Ram0.DATAOUT1
+display1Time0[2] <= Ram0.DATAOUT2
+display1Time0[3] <= Ram0.DATAOUT3
+display1Time0[4] <= Ram0.DATAOUT4
+display1Time0[5] <= Ram0.DATAOUT5
+display1Time0[6] <= Ram0.DATAOUT6
+display1Time0[7] <= Ram0.DATAOUT7
+display1Time0[8] <= Ram0.DATAOUT8
+display1Time0[9] <= Ram0.DATAOUT9
+display1Time0[10] <= Ram0.DATAOUT10
+display2Time0[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+display2Time0[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+display2Time0[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+display2Time0[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+display2Time0[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+display2Time0[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+display2Time0[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+display2Time0[7] <= <VCC>
+display2Time0[8] <= <VCC>
+display2Time0[9] <= <GND>
+display2Time0[10] <= <VCC>
+display1Time1[0] <= Ram1.DATAOUT
+display1Time1[1] <= Ram1.DATAOUT1
+display1Time1[2] <= Ram1.DATAOUT2
+display1Time1[3] <= Ram1.DATAOUT3
+display1Time1[4] <= Ram1.DATAOUT4
+display1Time1[5] <= Ram1.DATAOUT5
+display1Time1[6] <= Ram1.DATAOUT6
+display1Time1[7] <= Ram1.DATAOUT7
+display1Time1[8] <= Ram1.DATAOUT8
+display1Time1[9] <= Ram1.DATAOUT9
+display1Time1[10] <= Ram1.DATAOUT10
+display2Time1[0] <= Mux13.DB_MAX_OUTPUT_PORT_TYPE
+display2Time1[1] <= Mux12.DB_MAX_OUTPUT_PORT_TYPE
+display2Time1[2] <= Mux11.DB_MAX_OUTPUT_PORT_TYPE
+display2Time1[3] <= Mux10.DB_MAX_OUTPUT_PORT_TYPE
+display2Time1[4] <= Mux9.DB_MAX_OUTPUT_PORT_TYPE
+display2Time1[5] <= Mux8.DB_MAX_OUTPUT_PORT_TYPE
+display2Time1[6] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
+display2Time1[7] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+display2Time1[8] <= <VCC>
+display2Time1[9] <= <VCC>
+display2Time1[10] <= <VCC>
 
 
