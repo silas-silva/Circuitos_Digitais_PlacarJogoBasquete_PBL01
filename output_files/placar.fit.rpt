@@ -1,5 +1,5 @@
 Fitter report for placar
-Mon Apr 04 22:13:30 2022
+Mon Apr 04 23:38:15 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -53,7 +53,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------+
 ; Fitter Summary                                                      ;
 +-----------------------+---------------------------------------------+
-; Fitter Status         ; Successful - Mon Apr 04 22:13:30 2022       ;
+; Fitter Status         ; Successful - Mon Apr 04 23:38:15 2022       ;
 ; Quartus Prime Version ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name         ; placar                                      ;
 ; Top-level Entity Name ; somador_subtrator7bts                       ;
@@ -560,7 +560,7 @@ Info (176215): I/O bank details before I/O pin placement
     Info (176214): Statistics of I/O banks
         Info (176213): I/O bank number 1 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  36 pins available
         Info (176213): I/O bank number 2 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  40 pins available
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
@@ -574,15 +574,15 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.09 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.04 seconds.
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file C:/Users/silas/Documents/Quartus/PBL01/output_files/placar.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 5320 megabytes
-    Info: Processing ended: Mon Apr 04 22:13:30 2022
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Peak virtual memory: 5321 megabytes
+    Info: Processing ended: Mon Apr 04 23:38:15 2022
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
 
 
 +----------------------------+

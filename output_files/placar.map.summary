@@ -1,9 +1,5 @@
-Analysis & Synthesis Status : Successful - Mon Apr 04 22:13:23 2022
+Analysis & Synthesis Status : Failed - Mon Apr 04 23:41:10 2022
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : placar
-Top-level Entity Name : somador_subtrator7bts
+Top-level Entity Name : Entradas_soma
 Family : MAX II
-Total logic elements : 16
-Total pins : 18
-Total virtual pins : 0
-UFM blocks : 0 / 1 ( 0 % )
