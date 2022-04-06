@@ -1,5 +1,5 @@
 Analysis & Synthesis report for placar
-Tue Apr 05 12:43:24 2022
+Tue Apr 05 22:19:18 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -11,7 +11,11 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
   5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Messages
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Analysis & Synthesis Messages
 
 
 
@@ -37,11 +41,15 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Tue Apr 05 12:43:24 2022           ;
+; Analysis & Synthesis Status ; Successful - Tue Apr 05 22:19:18 2022       ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; placar                                      ;
 ; Top-level Entity Name       ; Entradas_soma                               ;
 ; Family                      ; MAX II                                      ;
+; Total logic elements        ; 234                                         ;
+; Total pins                  ; 69                                          ;
+; Total virtual pins          ; 0                                           ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
 +-----------------------------+---------------------------------------------+
 
 
@@ -132,13 +140,113 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                         ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                           ; Library ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------+---------+
-; Entradas_soma.v                  ; yes             ; User Verilog HDL File  ; C:/Users/silas/Documents/Quartus/PBL01/Entradas_soma.v ;         ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                          ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                            ; Library ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------+---------+
+; somador1bt.v                     ; yes             ; User Verilog HDL File  ; C:/Users/silas/Documents/Quartus/PBL01/somador1bt.v                     ;         ;
+; btnsEntrada.v                    ; yes             ; User Verilog HDL File  ; C:/Users/silas/Documents/Quartus/PBL01/btnsEntrada.v                    ;         ;
+; Entradas_soma.v                  ; yes             ; User Verilog HDL File  ; C:/Users/silas/Documents/Quartus/PBL01/Entradas_soma.v                  ;         ;
+; somador_subtrator7bts.v          ; yes             ; User Verilog HDL File  ; C:/Users/silas/Documents/Quartus/PBL01/somador_subtrator7bts.v          ;         ;
+; decodificadorDisplay7Segmentos.v ; yes             ; User Verilog HDL File  ; C:/Users/silas/Documents/Quartus/PBL01/decodificadorDisplay7Segmentos.v ;         ;
+; comparador.v                     ; yes             ; User Verilog HDL File  ; C:/Users/silas/Documents/Quartus/PBL01/comparador.v                     ;         ;
+; compararMais99.v                 ; yes             ; User Verilog HDL File  ; C:/Users/silas/Documents/Quartus/PBL01/compararMais99.v                 ;         ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Total logic elements                        ; 234       ;
+;     -- Combinational with no register       ; 234       ;
+;     -- Register only                        ; 0         ;
+;     -- Combinational with a register        ; 0         ;
+;                                             ;           ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 157       ;
+;     -- 3 input functions                    ; 55        ;
+;     -- 2 input functions                    ; 22        ;
+;     -- 1 input functions                    ; 0         ;
+;     -- 0 input functions                    ; 0         ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 234       ;
+;     -- arithmetic mode                      ; 0         ;
+;     -- qfbk mode                            ; 0         ;
+;     -- register cascade mode                ; 0         ;
+;     -- synchronous clear/load mode          ; 0         ;
+;     -- asynchronous clear/load mode         ; 0         ;
+;                                             ;           ;
+; Total registers                             ; 0         ;
+; I/O pins                                    ; 69        ;
+; Maximum fan-out node                        ; MudarTime ;
+; Maximum fan-out                             ; 70        ;
+; Total fan-out                               ; 878       ;
+; Average fan-out                             ; 2.90      ;
++---------------------------------------------+-----------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                             ;
++---------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------+--------------------------------+--------------+
+; Compilation Hierarchy Node                  ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                          ; Entity Name                    ; Library Name ;
++---------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------+--------------------------------+--------------+
+; |Entradas_soma                              ; 234 (2)     ; 0            ; 0          ; 69   ; 0            ; 234 (2)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Entradas_soma                                               ; Entradas_soma                  ; work         ;
+;    |btnsEntrada:entradas|                   ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Entradas_soma|btnsEntrada:entradas                          ; btnsEntrada                    ; work         ;
+;    |comparador:comparar|                    ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Entradas_soma|comparador:comparar                           ; comparador                     ; work         ;
+;    |compararMais99:comparar99|              ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Entradas_soma|compararMais99:comparar99                     ; compararMais99                 ; work         ;
+;    |decodificadorDisplay7Segmentos:display| ; 211 (211)   ; 0            ; 0          ; 0    ; 0            ; 211 (211)    ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Entradas_soma|decodificadorDisplay7Segmentos:display        ; decodificadorDisplay7Segmentos ; work         ;
+;    |somador_subtrator7bts:resultado|        ; 16 (1)      ; 0            ; 0          ; 0    ; 0            ; 16 (1)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Entradas_soma|somador_subtrator7bts:resultado               ; somador_subtrator7bts          ; work         ;
+;       |somador1bt:r1|                       ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Entradas_soma|somador_subtrator7bts:resultado|somador1bt:r1 ; somador1bt                     ; work         ;
+;       |somador1bt:r2|                       ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Entradas_soma|somador_subtrator7bts:resultado|somador1bt:r2 ; somador1bt                     ; work         ;
+;       |somador1bt:r3|                       ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Entradas_soma|somador_subtrator7bts:resultado|somador1bt:r3 ; somador1bt                     ; work         ;
+;       |somador1bt:r4|                       ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Entradas_soma|somador_subtrator7bts:resultado|somador1bt:r4 ; somador1bt                     ; work         ;
+;       |somador1bt:r5|                       ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Entradas_soma|somador_subtrator7bts:resultado|somador1bt:r5 ; somador1bt                     ; work         ;
+;       |somador1bt:r6|                       ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Entradas_soma|somador_subtrator7bts:resultado|somador1bt:r6 ; somador1bt                     ; work         ;
+;       |somador1bt:r7|                       ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Entradas_soma|somador_subtrator7bts:resultado|somador1bt:r7 ; somador1bt                     ; work         ;
++---------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------+--------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Entradas_soma|decodificadorDisplay7Segmentos:display|Mux21 ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Entradas_soma|decodificadorDisplay7Segmentos:display|Mux21 ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Entradas_soma|decodificadorDisplay7Segmentos:display|Mux19 ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Entradas_soma|decodificadorDisplay7Segmentos:display|Mux19 ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Entradas_soma|decodificadorDisplay7Segmentos:display|Mux7  ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |Entradas_soma|decodificadorDisplay7Segmentos:display|Mux2  ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |Entradas_soma|decodificadorDisplay7Segmentos:display|Mux8  ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Entradas_soma|decodificadorDisplay7Segmentos:display|Mux5  ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; No         ; |Entradas_soma|decodificadorDisplay7Segmentos:display|Mux24 ;
+; 11:1               ; 2 bits    ; 14 LEs        ; 8 LEs                ; 6 LEs                  ; No         ; |Entradas_soma|decodificadorDisplay7Segmentos:display|Mux1  ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |Entradas_soma|decodificadorDisplay7Segmentos:display|Mux26 ;
+; 14:1               ; 2 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; No         ; |Entradas_soma|decodificadorDisplay7Segmentos:display|Mux20 ;
+; 17:1               ; 2 bits    ; 22 LEs        ; 12 LEs               ; 10 LEs                 ; No         ; |Entradas_soma|decodificadorDisplay7Segmentos:display|Mux11 ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |Entradas_soma|decodificadorDisplay7Segmentos:display|Mux4  ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; No         ; |Entradas_soma|decodificadorDisplay7Segmentos:display|Mux27 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -147,7 +255,7 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Apr 05 12:43:15 2022
+    Info: Processing started: Tue Apr 05 22:19:05 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off placar -c placar
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -168,15 +276,37 @@ Info (12021): Found 1 design units, including 1 entities, in source file compara
     Info (12023): Found entity 1: compararMais99 File: C:/Users/silas/Documents/Quartus/PBL01/compararMais99.v Line: 1
 Warning (10236): Verilog HDL Implicit Net warning at somador_subtrator7bts.v(8): created implicit net for "x" File: C:/Users/silas/Documents/Quartus/PBL01/somador_subtrator7bts.v Line: 8
 Info (12127): Elaborating entity "Entradas_soma" for the top level hierarchy
-Warning (10270): Verilog HDL Case Statement warning at Entradas_soma.v(20): incomplete case statement has no default case item File: C:/Users/silas/Documents/Quartus/PBL01/Entradas_soma.v Line: 20
-Warning (10240): Verilog HDL Always Construct warning at Entradas_soma.v(20): inferring latch(es) for variable "buzzer", which holds its previous value in one or more paths through the always construct File: C:/Users/silas/Documents/Quartus/PBL01/Entradas_soma.v Line: 20
-Error (10663): Verilog HDL Port Connection error at Entradas_soma.v(36): output or inout port "Buzzer" must be connected to a structural net expression File: C:/Users/silas/Documents/Quartus/PBL01/Entradas_soma.v Line: 36
-Error (10663): Verilog HDL Port Connection error at Entradas_soma.v(36): output or inout port "led" must be connected to a structural net expression File: C:/Users/silas/Documents/Quartus/PBL01/Entradas_soma.v Line: 36
-Error (12153): Can't elaborate top-level user hierarchy
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 3 errors, 5 warnings
-    Error: Peak virtual memory: 4694 megabytes
-    Error: Processing ended: Tue Apr 05 12:43:24 2022
-    Error: Elapsed time: 00:00:09
-    Error: Total CPU time (on all processors): 00:00:20
+Info (12128): Elaborating entity "btnsEntrada" for hierarchy "btnsEntrada:entradas" File: C:/Users/silas/Documents/Quartus/PBL01/Entradas_soma.v Line: 10
+Info (12128): Elaborating entity "comparador" for hierarchy "comparador:comparar" File: C:/Users/silas/Documents/Quartus/PBL01/Entradas_soma.v Line: 14
+Info (12128): Elaborating entity "somador_subtrator7bts" for hierarchy "somador_subtrator7bts:resultado" File: C:/Users/silas/Documents/Quartus/PBL01/Entradas_soma.v Line: 33
+Info (12128): Elaborating entity "somador1bt" for hierarchy "somador_subtrator7bts:resultado|somador1bt:r1" File: C:/Users/silas/Documents/Quartus/PBL01/somador_subtrator7bts.v Line: 22
+Info (12128): Elaborating entity "compararMais99" for hierarchy "compararMais99:comparar99" File: C:/Users/silas/Documents/Quartus/PBL01/Entradas_soma.v Line: 36
+Info (12128): Elaborating entity "decodificadorDisplay7Segmentos" for hierarchy "decodificadorDisplay7Segmentos:display" File: C:/Users/silas/Documents/Quartus/PBL01/Entradas_soma.v Line: 39
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "time1d1[7]" is stuck at VCC File: C:/Users/silas/Documents/Quartus/PBL01/Entradas_soma.v Line: 6
+    Warning (13410): Pin "time1d1[8]" is stuck at VCC File: C:/Users/silas/Documents/Quartus/PBL01/Entradas_soma.v Line: 6
+    Warning (13410): Pin "time1d1[9]" is stuck at VCC File: C:/Users/silas/Documents/Quartus/PBL01/Entradas_soma.v Line: 6
+    Warning (13410): Pin "time1d1[10]" is stuck at GND File: C:/Users/silas/Documents/Quartus/PBL01/Entradas_soma.v Line: 6
+    Warning (13410): Pin "time1d2[7]" is stuck at VCC File: C:/Users/silas/Documents/Quartus/PBL01/Entradas_soma.v Line: 6
+    Warning (13410): Pin "time1d2[8]" is stuck at VCC File: C:/Users/silas/Documents/Quartus/PBL01/Entradas_soma.v Line: 6
+    Warning (13410): Pin "time1d2[9]" is stuck at GND File: C:/Users/silas/Documents/Quartus/PBL01/Entradas_soma.v Line: 6
+    Warning (13410): Pin "time1d2[10]" is stuck at VCC File: C:/Users/silas/Documents/Quartus/PBL01/Entradas_soma.v Line: 6
+    Warning (13410): Pin "time2d1[7]" is stuck at VCC File: C:/Users/silas/Documents/Quartus/PBL01/Entradas_soma.v Line: 6
+    Warning (13410): Pin "time2d1[8]" is stuck at GND File: C:/Users/silas/Documents/Quartus/PBL01/Entradas_soma.v Line: 6
+    Warning (13410): Pin "time2d1[9]" is stuck at VCC File: C:/Users/silas/Documents/Quartus/PBL01/Entradas_soma.v Line: 6
+    Warning (13410): Pin "time2d1[10]" is stuck at VCC File: C:/Users/silas/Documents/Quartus/PBL01/Entradas_soma.v Line: 6
+    Warning (13410): Pin "time2d2[7]" is stuck at GND File: C:/Users/silas/Documents/Quartus/PBL01/Entradas_soma.v Line: 6
+    Warning (13410): Pin "time2d2[8]" is stuck at VCC File: C:/Users/silas/Documents/Quartus/PBL01/Entradas_soma.v Line: 6
+    Warning (13410): Pin "time2d2[9]" is stuck at VCC File: C:/Users/silas/Documents/Quartus/PBL01/Entradas_soma.v Line: 6
+    Warning (13410): Pin "time2d2[10]" is stuck at VCC File: C:/Users/silas/Documents/Quartus/PBL01/Entradas_soma.v Line: 6
+Info (21057): Implemented 303 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 12 input pins
+    Info (21059): Implemented 57 output pins
+    Info (21061): Implemented 234 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 20 warnings
+    Info: Peak virtual memory: 4706 megabytes
+    Info: Processing ended: Tue Apr 05 22:19:18 2022
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:25
 
 

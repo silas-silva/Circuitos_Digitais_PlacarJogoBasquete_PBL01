@@ -1,11 +1,11 @@
-Fitter Status : Successful - Tue Apr 05 12:35:34 2022
+Fitter Status : Successful - Tue Apr 05 22:19:24 2022
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : placar
-Top-level Entity Name : compararMais99
+Top-level Entity Name : Entradas_soma
 Family : MAX II
 Device : EPM570T100C5
 Timing Models : Final
-Total logic elements : 2 / 570 ( < 1 % )
-Total pins : 9 / 76 ( 12 % )
+Total logic elements : 234 / 570 ( 41 % )
+Total pins : 69 / 76 ( 91 % )
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )
