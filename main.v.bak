@@ -1,0 +1,4 @@
+module main (Nsimulacao ,Nbotoes ,ChaveNegPos, ChaveTime ,clock ,buzzer ,led ,display ,Cout);
+
+
+endmodule 

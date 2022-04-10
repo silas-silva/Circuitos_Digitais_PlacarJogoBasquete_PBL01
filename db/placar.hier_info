@@ -1,98 +1,22 @@
-|somadorSubtrator7bts
-A[0] => A[0].IN1
-A[1] => A[1].IN1
-A[2] => A[2].IN1
-A[3] => A[3].IN1
-A[4] => A[4].IN1
-A[5] => A[5].IN1
-A[6] => A[6].IN1
-B[0] => xor0.IN0
-B[1] => xor1.IN0
-Cin => Cin.IN1
-S[0] <= somador1bt:r1.S
-S[1] <= somador1bt:r2.S
-S[2] <= somador1bt:r3.S
-S[3] <= somador1bt:r4.S
-S[4] <= somador1bt:r5.S
-S[5] <= somador1bt:r6.S
-S[6] <= somador1bt:r7.S
-Cout <= somador1bt:r7.Cout
-
-
-|somadorSubtrator7bts|somador1bt:r1
-A => Xor0.IN0
-A => And0.IN0
-B => Xor0.IN1
-B => And0.IN1
-Cin => Xor1.IN1
-Cin => And1.IN1
-S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|somadorSubtrator7bts|somador1bt:r2
-A => Xor0.IN0
-A => And0.IN0
-B => Xor0.IN1
-B => And0.IN1
-Cin => Xor1.IN1
-Cin => And1.IN1
-S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|somadorSubtrator7bts|somador1bt:r3
-A => Xor0.IN0
-A => And0.IN0
-B => Xor0.IN1
-B => And0.IN1
-Cin => Xor1.IN1
-Cin => And1.IN1
-S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|somadorSubtrator7bts|somador1bt:r4
-A => Xor0.IN0
-A => And0.IN0
-B => Xor0.IN1
-B => And0.IN1
-Cin => Xor1.IN1
-Cin => And1.IN1
-S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|somadorSubtrator7bts|somador1bt:r5
-A => Xor0.IN0
-A => And0.IN0
-B => Xor0.IN1
-B => And0.IN1
-Cin => Xor1.IN1
-Cin => And1.IN1
-S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|somadorSubtrator7bts|somador1bt:r6
-A => Xor0.IN0
-A => And0.IN0
-B => Xor0.IN1
-B => And0.IN1
-Cin => Xor1.IN1
-Cin => And1.IN1
-S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|somadorSubtrator7bts|somador1bt:r7
-A => Xor0.IN0
-A => And0.IN0
-B => Xor0.IN1
-B => And0.IN1
-Cin => Xor1.IN1
-Cin => And1.IN1
-S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+|comparadorDeMagnitude
+chavePN => And0.IN0
+B[0] => And1.IN0
+B[0] => And3.IN0
+B[0] => And2.IN0
+B[1] => And2.IN1
+B[1] => And3.IN1
+B[1] => And1.IN1
+A[0] => And4.IN0
+A[0] => And1.IN2
+A[0] => Or0.IN1
+A[1] => And1.IN3
+A[1] => And2.IN2
+A[1] => And4.IN1
+A[2] => And0.IN1
+A[3] => And0.IN2
+A[4] => And0.IN3
+A[5] => And0.IN4
+A[6] => And0.IN5
+F <= and6.DB_MAX_OUTPUT_PORT_TYPE
 
 

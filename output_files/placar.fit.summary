@@ -1,11 +1,11 @@
-Fitter Status : Successful - Sat Apr 09 15:21:50 2022
+Fitter Status : Successful - Sun Apr 10 16:13:39 2022
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : Placar
-Top-level Entity Name : somadorSubtrator7bts
+Top-level Entity Name : comparadorDeMagnitude
 Family : MAX II
 Device : EPM240T100C5
 Timing Models : Final
-Total logic elements : 16 / 240 ( 7 % )
-Total pins : 18 / 80 ( 23 % )
+Total logic elements : 3 / 240 ( 1 % )
+Total pins : 11 / 80 ( 14 % )
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )
