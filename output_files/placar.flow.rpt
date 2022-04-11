@@ -1,5 +1,5 @@
 Flow report for Placar
-Mon Apr 11 19:01:53 2022
+Mon Apr 11 19:49:04 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------+
 ; Flow Summary                                                        ;
 +-----------------------+---------------------------------------------+
-; Flow Status           ; Successful - Mon Apr 11 19:01:53 2022       ;
+; Flow Status           ; Successful - Mon Apr 11 19:49:04 2022       ;
 ; Quartus Prime Version ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name         ; Placar                                      ;
-; Top-level Entity Name ; somador1bt                                  ;
+; Top-level Entity Name ; decod7segs                                  ;
 ; Family                ; MAX II                                      ;
 ; Device                ; EPM240T100C5                                ;
 ; Timing Models         ; Final                                       ;
-; Total logic elements  ; 2 / 240 ( < 1 % )                           ;
-; Total pins            ; 5 / 80 ( 6 % )                              ;
+; Total logic elements  ; 7 / 240 ( 3 % )                             ;
+; Total pins            ; 11 / 80 ( 14 % )                            ;
 ; Total virtual pins    ; 0                                           ;
 ; UFM blocks            ; 0 / 1 ( 0 % )                               ;
 +-----------------------+---------------------------------------------+
@@ -59,7 +59,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/11/2022 18:50:15 ;
+; Start date & time ; 04/11/2022 19:41:35 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Placar              ;
 +-------------------+---------------------+
@@ -70,12 +70,12 @@ refer to the applicable agreement for further details.
 +---------------------------------------+---------------------------------+---------------+-------------+------------+
 ; Assignment Name                       ; Value                           ; Default Value ; Entity Name ; Section Id ;
 +---------------------------------------+---------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID                 ; 110168740017899.164971381514264 ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID                 ; 110168740017899.164971689506556 ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP                ; 85                              ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP                ; 0                               ; --            ; --          ; --         ;
 ; POWER_EXT_SUPPLY_VOLTAGE_TO_REGULATOR ; 3.3V                            ; --            ; --          ; --         ;
 ; PROJECT_OUTPUT_DIRECTORY              ; output_files                    ; --            ; --          ; --         ;
-; TOP_LEVEL_ENTITY                      ; somador1bt                      ; Placar        ; --          ; --         ;
+; TOP_LEVEL_ENTITY                      ; decod7segs                      ; Placar        ; --          ; --         ;
 +---------------------------------------+---------------------------------+---------------+-------------+------------+
 
 
@@ -84,13 +84,13 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 4704 MB             ; 00:00:23                           ;
-; Fitter               ; 00:00:02     ; 1.0                     ; 5317 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4704 MB             ; 00:00:21                           ;
+; Fitter               ; 00:00:01     ; 1.0                     ; 5316 MB             ; 00:00:01                           ;
 ; Assembler            ; 00:00:01     ; 1.0                     ; 4648 MB             ; 00:00:00                           ;
-; Timing Analyzer      ; 00:00:00     ; 1.0                     ; 4669 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:01     ; 1.0                     ; 4669 MB             ; 00:00:01                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4602 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4611 MB             ; 00:00:01                           ;
-; Total                ; 00:00:14     ; --                      ; --                  ; 00:00:27                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4611 MB             ; 00:00:00                           ;
+; Total                ; 00:00:14     ; --                      ; --                  ; 00:00:24                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -115,7 +115,7 @@ quartus_map --read_settings_files=on --write_settings_files=off Placar -c Placar
 quartus_fit --read_settings_files=off --write_settings_files=off Placar -c Placar
 quartus_asm --read_settings_files=off --write_settings_files=off Placar -c Placar
 quartus_sta Placar -c Placar
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Placar -c Placar --vector_source=C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/somador1btsTest.vwf --testbench_file=C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/simulation/qsim/somador1btsTest.vwf.vht
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Placar -c Placar --vector_source=C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/decod7segs.vwf --testbench_file=C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/simulation/qsim/decod7segs.vwf.vht
 quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/simulation/qsim/ Placar -c Placar
 
 

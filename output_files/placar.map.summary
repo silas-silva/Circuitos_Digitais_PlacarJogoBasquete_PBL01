@@ -1,9 +1,9 @@
-Analysis & Synthesis Status : Successful - Mon Apr 11 18:50:25 2022
+Analysis & Synthesis Status : Successful - Mon Apr 11 19:41:43 2022
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : Placar
-Top-level Entity Name : somador1bt
+Top-level Entity Name : decod7segs
 Family : MAX II
-Total logic elements : 2
-Total pins : 5
+Total logic elements : 7
+Total pins : 11
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )

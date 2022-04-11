@@ -1,11 +1,46 @@
-|somador1bt
-A => Xor0.IN0
-A => And0.IN0
-B => Xor0.IN1
-B => And0.IN1
-Cin => Xor1.IN1
-Cin => And1.IN1
-S << Xor1.DB_MAX_OUTPUT_PORT_TYPE
-Cout << Or0.DB_MAX_OUTPUT_PORT_TYPE
+|decod7segs
+BCD[0] => ands01.IN0
+BCD[0] => ands03.IN0
+BCD[0] => ands05.IN0
+BCD[0] => ands07.IN0
+BCD[0] => ands09.IN0
+BCD[0] => ands02.IN0
+BCD[0] => ands04.IN0
+BCD[0] => ands06.IN0
+BCD[0] => ands08.IN0
+BCD[1] => ands02.IN1
+BCD[1] => ands03.IN1
+BCD[1] => ands06.IN1
+BCD[1] => ands07.IN1
+BCD[1] => ands01.IN1
+BCD[1] => ands04.IN1
+BCD[1] => ands05.IN1
+BCD[1] => ands08.IN1
+BCD[1] => ands09.IN1
+BCD[2] => ands04.IN2
+BCD[2] => ands05.IN2
+BCD[2] => ands06.IN2
+BCD[2] => ands07.IN2
+BCD[2] => ands01.IN2
+BCD[2] => ands02.IN2
+BCD[2] => ands03.IN2
+BCD[2] => ands08.IN2
+BCD[2] => ands09.IN2
+BCD[3] => ands08.IN3
+BCD[3] => ands09.IN3
+BCD[3] => ands01.IN3
+BCD[3] => ands02.IN3
+BCD[3] => ands03.IN3
+BCD[3] => ands04.IN3
+BCD[3] => ands05.IN3
+BCD[3] => ands06.IN3
+BCD[3] => ands07.IN3
+n7Segs[0] << ors00.DB_MAX_OUTPUT_PORT_TYPE
+n7Segs[1] << ors01.DB_MAX_OUTPUT_PORT_TYPE
+n7Segs[2] << ors02.DB_MAX_OUTPUT_PORT_TYPE
+n7Segs[3] << ors03.DB_MAX_OUTPUT_PORT_TYPE
+n7Segs[4] << ors04.DB_MAX_OUTPUT_PORT_TYPE
+n7Segs[5] << ors05.DB_MAX_OUTPUT_PORT_TYPE
+n7Segs[6] << ors06.DB_MAX_OUTPUT_PORT_TYPE
 
 
