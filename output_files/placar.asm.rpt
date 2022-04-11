@@ -1,5 +1,5 @@
 Assembler report for Placar
-Mon Apr 11 19:41:47 2022
+Mon Apr 11 20:04:44 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -10,7 +10,7 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/output_files/Placar.pof
+  5. Assembler Device Options: C:/intelFPGA_lite/Circuitos_Digitais_PlacarJogoBasquete_PBL01/output_files/Placar.pof
   6. Assembler Messages
 
 
@@ -37,9 +37,9 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon Apr 11 19:41:47 2022 ;
+; Assembler Status      ; Successful - Mon Apr 11 20:04:44 2022 ;
 ; Revision Name         ; Placar                                ;
-; Top-level Entity Name ; decod7segs                            ;
+; Top-level Entity Name ; conversorBinarioBcd                   ;
 ; Family                ; MAX II                                ;
 ; Device                ; EPM240T100C5                          ;
 +-----------------------+---------------------------------------+
@@ -52,23 +52,23 @@ refer to the applicable agreement for further details.
 +--------+---------+---------------+
 
 
-+------------------------------------------------------------------------------------------------------+
-; Assembler Generated Files                                                                            ;
-+------------------------------------------------------------------------------------------------------+
-; File Name                                                                                            ;
-+------------------------------------------------------------------------------------------------------+
-; C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/output_files/Placar.pof ;
-+------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                             ;
++---------------------------------------------------------------------------------------+
+; File Name                                                                             ;
++---------------------------------------------------------------------------------------+
+; C:/intelFPGA_lite/Circuitos_Digitais_PlacarJogoBasquete_PBL01/output_files/Placar.pof ;
++---------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/output_files/Placar.pof ;
-+----------------+---------------------------------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                                                       ;
-+----------------+---------------------------------------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x001924B2                                                                                                    ;
-; Checksum       ; 0x001928B2                                                                                                    ;
-+----------------+---------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/intelFPGA_lite/Circuitos_Digitais_PlacarJogoBasquete_PBL01/output_files/Placar.pof ;
++----------------+------------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                        ;
++----------------+------------------------------------------------------------------------------------------------+
+; JTAG usercode  ; 0x0018D2FC                                                                                     ;
+; Checksum       ; 0x0018D57C                                                                                     ;
++----------------+------------------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -77,15 +77,15 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Apr 11 19:41:46 2022
-Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Placar -c Placar
+    Info: Processing started: Mon Apr 11 20:04:43 2022
+Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off placar -c Placar
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4652 megabytes
-    Info: Processing ended: Mon Apr 11 19:41:47 2022
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:00
+    Info: Peak virtual memory: 4648 megabytes
+    Info: Processing ended: Mon Apr 11 20:04:45 2022
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
 
 
