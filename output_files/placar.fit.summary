@@ -1,11 +1,11 @@
-Fitter Status : Successful - Mon Apr 11 20:04:42 2022
+Fitter Status : Successful - Mon Apr 11 20:26:48 2022
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : Placar
-Top-level Entity Name : conversorBinarioBcd
+Top-level Entity Name : mux8pra4
 Family : MAX II
 Device : EPM240T100C5
 Timing Models : Final
-Total logic elements : 33 / 240 ( 14 % )
-Total pins : 16 / 80 ( 20 % )
+Total logic elements : 4 / 240 ( 2 % )
+Total pins : 13 / 80 ( 16 % )
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )
