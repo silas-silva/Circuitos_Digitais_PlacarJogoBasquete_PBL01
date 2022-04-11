@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Placar
-Mon Apr 11 17:15:07 2022
+Mon Apr 11 18:50:25 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -14,11 +14,7 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Port Connectivity Checks: "mux16pra4:escolherDisplay|retornar8:R"
- 10. Port Connectivity Checks: "mux16pra4:escolherDisplay|mux8pra4:mux2"
- 11. Port Connectivity Checks: "mux16pra4:escolherDisplay|mux8pra4:mux1"
- 12. Port Connectivity Checks: "somadorSubtrator7bts:somador"
- 13. Analysis & Synthesis Messages
+  9. Analysis & Synthesis Messages
 
 
 
@@ -44,13 +40,13 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Mon Apr 11 17:15:07 2022       ;
+; Analysis & Synthesis Status ; Successful - Mon Apr 11 18:50:25 2022       ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; Placar                                      ;
-; Top-level Entity Name       ; main                                        ;
+; Top-level Entity Name       ; somador1bt                                  ;
 ; Family                      ; MAX II                                      ;
-; Total logic elements        ; 84                                          ;
-; Total pins                  ; 26                                          ;
+; Total logic elements        ; 2                                           ;
+; Total pins                  ; 5                                           ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
 +-----------------------------+---------------------------------------------+
@@ -62,7 +58,7 @@ refer to the applicable agreement for further details.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EPM240T100C5       ;                    ;
-; Top-level entity name                                            ; main               ; Placar             ;
+; Top-level entity name                                            ; somador1bt         ; Placar             ;
 ; Family name                                                      ; MAX II             ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -143,81 +139,56 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                       ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                         ; Library ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------+---------+
-; somador1bt.v                     ; yes             ; User Verilog HDL File  ; C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/somador1bt.v            ;         ;
-; btnsEntrada.v                    ; yes             ; User Verilog HDL File  ; C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/btnsEntrada.v           ;         ;
-; somadorSubtrator7bts.v           ; yes             ; User Verilog HDL File  ; C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/somadorSubtrator7bts.v  ;         ;
-; comparadorDeMagnitude.v          ; yes             ; User Verilog HDL File  ; C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/comparadorDeMagnitude.v ;         ;
-; conversorBinarioBcd.v            ; yes             ; User Verilog HDL File  ; C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/conversorBinarioBcd.v   ;         ;
-; mux8pra4.v                       ; yes             ; User Verilog HDL File  ; C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/mux8pra4.v              ;         ;
-; decod7segs.v                     ; yes             ; User Verilog HDL File  ; C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/decod7segs.v            ;         ;
-; mux16pra4.v                      ; yes             ; User Verilog HDL File  ; C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/mux16pra4.v             ;         ;
-; retornar8.v                      ; yes             ; User Verilog HDL File  ; C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/retornar8.v             ;         ;
-; main.v                           ; yes             ; User Verilog HDL File  ; C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/main.v                  ;         ;
-; mudarOrdem.v                     ; yes             ; User Verilog HDL File  ; C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/mudarOrdem.v            ;         ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                            ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                              ; Library ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------------+---------+
+; somador1bt.v                     ; yes             ; User Verilog HDL File  ; C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/somador1bt.v ;         ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary           ;
-+---------------------------------------------+---------+
-; Resource                                    ; Usage   ;
-+---------------------------------------------+---------+
-; Total logic elements                        ; 84      ;
-;     -- Combinational with no register       ; 84      ;
-;     -- Register only                        ; 0       ;
-;     -- Combinational with a register        ; 0       ;
-;                                             ;         ;
-; Logic element usage by number of LUT inputs ;         ;
-;     -- 4 input functions                    ; 65      ;
-;     -- 3 input functions                    ; 15      ;
-;     -- 2 input functions                    ; 4       ;
-;     -- 1 input functions                    ; 0       ;
-;     -- 0 input functions                    ; 0       ;
-;                                             ;         ;
-; Logic elements by mode                      ;         ;
-;     -- normal mode                          ; 84      ;
-;     -- arithmetic mode                      ; 0       ;
-;     -- qfbk mode                            ; 0       ;
-;     -- register cascade mode                ; 0       ;
-;     -- synchronous clear/load mode          ; 0       ;
-;     -- asynchronous clear/load mode         ; 0       ;
-;                                             ;         ;
-; Total registers                             ; 0       ;
-; I/O pins                                    ; 26      ;
-; Maximum fan-out node                        ; chaveNP ;
-; Maximum fan-out                             ; 26      ;
-; Total fan-out                               ; 323     ;
-; Average fan-out                             ; 2.94    ;
-+---------------------------------------------+---------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Total logic elements                        ; 2     ;
+;     -- Combinational with no register       ; 2     ;
+;     -- Register only                        ; 0     ;
+;     -- Combinational with a register        ; 0     ;
+;                                             ;       ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 2     ;
+;     -- 2 input functions                    ; 0     ;
+;     -- 1 input functions                    ; 0     ;
+;     -- 0 input functions                    ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 2     ;
+;     -- arithmetic mode                      ; 0     ;
+;     -- qfbk mode                            ; 0     ;
+;     -- register cascade mode                ; 0     ;
+;     -- synchronous clear/load mode          ; 0     ;
+;     -- asynchronous clear/load mode         ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+; I/O pins                                    ; 5     ;
+; Maximum fan-out node                        ; A     ;
+; Maximum fan-out                             ; 2     ;
+; Total fan-out                               ; 8     ;
+; Average fan-out                             ; 1.14  ;
++---------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                ;
-+-------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------+-----------------------+--------------+
-; Compilation Hierarchy Node          ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                              ; Entity Name           ; Library Name ;
-+-------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------+-----------------------+--------------+
-; |main                               ; 84 (0)      ; 0            ; 0          ; 26   ; 0            ; 84 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main                                            ; main                  ; work         ;
-;    |btnsEntrada:somaBotoes|         ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|btnsEntrada:somaBotoes                     ; btnsEntrada           ; work         ;
-;    |comparadorDeMagnitude:comparar| ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|comparadorDeMagnitude:comparar             ; comparadorDeMagnitude ; work         ;
-;    |conversorBinarioBcd:bin_bcd|    ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|conversorBinarioBcd:bin_bcd                ; conversorBinarioBcd   ; work         ;
-;    |decod7segs:decodificador7segs|  ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|decod7segs:decodificador7segs              ; decod7segs            ; work         ;
-;    |mux16pra4:escolherDisplay|      ; 1 (0)       ; 0            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|mux16pra4:escolherDisplay                  ; mux16pra4             ; work         ;
-;       |mux8pra4:mux3|               ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|mux16pra4:escolherDisplay|mux8pra4:mux3    ; mux8pra4              ; work         ;
-;    |mux8pra4:digitoMostrarDisplay|  ; 52 (52)     ; 0            ; 0          ; 0    ; 0            ; 52 (52)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|mux8pra4:digitoMostrarDisplay              ; mux8pra4              ; work         ;
-;    |somadorSubtrator7bts:somador|   ; 18 (1)      ; 0            ; 0          ; 0    ; 0            ; 18 (1)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|somadorSubtrator7bts:somador               ; somadorSubtrator7bts  ; work         ;
-;       |somador1bt:r1|               ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|somadorSubtrator7bts:somador|somador1bt:r1 ; somador1bt            ; work         ;
-;       |somador1bt:r2|               ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|somadorSubtrator7bts:somador|somador1bt:r2 ; somador1bt            ; work         ;
-;       |somador1bt:r3|               ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|somadorSubtrator7bts:somador|somador1bt:r3 ; somador1bt            ; work         ;
-;       |somador1bt:r4|               ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|somadorSubtrator7bts:somador|somador1bt:r4 ; somador1bt            ; work         ;
-;       |somador1bt:r5|               ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|somadorSubtrator7bts:somador|somador1bt:r5 ; somador1bt            ; work         ;
-;       |somador1bt:r6|               ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|somadorSubtrator7bts:somador|somador1bt:r6 ; somador1bt            ; work         ;
-;       |somador1bt:r7|               ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|somadorSubtrator7bts:somador|somador1bt:r7 ; somador1bt            ; work         ;
-+-------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------+-----------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
+; |somador1bt                ; 2 (2)       ; 0            ; 0          ; 5    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |somador1bt         ; somador1bt  ; work         ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -236,51 +207,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "mux16pra4:escolherDisplay|retornar8:R"                                                                                    ;
-+-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                                                                  ;
-+-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
-; saida ; Output ; Warning  ; Output or bidir port (9 bits) is wider than the port expression (8 bits) it drives; bit(s) "saida[8..8]" have no fanouts ;
-+-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "mux16pra4:escolherDisplay|mux8pra4:mux2"                                                                                                 ;
-+------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                                   ;
-+------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
-; N    ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (8 bits) it drives.  Extra input bit(s) "N[7..1]" will be connected to GND. ;
-; N    ; Input ; Info     ; Stuck at GND                                                                                                                              ;
-+------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "mux16pra4:escolherDisplay|mux8pra4:mux1"                                                                                                 ;
-+------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                                   ;
-+------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
-; N    ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (8 bits) it drives.  Extra input bit(s) "N[7..1]" will be connected to GND. ;
-; N    ; Input ; Info     ; Stuck at VCC                                                                                                                              ;
-+------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "somadorSubtrator7bts:somador"                                                       ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Apr 11 17:14:56 2022
+    Info: Processing started: Mon Apr 11 18:50:15 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Placar -c Placar
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -309,33 +242,15 @@ Info (12021): Found 1 design units, including 1 entities, in source file mudaror
 Warning (10236): Verilog HDL Implicit Net warning at somadorSubtrator7bts.v(8): created implicit net for "x" File: C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/somadorSubtrator7bts.v Line: 8
 Warning (10236): Verilog HDL Implicit Net warning at mux16pra4.v(7): created implicit net for "OP1" File: C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/mux16pra4.v Line: 7
 Warning (10236): Verilog HDL Implicit Net warning at mux16pra4.v(8): created implicit net for "OP2" File: C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/mux16pra4.v Line: 8
-Info (12127): Elaborating entity "main" for the top level hierarchy
-Info (12128): Elaborating entity "btnsEntrada" for hierarchy "btnsEntrada:somaBotoes" File: C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/main.v Line: 29
-Info (12128): Elaborating entity "comparadorDeMagnitude" for hierarchy "comparadorDeMagnitude:comparar" File: C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/main.v Line: 32
-Info (12128): Elaborating entity "somadorSubtrator7bts" for hierarchy "somadorSubtrator7bts:somador" File: C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/main.v Line: 35
-Info (12128): Elaborating entity "somador1bt" for hierarchy "somadorSubtrator7bts:somador|somador1bt:r1" File: C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/somadorSubtrator7bts.v Line: 22
-Info (12128): Elaborating entity "conversorBinarioBcd" for hierarchy "conversorBinarioBcd:bin_bcd" File: C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/main.v Line: 38
-Info (12128): Elaborating entity "mudarOrdem" for hierarchy "mudarOrdem:padraomux" File: C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/main.v Line: 41
-Info (12128): Elaborating entity "mux8pra4" for hierarchy "mux8pra4:digitoMostrarDisplay" File: C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/main.v Line: 44
-Info (12128): Elaborating entity "mux16pra4" for hierarchy "mux16pra4:escolherDisplay" File: C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/main.v Line: 47
-Warning (10230): Verilog HDL assignment warning at mux16pra4.v(7): truncated value with size 8 to match size of target (1) File: C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/mux16pra4.v Line: 7
-Warning (10230): Verilog HDL assignment warning at mux16pra4.v(8): truncated value with size 8 to match size of target (1) File: C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/mux16pra4.v Line: 8
-Info (12128): Elaborating entity "retornar8" for hierarchy "mux16pra4:escolherDisplay|retornar8:R" File: C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/mux16pra4.v Line: 17
-Warning (10034): Output port "saida[8]" at retornar8.v(3) has no driver File: C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/retornar8.v Line: 3
-Info (12128): Elaborating entity "decod7segs" for hierarchy "decod7segs:decodificador7segs" File: C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/main.v Line: 50
-Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "escolhaDisplay[1]" is stuck at GND File: C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/main.v Line: 16
-    Warning (13410): Pin "escolhaDisplay[2]" is stuck at GND File: C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/main.v Line: 16
-    Warning (13410): Pin "escolhaDisplay[3]" is stuck at GND File: C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/main.v Line: 16
-Info (21057): Implemented 110 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 13 input pins
-    Info (21059): Implemented 13 output pins
-    Info (21061): Implemented 84 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
+Info (12127): Elaborating entity "somador1bt" for the top level hierarchy
+Info (21057): Implemented 7 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 2 output pins
+    Info (21061): Implemented 2 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 4704 megabytes
-    Info: Processing ended: Mon Apr 11 17:15:07 2022
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:24
+    Info: Processing ended: Mon Apr 11 18:50:25 2022
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:23
 
 
