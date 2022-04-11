@@ -1,0 +1,96 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/simulation/qsim
+Esomador1bt
+Z1 w1649714513
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx5 maxii 15 maxii_atom_pack 0 22 YKbF;Xz>AMfIeW9BZZ=^R1
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx5 maxii 16 maxii_components 0 22 dFmiCWeK;<H7KniW1jX0I2
+Z6 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z7 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z8 8Placar.vho
+Z9 FPlacar.vho
+l0
+L34
+VCkS;SiBg?aP9z[4HBbOg03
+!s100 iUg4K3ZYGNYjHg;>iCSQD3
+Z10 OV;C;10.5b;63
+32
+Z11 !s110 1649714516
+!i10b 1
+Z12 !s108 1649714516.000000
+Z13 !s90 -work|work|Placar.vho|
+Z14 !s107 Placar.vho|
+!i113 1
+Z15 o-work work
+Z16 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 10 somador1bt 0 22 CkS;SiBg?aP9z[4HBbOg03
+l68
+L47
+VIZbD49jSOWOLY[l9JJYlf2
+!s100 eml1R@E2>]gZWc1e<B06Z2
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Esomador1bt_vhd_vec_tst
+R1
+R6
+R7
+R0
+Z17 8somador1btsTest.vwf.vht
+Z18 Fsomador1btsTest.vwf.vht
+l0
+L31
+VRj[eUJ>QQbWBi_6GH41Z]1
+!s100 2G]k=ch?8_J1JNWF>L5n50
+R10
+32
+R11
+!i10b 1
+R12
+Z19 !s90 -work|work|somador1btsTest.vwf.vht|
+Z20 !s107 somador1btsTest.vwf.vht|
+!i113 1
+R15
+R16
+Asomador1bt_arch
+R6
+R7
+DEx4 work 22 somador1bt_vhd_vec_tst 0 22 Rj[eUJ>QQbWBi_6GH41Z]1
+l50
+L33
+V7RHVm][NBXh`R6=C9_amE0
+!s100 ]lIzmO3`0OTCM8STZ@N4_1
+R10
+32
+R11
+!i10b 1
+R12
+R19
+R20
+!i113 1
+R15
+R16

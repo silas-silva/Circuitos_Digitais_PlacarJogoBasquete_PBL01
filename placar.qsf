@@ -58,4 +58,4 @@ set_global_assignment -name VERILOG_FILE mux16pra4.v
 set_global_assignment -name VERILOG_FILE retornar8.v
 set_global_assignment -name VERILOG_FILE main.v
 set_global_assignment -name VERILOG_FILE mudarOrdem.v
-set_global_assignment -name VECTOR_WAVEFORM_FILE somador1btTest.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE somador1btsTest.vwf
