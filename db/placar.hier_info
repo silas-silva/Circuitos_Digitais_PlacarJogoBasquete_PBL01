@@ -1,4 +1,164 @@
-|conversorBinarioBcd
+|main
+nSimulacao[0] => nSimulacao[0].IN2
+nSimulacao[1] => nSimulacao[1].IN2
+nSimulacao[2] => nSimulacao[2].IN2
+nSimulacao[3] => nSimulacao[3].IN2
+nSimulacao[4] => nSimulacao[4].IN2
+nSimulacao[5] => nSimulacao[5].IN2
+nSimulacao[6] => nSimulacao[6].IN2
+cBotoes[0] => cBotoes[0].IN1
+cBotoes[1] => cBotoes[1].IN1
+cBotoes[2] => cBotoes[2].IN1
+chaveNP => chaveNP.IN2
+chaveTime => chaveTime.IN1
+clock => clock.IN2
+buzzer <= conversorBinarioBcd:bin_bcd.Passou99
+led <= comparadorDeMagnitude:comparar.F
+display[0] <= decod7segs:decodificador7segs.n7Segs
+display[1] <= decod7segs:decodificador7segs.n7Segs
+display[2] <= decod7segs:decodificador7segs.n7Segs
+display[3] <= decod7segs:decodificador7segs.n7Segs
+display[4] <= decod7segs:decodificador7segs.n7Segs
+display[5] <= decod7segs:decodificador7segs.n7Segs
+display[6] <= decod7segs:decodificador7segs.n7Segs
+escolhaDisplay[0] <= mux16pra4:escolherDisplay.saida
+escolhaDisplay[1] <= mux16pra4:escolherDisplay.saida
+escolhaDisplay[2] <= mux16pra4:escolherDisplay.saida
+escolhaDisplay[3] <= mux16pra4:escolherDisplay.saida
+
+
+|main|btnsEntrada:somaBotoes
+A => Xor0.IN0
+A => Xor1.IN0
+B => Xor0.IN1
+B => And1.IN1
+C => Xor1.IN1
+C => And0.IN1
+N[0] <= And0.DB_MAX_OUTPUT_PORT_TYPE
+N[1] <= And1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|comparadorDeMagnitude:comparar
+chavePN => And0.IN0
+B[0] => And1.IN0
+B[0] => And3.IN0
+B[0] => And2.IN0
+B[1] => And2.IN1
+B[1] => And3.IN1
+B[1] => And1.IN1
+A[0] => And4.IN0
+A[0] => And1.IN2
+A[0] => Or0.IN1
+A[1] => And1.IN3
+A[1] => And2.IN2
+A[1] => And4.IN1
+A[2] => And0.IN1
+A[3] => And0.IN2
+A[4] => And0.IN3
+A[5] => And0.IN4
+A[6] => And0.IN5
+F <= and6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|somadorSubtrator7bts:somador
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+A[4] => A[4].IN1
+A[5] => A[5].IN1
+A[6] => A[6].IN1
+B[0] => xor0.IN0
+B[1] => xor1.IN0
+Cin => Cin.IN1
+S[0] <= somador1bt:r1.S
+S[1] <= somador1bt:r2.S
+S[2] <= somador1bt:r3.S
+S[3] <= somador1bt:r4.S
+S[4] <= somador1bt:r5.S
+S[5] <= somador1bt:r6.S
+S[6] <= somador1bt:r7.S
+Cout <= somador1bt:r7.Cout
+
+
+|main|somadorSubtrator7bts:somador|somador1bt:r1
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => Xor1.IN1
+Cin => And1.IN1
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|somadorSubtrator7bts:somador|somador1bt:r2
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => Xor1.IN1
+Cin => And1.IN1
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|somadorSubtrator7bts:somador|somador1bt:r3
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => Xor1.IN1
+Cin => And1.IN1
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|somadorSubtrator7bts:somador|somador1bt:r4
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => Xor1.IN1
+Cin => And1.IN1
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|somadorSubtrator7bts:somador|somador1bt:r5
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => Xor1.IN1
+Cin => And1.IN1
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|somadorSubtrator7bts:somador|somador1bt:r6
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => Xor1.IN1
+Cin => And1.IN1
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|somadorSubtrator7bts:somador|somador1bt:r7
+A => Xor0.IN0
+A => And0.IN0
+B => Xor0.IN1
+B => And0.IN1
+Cin => Xor1.IN1
+Cin => And1.IN1
+S <= Xor1.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Or0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|conversorBinarioBcd:bin_bcd
 A[0] => andB72.IN0
 A[0] => andB73.IN0
 A[0] => andB74.IN0
@@ -317,5 +477,191 @@ B[5] <= orB50.DB_MAX_OUTPUT_PORT_TYPE
 B[6] <= orB60.DB_MAX_OUTPUT_PORT_TYPE
 B[7] <= orB70.DB_MAX_OUTPUT_PORT_TYPE
 Passou99 <= orP1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|mudarOrdem:padraomux
+n[0] => saida[0].DATAIN
+n[1] => saida[2].DATAIN
+n[2] => saida[4].DATAIN
+n[3] => saida[6].DATAIN
+n[4] => saida[1].DATAIN
+n[5] => saida[3].DATAIN
+n[6] => saida[5].DATAIN
+n[7] => saida[7].DATAIN
+saida[0] <= n[0].DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= n[4].DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= n[1].DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= n[5].DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= n[2].DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= n[6].DB_MAX_OUTPUT_PORT_TYPE
+saida[6] <= n[3].DB_MAX_OUTPUT_PORT_TYPE
+saida[7] <= n[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|mux8pra4:digitoMostrarDisplay
+N[0] => ands00.IN0
+N[1] => ands10.IN0
+N[2] => ands20.IN0
+N[3] => ands30.IN0
+N[4] => ands01.IN0
+N[5] => ands11.IN0
+N[6] => ands21.IN0
+N[7] => ands31.IN0
+escolha => ands01.IN1
+escolha => ands11.IN1
+escolha => ands21.IN1
+escolha => ands31.IN1
+escolha => ands00.IN1
+escolha => ands10.IN1
+escolha => ands20.IN1
+escolha => ands30.IN1
+S[0] <= ors00.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= ors10.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= ors20.DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= ors30.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|mux16pra4:escolherDisplay
+seletor1 => seletor1.IN1
+seletorTime => seletorTime.IN2
+saida[0] <= mux8pra4:mux3.port2
+saida[1] <= mux8pra4:mux3.port2
+saida[2] <= mux8pra4:mux3.port2
+saida[3] <= mux8pra4:mux3.port2
+
+
+|main|mux16pra4:escolherDisplay|mux8pra4:mux1
+N[0] => ands00.IN0
+N[1] => ands10.IN0
+N[2] => ands20.IN0
+N[3] => ands30.IN0
+N[4] => ands01.IN0
+N[5] => ands11.IN0
+N[6] => ands21.IN0
+N[7] => ands31.IN0
+escolha => ands01.IN1
+escolha => ands11.IN1
+escolha => ands21.IN1
+escolha => ands31.IN1
+escolha => ands00.IN1
+escolha => ands10.IN1
+escolha => ands20.IN1
+escolha => ands30.IN1
+S[0] <= ors00.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= ors10.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= ors20.DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= ors30.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|mux16pra4:escolherDisplay|mux8pra4:mux2
+N[0] => ands00.IN0
+N[1] => ands10.IN0
+N[2] => ands20.IN0
+N[3] => ands30.IN0
+N[4] => ands01.IN0
+N[5] => ands11.IN0
+N[6] => ands21.IN0
+N[7] => ands31.IN0
+escolha => ands01.IN1
+escolha => ands11.IN1
+escolha => ands21.IN1
+escolha => ands31.IN1
+escolha => ands00.IN1
+escolha => ands10.IN1
+escolha => ands20.IN1
+escolha => ands30.IN1
+S[0] <= ors00.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= ors10.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= ors20.DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= ors30.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|mux16pra4:escolherDisplay|retornar8:R
+n1[0] => saida[0].DATAIN
+n1[1] => saida[2].DATAIN
+n1[2] => saida[4].DATAIN
+n1[3] => saida[6].DATAIN
+n2[0] => saida[1].DATAIN
+n2[1] => saida[3].DATAIN
+n2[2] => saida[5].DATAIN
+n2[3] => saida[7].DATAIN
+saida[0] <= n1[0].DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= n2[0].DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= n1[1].DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= n2[1].DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= n1[2].DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= n2[2].DB_MAX_OUTPUT_PORT_TYPE
+saida[6] <= n1[3].DB_MAX_OUTPUT_PORT_TYPE
+saida[7] <= n2[3].DB_MAX_OUTPUT_PORT_TYPE
+saida[8] <= <GND>
+
+
+|main|mux16pra4:escolherDisplay|mux8pra4:mux3
+N[0] => ands00.IN0
+N[1] => ands10.IN0
+N[2] => ands20.IN0
+N[3] => ands30.IN0
+N[4] => ands01.IN0
+N[5] => ands11.IN0
+N[6] => ands21.IN0
+N[7] => ands31.IN0
+escolha => ands01.IN1
+escolha => ands11.IN1
+escolha => ands21.IN1
+escolha => ands31.IN1
+escolha => ands00.IN1
+escolha => ands10.IN1
+escolha => ands20.IN1
+escolha => ands30.IN1
+S[0] <= ors00.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= ors10.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= ors20.DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= ors30.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|decod7segs:decodificador7segs
+BCD[0] => ands01.IN0
+BCD[0] => ands03.IN0
+BCD[0] => ands05.IN0
+BCD[0] => ands07.IN0
+BCD[0] => ands09.IN0
+BCD[0] => ands02.IN0
+BCD[0] => ands04.IN0
+BCD[0] => ands06.IN0
+BCD[0] => ands08.IN0
+BCD[1] => ands02.IN1
+BCD[1] => ands03.IN1
+BCD[1] => ands06.IN1
+BCD[1] => ands07.IN1
+BCD[1] => ands01.IN1
+BCD[1] => ands04.IN1
+BCD[1] => ands05.IN1
+BCD[1] => ands08.IN1
+BCD[1] => ands09.IN1
+BCD[2] => ands04.IN2
+BCD[2] => ands05.IN2
+BCD[2] => ands06.IN2
+BCD[2] => ands07.IN2
+BCD[2] => ands01.IN2
+BCD[2] => ands02.IN2
+BCD[2] => ands03.IN2
+BCD[2] => ands08.IN2
+BCD[2] => ands09.IN2
+BCD[3] => ands08.IN3
+BCD[3] => ands09.IN3
+BCD[3] => ands01.IN3
+BCD[3] => ands02.IN3
+BCD[3] => ands03.IN3
+BCD[3] => ands04.IN3
+BCD[3] => ands05.IN3
+BCD[3] => ands06.IN3
+BCD[3] => ands07.IN3
+n7Segs[0] <= ors00.DB_MAX_OUTPUT_PORT_TYPE
+n7Segs[1] <= ors01.DB_MAX_OUTPUT_PORT_TYPE
+n7Segs[2] <= ors02.DB_MAX_OUTPUT_PORT_TYPE
+n7Segs[3] <= ors03.DB_MAX_OUTPUT_PORT_TYPE
+n7Segs[4] <= ors04.DB_MAX_OUTPUT_PORT_TYPE
+n7Segs[5] <= ors05.DB_MAX_OUTPUT_PORT_TYPE
+n7Segs[6] <= ors06.DB_MAX_OUTPUT_PORT_TYPE
 
 

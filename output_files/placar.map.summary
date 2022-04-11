@@ -1,9 +1,9 @@
-Analysis & Synthesis Status : Successful - Sun Apr 10 18:36:34 2022
+Analysis & Synthesis Status : Successful - Mon Apr 11 17:15:07 2022
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : Placar
-Top-level Entity Name : conversorBinarioBcd
+Top-level Entity Name : main
 Family : MAX II
-Total logic elements : 33
-Total pins : 16
+Total logic elements : 84
+Total pins : 26
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )

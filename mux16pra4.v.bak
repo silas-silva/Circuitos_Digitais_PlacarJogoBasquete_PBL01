@@ -1,0 +1,8 @@
+module mux16pra4(seletor, saida);
+	input [1:0] seletor:
+	output [3:0] saida;
+	
+	
+
+
+endmodule 

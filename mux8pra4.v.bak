@@ -1,0 +1,12 @@
+module mux8pra4(N, escolha, S);
+	input [6:0] N;
+	input escolha;
+	output [3:0] S;
+	
+	
+	
+	
+	
+	
+
+endmodule 

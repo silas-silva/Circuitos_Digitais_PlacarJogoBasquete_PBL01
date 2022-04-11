@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "MAX II"
 set_global_assignment -name DEVICE EPM240T100C5
-set_global_assignment -name TOP_LEVEL_ENTITY conversorBinarioBcd
+set_global_assignment -name TOP_LEVEL_ENTITY main
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "15:11:51  APRIL 09, 2022"
 set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
@@ -52,3 +52,9 @@ set_global_assignment -name VERILOG_FILE btnsEntrada.v
 set_global_assignment -name VERILOG_FILE somadorSubtrator7bts.v
 set_global_assignment -name VERILOG_FILE comparadorDeMagnitude.v
 set_global_assignment -name VERILOG_FILE conversorBinarioBcd.v
+set_global_assignment -name VERILOG_FILE mux8pra4.v
+set_global_assignment -name VERILOG_FILE decod7segs.v
+set_global_assignment -name VERILOG_FILE mux16pra4.v
+set_global_assignment -name VERILOG_FILE retornar8.v
+set_global_assignment -name VERILOG_FILE main.v
+set_global_assignment -name VERILOG_FILE mudarOrdem.v
