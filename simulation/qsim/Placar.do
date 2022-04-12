@@ -1,11 +1,11 @@
 onerror {exit -code 1}
 vlib work
-vlog -work work Placar.vo
-vlog -work work btnEntradaTeste.vwf.vt
-vsim -c -t 1ps -L maxii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.btnsEntrada_vlg_vec_tst
-vcd file -direction placar.msim.vcd
-vcd add -internal btnsEntrada_vlg_vec_tst/*
-vcd add -internal btnsEntrada_vlg_vec_tst/i1/*
+vcom -work work Placar.vho
+vcom -work work testeTotal.vwf.vht
+vsim  -c -t 1ps -L maxii -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.mux8pra4_vhd_vec_tst
+vcd file -direction Placar.msim.vcd
+vcd add -internal mux8pra4_vhd_vec_tst/*
+vcd add -internal mux8pra4_vhd_vec_tst/i1/*
 proc simTimestamp {} {
     echo "Simulation time: $::now ps"
     if { [string equal running [runStatus]] } {

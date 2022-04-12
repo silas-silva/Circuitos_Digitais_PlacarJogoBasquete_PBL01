@@ -1,9 +1,9 @@
-Analysis & Synthesis Status : Successful - Mon Apr 11 21:37:07 2022
+Analysis & Synthesis Status : Successful - Tue Apr 12 20:02:12 2022
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : Placar
-Top-level Entity Name : main
+Top-level Entity Name : mux8pra4
 Family : MAX II
-Total logic elements : 84
-Total pins : 26
+Total logic elements : 4
+Total pins : 13
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )

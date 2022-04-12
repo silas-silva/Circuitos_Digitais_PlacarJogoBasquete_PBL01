@@ -33,32 +33,32 @@ module conversorBinarioBcd( A, B, Passou99);
 	not (AN1, A[1]);
 	not (AN0, A[0]);
 
-	//==================================== Saida B[0] =================================
+	//==================================== Saida B[7] =================================
 	//A B C' E' F'  + A B C' D'  + A B' C ;
 	wire B00, B01, B02;
 	and andB00 (B00 ,A[6], A[5], AN2, AN1);
 	and andB01 (B01 ,A[6], A[5], AN3, AN4);
 	and andB02 (B02 ,A[6], AN5, A[4]);
-	or orB00 (B[0] ,B00, B01, B02);
+	or orB00 (B[7] ,B00, B01, B02);
 	
-	//==================================== Saida B[1] =================================
+	//==================================== Saida B[6] =================================
 	//A B' C'  + A' B C  + A' B D ;
 	wire B10, B11, B12;
 	and andB10 (B10 ,A[6], AN5, AN4);
 	and andB11 (B11 ,AN6, A[5], A[4]);
 	and andB12 (B12 ,AN6, A[5], A[3]);
-	or orB10 (B[1] ,B10, B11, B12);
+	or orB10 (B[6] ,B10, B11, B12);
 	
-	//==================================== Saida B[2] =================================
+	//==================================== Saida B[5] =================================
 	//A' B C' D'   + A' C D E  + A B' C'  + A' B' C D  + A' B' C E ;
 	wire B20, B21, B22, B23;
 	and andB20 (B20 ,AN6, A[5], AN4, AN3);
 	and andB21 (B21 ,AN6, A[4], A[3], A[2]);
 	and andB22 (B22 ,A[6], AN5, AN4);
 	and andB23 (B23 ,AN6, AN5, A[4], A[2]);
-	or orB20 (B[2] ,B20, B21, B22, B23);
+	or orB20 (B[5] ,B20, B21, B22, B23);
 	
-	//==================================== Saida B[3] =================================
+	//==================================== Saida B[4] =================================
 	//A' B D' F  + A C' D' E F  + A C' D E' F'  + A B' D E + A' B' C D' E'  + A' B C D E'  + A' B D' E  + A B' D F  
 	//+ B C' D'  + B' D E F  + B' C' D E  + B' C' D F ;
 	wire B30, B31, B32, B33, B34, B35, B36, B37, B38, B39, B391, B392;
@@ -74,9 +74,9 @@ module conversorBinarioBcd( A, B, Passou99);
 	and andB39 (B39 ,AN5, A[3], A[2], A[1]);
 	and andB391 (B391 ,AN5, AN4, A[3], A[2]);
 	and andB392 (B392 ,AN5, AN4, A[3], A[1]);
-	or orB30 (B[3] ,B30, B31, B32, B33, B34, B35, B36, B37, B38, B39, B391, B392);
+	or orB30 (B[4] ,B30, B31, B32, B33, B34, B35, B36, B37, B38, B39, B391, B392);
 	
-	//==================================== Saida B[4] =================================
+	//==================================== Saida B[3] =================================
 	//A' B' C D E F'  + A' B' C D' E' F  + A' B C D E' F  + A B' C D E' F'  
 	//+ A' B C D' E' F' + A B' C' D E F  + A' B' C' D E' F'  + B C' D' E F  
 	//+ A C' D' E F'  + A B C' D E' F'  + A B C' D' F ;
@@ -92,9 +92,9 @@ module conversorBinarioBcd( A, B, Passou99);
 	and andB48 (B48 ,A[6], AN4, AN3, A[2], AN1);
 	and andB49 (B49 ,A[6], AN4, A[3], AN2, AN1);
 	and andB491 (B491 ,A[5], A[4], AN3, AN3, A[1]);
-	or orB40 (B[4] ,B40, B41, B42, B43, B44, B45, B46, B47, B48, B49, B491);
+	or orB40 (B[3] ,B40, B41, B42, B43, B44, B45, B46, B47, B48, B49, B491);
 
-	//==================================== Saida B[5] =================================
+	//==================================== Saida B[2] =================================
 	//A' C' D' E F'  + A' B' C' E F  + A' B C' D E  + A' C D E' F'  
 	//A C' D' E' F' + A' B C D' E F  + A B' C E F  + A B' C D' E  
 	//A' B C' D' E' F  + A B' C' E' F  + A' B' C D E'  + A' B' C E' F'  
@@ -113,9 +113,9 @@ module conversorBinarioBcd( A, B, Passou99);
 	and andB591 (B591 ,AN6, AN5, A[4], A[3], AN2);
 	and andB592 (B592 ,AN6 , AN5, A[4], AN2, AN1);
 	and andB593 (B593 ,A[6], AN5, AN4, A[3], A[2], AN1);
-	or orB50 (B[5] ,B50, B51, B52, B53, B54, B55, B56, B57, B58, B59, B591, B592, B593);
+	or orB50 (B[2] ,B50, B51, B52, B53, B54, B55, B56, B57, B58, B59, B591, B592, B593);
 	
-	//==================================== Saida B[6] =================================
+	//==================================== Saida B[1] =================================
 	//B' C' D' E' F  + A' B' D' E F  + A B' C D' F  + B C' D' E' F'  
 	//A B' D E F'  + A B' C' D F'  + A' B C D E' F'  + A' B D E F   
 	//A' B D' E F'  + A' B C' D F  + A' B' C D E' F  + A' B' C D' E' F'  
@@ -135,9 +135,9 @@ module conversorBinarioBcd( A, B, Passou99);
 	and andB692 (B692 ,AN6 , AN5, A[4], AN3, AN2, AN1);
 	and andB693 (B693, AN5, AN4, A[3], A[2], AN1);
 	
-	or orB60 (B[6] ,B60, B61, B62, B63, B64, B65, B66, B67, B68, B69, B691, B692, B693);
+	or orB60 (B[1] ,B60, B61, B62, B63, B64, B65, B66, B67, B68, B69, B691, B692, B693);
 	
-	//==================================== Saida B[7] =================================
+	//==================================== Saida B[0] =================================
 	// A B C' D E' F'  + A B C' D' E  + B' G + A' G +  C' D' G;
 	wire B70, B71, B72, B73, B74;
 	and andB70 (B70 ,A[6], A[5], AN4, A[3], AN2, AN1);
@@ -145,7 +145,7 @@ module conversorBinarioBcd( A, B, Passou99);
 	and andB72 (B72 ,AN5, A[0]);
 	and andB73 (B73 ,AN6, A[0]);
 	and andB74 (B74 ,AN4, AN3, A[0]);
-	or orB70 (B[7] ,B70, B71, B72, B73, B74);
+	or orB70 (B[0] ,B70, B71, B72, B73, B74);
 	
 	//==================================== Saida Passou 99 =================================
 	//Passou99 = A B C' D E' F'  + A B C' D' E ;

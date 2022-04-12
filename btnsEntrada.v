@@ -3,15 +3,23 @@ module btnsEntrada ( A, B, C, N);
 	output [1:0] N;
 	
 	
-	wire T1, T2, T3, T4;
+	wire T1, T2, T3;
+	wire CN, BN, AN;
 	
+	not (CN, C);
+	not (BN, B);
+	not (AN, A);
 	
-	xor Xor0(T1, A, B);
-	not Not0(T2, C);
-	and And0 (N[0], T1, T2);
-	xor Xor1(T3, A, C);
-	not Not1(T4, B);
-	and And1 (N[1], T3, T4);
+	and And0 (T1, CN, B, A);
+	
+	and And1 (T2, C, BN, A);
+	
+	and And2 (T3, C, B, AN);
+	
+
+	
+	xor Xor0(N[0], T1, T3);
+	xor Xor1(N[1], T1, T2);
 	
 	
 endmodule 

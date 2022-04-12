@@ -38,6 +38,7 @@ module main (nSimulacao ,cBotoes ,chaveNP, chaveTime ,clock ,buzzer ,led ,displa
 	conversorBinarioBcd bin_bcd ( .A(soma), .B(digitosBCD), .Passou99(buzzer));
 	
 	
+	
 	mudarOrdem padraomux (digitosBCD, digitosBCDPadraoMux);
 	
 	

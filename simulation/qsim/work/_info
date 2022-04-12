@@ -9,87 +9,259 @@ z2
 cModel Technology
 Z0 dC:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/simulation/qsim
 vbtnsEntrada
-Z1 !s110 1649721121
+Z1 !s110 1649802387
 !i10b 1
-!s100 4L12:PcoWgHbHhBFO0fDW2
-IdOcGbIDYkVTEMXeoWMZ]A1
+!s100 di5;2@:B11G<Kz19bQ?_12
+IC>2W`=9fgZD1Hb4@1?a_H2
 Z2 VDg1SIo80bB@j0V0VzS_@n1
-Z3 dC:/intelFPGA_lite/Circuitos_Digitais_PlacarJogoBasquete_PBL01/simulation/qsim
-w1649721118
-Z4 8Placar.vo
-Z5 FPlacar.vo
-Z6 L0 31
-Z7 OV;L;10.5b;63
+R0
+w1649802386
+Z3 8Placar.vo
+Z4 FPlacar.vo
+Z5 L0 31
+Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-!s108 1649721120.000000
+Z7 !s108 1649802387.000000
 Z8 !s107 Placar.vo|
 Z9 !s90 -work|work|Placar.vo|
 !i113 1
 Z10 o-work work
 Z11 tCvgOpt 0
 nbtns@entrada
+Ebtnsentrada
+Z12 w1649803629
+Z13 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z14 DPx5 maxii 15 maxii_atom_pack 0 22 YKbF;Xz>AMfIeW9BZZ=^R1
+Z15 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z16 DPx5 maxii 16 maxii_components 0 22 dFmiCWeK;<H7KniW1jX0I2
+Z17 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z18 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z19 8Placar.vho
+Z20 FPlacar.vho
+l0
+L34
+V<ecgQRiX2J`Ifh7DDXR3_0
+!s100 9n1B;c1Q5C0BNna2nb@HM2
+Z21 OV;C;10.5b;63
+32
+Z22 !s110 1649803630
+!i10b 1
+Z23 !s108 1649803630.000000
+Z24 !s90 -work|work|Placar.vho|
+Z25 !s107 Placar.vho|
+!i113 1
+R10
+Z26 tExplicit 1 CvgOpt 0
+Astructure
+R13
+R14
+R15
+R16
+R17
+R18
+DEx4 work 11 btnsentrada 0 22 <ecgQRiX2J`Ifh7DDXR3_0
+l66
+L46
+VgzZ;RbB>:SiGka:aHi4Jb0
+!s100 d?aCl3Z^ifF>^:cCfBl?j0
+R21
+32
+R22
+!i10b 1
+R23
+R24
+R25
+!i113 1
+R10
+R26
+Ebtnsentrada_vhd_vec_tst
+Z27 w1649803628
+R17
+R18
+R0
+Z28 8mux8x4Teste.vwf.vht
+Z29 Fmux8x4Teste.vwf.vht
+l0
+L31
+VMSRF_7C2n<X_[aOBIj:<S1
+!s100 d?YkT=jjW7f9IY_ce_9nF2
+R21
+32
+R22
+!i10b 1
+R23
+Z30 !s90 -work|work|mux8x4Teste.vwf.vht|
+Z31 !s107 mux8x4Teste.vwf.vht|
+!i113 1
+R10
+R26
+Abtnsentrada_arch
+R17
+R18
+DEx4 work 23 btnsentrada_vhd_vec_tst 0 22 MSRF_7C2n<X_[aOBIj:<S1
+l48
+L33
+V3_abS<b:>KFSB:@NQ2DJ71
+!s100 5GhmUJhYYLf5=6VH=k35b1
+R21
+32
+R22
+!i10b 1
+R23
+R30
+R31
+!i113 1
+R10
+R26
 vbtnsEntrada_vlg_vec_tst
 R1
 !i10b 1
-!s100 mG^6z8[<]a]fgRMYR>`9C1
-IkBlFI@XI9?hVI[7kf6EFY0
+!s100 mOdT`eUfSZ]SX]1C=dd8G0
+ISK66hR63oUKXaa7WO=D;T3
 R2
-R3
-w1649721116
-8btnEntradaTeste.vwf.vt
-FbtnEntradaTeste.vwf.vt
-Z12 L0 29
-R7
+R0
+w1649802385
+8somadorSubtratorTest.vwf.vt
+FsomadorSubtratorTest.vwf.vt
+Z32 L0 29
+R6
 r1
 !s85 0
 31
-!s108 1649721121.000000
-!s107 btnEntradaTeste.vwf.vt|
-!s90 -work|work|btnEntradaTeste.vwf.vt|
+R7
+!s107 somadorSubtratorTest.vwf.vt|
+!s90 -work|work|somadorSubtratorTest.vwf.vt|
 !i113 1
 R10
 R11
 nbtns@entrada_vlg_vec_tst
 vconversorBinarioBcd
-Z13 !s110 1649718735
+Z33 !s110 1649718735
 !i10b 1
 !s100 IUlN=6OdTVG@@;<F4f:i;2
 IzBEXeg7do1o?ajHWjGI0c1
 R2
-R3
+Z34 dC:/intelFPGA_lite/Circuitos_Digitais_PlacarJogoBasquete_PBL01/simulation/qsim
 w1649718733
+R3
 R4
 R5
 R6
-R7
 r1
 !s85 0
 31
-Z14 !s108 1649718735.000000
+Z35 !s108 1649718735.000000
 R8
 R9
 !i113 1
 R10
 R11
 nconversor@binario@bcd
-vconversorBinarioBcd_vlg_vec_tst
+Econversorbinariobcd
+Z36 w1649799717
 R13
+R14
+R15
+R16
+R17
+R18
+R0
+R19
+R20
+l0
+L34
+Vfcn95RSOo?]B?igf[QPK`0
+!s100 ESd4[I@mm4O5TegV1GWbo3
+R21
+32
+Z37 !s110 1649799719
+!i10b 1
+Z38 !s108 1649799719.000000
+R24
+R25
+!i113 1
+R10
+R26
+Astructure
+R13
+R14
+R15
+R16
+R17
+R18
+DEx4 work 19 conversorbinariobcd 0 22 fcn95RSOo?]B?igf[QPK`0
+l93
+L45
+V3iKNWMA587Z@=;?^@e:732
+!s100 LNEZ[eo`Y=mNKX5XRTLz<3
+R21
+32
+R37
+!i10b 1
+R38
+R24
+R25
+!i113 1
+R10
+R26
+Econversorbinariobcd_vhd_vec_tst
+R36
+R17
+R18
+R0
+Z39 8ConversorBinarioBcdTest.vwf.vht
+Z40 FConversorBinarioBcdTest.vwf.vht
+l0
+L31
+V1ddN;5B^cZ;<P=^GodLUO3
+!s100 5<_:jCnD2XF[>NU`Y75CM0
+R21
+32
+R37
+!i10b 1
+R38
+Z41 !s90 -work|work|ConversorBinarioBcdTest.vwf.vht|
+Z42 !s107 ConversorBinarioBcdTest.vwf.vht|
+!i113 1
+R10
+R26
+Aconversorbinariobcd_arch
+R17
+R18
+DEx4 work 31 conversorbinariobcd_vhd_vec_tst 0 22 1ddN;5B^cZ;<P=^GodLUO3
+l46
+L33
+VLkZP_=m1CSL`JXe?:^K4g0
+!s100 PbK9cnV>;9i7g3_AREiaU1
+R21
+32
+R37
+!i10b 1
+R38
+R41
+R42
+!i113 1
+R10
+R26
+vconversorBinarioBcd_vlg_vec_tst
+R33
 !i10b 1
 !s100 HjAUcc[7KHZ`n8nlB4D3P3
 IeQ^geg8`o]CY;UbSRLcP>3
 R2
-R3
+R34
 w1649718731
 8ConversorBinarioBcdTest.vwf.vt
 FConversorBinarioBcdTest.vwf.vt
-R12
-R7
+R32
+R6
 r1
 !s85 0
 31
-R14
+R35
 !s107 ConversorBinarioBcdTest.vwf.vt|
 !s90 -work|work|ConversorBinarioBcdTest.vwf.vt|
 !i113 1
@@ -97,302 +269,367 @@ R10
 R11
 nconversor@binario@bcd_vlg_vec_tst
 Edecod7segs
-Z15 w1649717344
-Z16 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
-Z17 DPx5 maxii 15 maxii_atom_pack 0 22 YKbF;Xz>AMfIeW9BZZ=^R1
-Z18 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
-Z19 DPx5 maxii 16 maxii_components 0 22 dFmiCWeK;<H7KniW1jX0I2
-Z20 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z21 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z43 w1649717344
+R13
+R14
+R15
+R16
+R17
+R18
 R0
-Z22 8Placar.vho
-Z23 FPlacar.vho
+R19
+R20
 l0
 L34
 Vc`0R_l5VIY1XWH;n0GEOF3
 !s100 Cn[ck;=kTXDGdKKQ@Q?LH1
-Z24 OV;C;10.5b;63
+R21
 32
-Z25 !s110 1649717346
+Z44 !s110 1649717346
 !i10b 1
-Z26 !s108 1649717345.000000
-Z27 !s90 -work|work|Placar.vho|
-Z28 !s107 Placar.vho|
+Z45 !s108 1649717345.000000
+R24
+R25
 !i113 1
 R10
-Z29 tExplicit 1 CvgOpt 0
+R26
 Astructure
+R13
+R14
+R15
 R16
 R17
 R18
-R19
-R20
-R21
 DEx4 work 10 decod7segs 0 22 c`0R_l5VIY1XWH;n0GEOF3
 l67
 L44
 VLbc``ehNj30J@IC8nDeMF1
 !s100 j_1^<2Bd8z0aWIBThGcf22
-R24
+R21
 32
-R25
+R44
 !i10b 1
-R26
-R27
-R28
+R45
+R24
+R25
 !i113 1
 R10
-R29
+R26
 Edecod7segs_vhd_vec_tst
-Z30 w1649717343
-R20
-R21
+Z46 w1649717343
+R17
+R18
 R0
-Z31 8decod7segs.vwf.vht
-Z32 Fdecod7segs.vwf.vht
+Z47 8decod7segs.vwf.vht
+Z48 Fdecod7segs.vwf.vht
 l0
 L31
 VMU2nKKN8BodK;gnNElFJc2
 !s100 RRGP=CS>;n@IY>Be8U<g=1
-R24
+R21
 32
-R25
+R44
 !i10b 1
-Z33 !s108 1649717346.000000
-Z34 !s90 -work|work|decod7segs.vwf.vht|
-Z35 !s107 decod7segs.vwf.vht|
+Z49 !s108 1649717346.000000
+Z50 !s90 -work|work|decod7segs.vwf.vht|
+Z51 !s107 decod7segs.vwf.vht|
 !i113 1
 R10
-R29
+R26
 Adecod7segs_arch
-R20
-R21
+R17
+R18
 DEx4 work 22 decod7segs_vhd_vec_tst 0 22 MU2nKKN8BodK;gnNElFJc2
 l44
 L33
 V73nM?c?9S;J>1OB:k0?^R0
 !s100 mmXFR:Wzaf43A=mzR>k^13
-R24
+R21
 32
+R44
+!i10b 1
+R49
+R50
+R51
+!i113 1
+R10
+R26
+Emux8pra4
+Z52 w1649804801
+R13
+R14
+R15
+R16
+R17
+R18
+R0
+R19
+R20
+l0
+L34
+VU]nT@TBOG:LTHcf=f@kOz0
+!s100 FKAZifimllETSMTTFaii70
+R21
+32
+Z53 !s110 1649804802
+!i10b 1
+Z54 !s108 1649804802.000000
+R24
 R25
-!i10b 1
-R33
-R34
-R35
 !i113 1
 R10
-R29
-vmux8pra4
-Z36 !s110 1649720292
+R26
+Astructure
+R13
+R14
+R15
+R16
+R17
+R18
+DEx4 work 8 mux8pra4 0 22 U]nT@TBOG:LTHcf=f@kOz0
+l65
+L45
+VK4Ac3H_bKdU9497CHTEkG1
+!s100 1X_Q1_aKgZ1d4U8XzSPJE2
+R21
+32
+R53
 !i10b 1
-!s100 :Wj3m9WHeB:8Vh>VGAS^l1
-I]]b@4N_dKzSeg@5ERJ?F20
-R2
-R3
-w1649720290
-R4
-R5
-R6
-R7
-r1
-!s85 0
-31
-Z37 !s108 1649720292.000000
-R8
-R9
+R54
+R24
+R25
 !i113 1
 R10
-R11
+R26
+Emux8pra4_vhd_vec_tst
+Z55 w1649804800
+R17
+R18
+R0
+Z56 8testeTotal.vwf.vht
+Z57 FtesteTotal.vwf.vht
+l0
+L31
+Vk8i67A]9?T>zZ5@E:^XCT1
+!s100 AnNl`gSz?JIY1=?R3_5LO2
+R21
+32
+R53
+!i10b 1
+R54
+Z58 !s90 -work|work|testeTotal.vwf.vht|
+Z59 !s107 testeTotal.vwf.vht|
+!i113 1
+R10
+R26
+Amux8pra4_arch
+R17
+R18
+Z60 DEx4 work 20 mux8pra4_vhd_vec_tst 0 22 k8i67A]9?T>zZ5@E:^XCT1
+l46
+L33
+VDi8`046e3oOkBUK=N]7Nl1
+!s100 ?F:LRDQQGA:4a^TPQd8P30
+R21
+32
+R53
+!i10b 1
+R54
+R58
+R59
+!i113 1
+R10
+R26
 vmux8pra4_vlg_vec_tst
-R36
+!s110 1649804597
 !i10b 1
 !s100 >L22EF@Dfj9YNf`]k1HlW0
 IO2b?oCb;`l>;7h>LA0D[V2
 R2
-R3
-w1649720287
+R0
+w1649804595
 8mux8x4Teste.vwf.vt
 Fmux8x4Teste.vwf.vt
-R12
-R7
+R32
+R6
 r1
 !s85 0
 31
-R37
+!s108 1649804597.000000
 !s107 mux8x4Teste.vwf.vt|
 !s90 -work|work|mux8x4Teste.vwf.vt|
 !i113 1
 R10
 R11
 Esomador1bt
-Z38 w1649714513
+Z61 w1649714513
+R13
+R14
+R15
 R16
 R17
 R18
+R0
 R19
 R20
-R21
-R0
-R22
-R23
 l0
 L34
 VCkS;SiBg?aP9z[4HBbOg03
 !s100 iUg4K3ZYGNYjHg;>iCSQD3
-R24
+R21
 32
-Z39 !s110 1649714516
+Z62 !s110 1649714516
 !i10b 1
-Z40 !s108 1649714516.000000
-R27
-R28
+Z63 !s108 1649714516.000000
+R24
+R25
 !i113 1
 R10
-R29
+R26
 Astructure
+R13
+R14
+R15
 R16
 R17
 R18
-R19
-R20
-R21
 DEx4 work 10 somador1bt 0 22 CkS;SiBg?aP9z[4HBbOg03
 l68
 L47
 VIZbD49jSOWOLY[l9JJYlf2
 !s100 eml1R@E2>]gZWc1e<B06Z2
-R24
+R21
 32
-R39
+R62
 !i10b 1
-R40
-R27
-R28
+R63
+R24
+R25
 !i113 1
 R10
-R29
+R26
 Esomador1bt_vhd_vec_tst
-R38
-R20
-R21
+R61
+R17
+R18
 R0
-Z41 8somador1btsTest.vwf.vht
-Z42 Fsomador1btsTest.vwf.vht
+Z64 8somador1btsTest.vwf.vht
+Z65 Fsomador1btsTest.vwf.vht
 l0
 L31
 VRj[eUJ>QQbWBi_6GH41Z]1
 !s100 2G]k=ch?8_J1JNWF>L5n50
-R24
+R21
 32
-R39
+R62
 !i10b 1
-R40
-Z43 !s90 -work|work|somador1btsTest.vwf.vht|
-Z44 !s107 somador1btsTest.vwf.vht|
+R63
+Z66 !s90 -work|work|somador1btsTest.vwf.vht|
+Z67 !s107 somador1btsTest.vwf.vht|
 !i113 1
 R10
-R29
+R26
 Asomador1bt_arch
-R20
-R21
+R17
+R18
 DEx4 work 22 somador1bt_vhd_vec_tst 0 22 Rj[eUJ>QQbWBi_6GH41Z]1
 l50
 L33
 V7RHVm][NBXh`R6=C9_amE0
 !s100 ]lIzmO3`0OTCM8STZ@N4_1
-R24
+R21
 32
-R39
+R62
 !i10b 1
-R40
-R43
-R44
+R63
+R66
+R67
 !i113 1
 R10
-R29
+R26
 Esomadorsubtrator7bts
-Z45 w1649716704
+Z68 w1649716704
+R13
+R14
+R15
 R16
 R17
 R18
+R0
 R19
 R20
-R21
-R0
-R22
-R23
 l0
 L34
 V8LP_gPFeYOMQ2:?DfV[m81
 !s100 3S@Tk^[A2N=RcQ6h84DkS2
-R24
+R21
 32
-Z46 !s110 1649716705
+Z69 !s110 1649716705
 !i10b 1
-Z47 !s108 1649716705.000000
-R27
-R28
+Z70 !s108 1649716705.000000
+R24
+R25
 !i113 1
 R10
-R29
+R26
 Astructure
+R13
+R14
+R15
 R16
 R17
 R18
-R19
-R20
-R21
 DEx4 work 20 somadorsubtrator7bts 0 22 8LP_gPFeYOMQ2:?DfV[m81
 l82
 L47
 Vg_nHC7U14Hl3LQQC<Qz^V3
 !s100 >3Wgmfb;`KE1@1zC8]3A83
-R24
+R21
 32
-R46
+R69
 !i10b 1
-R47
-R27
-R28
+R70
+R24
+R25
 !i113 1
 R10
-R29
+R26
 Esomadorsubtrator7bts_vhd_vec_tst
-R45
-R20
-R21
+R68
+R17
+R18
 R0
-Z48 8somadorSubtratorTest.vwf.vht
-Z49 FsomadorSubtratorTest.vwf.vht
+Z71 8somadorSubtratorTest.vwf.vht
+Z72 FsomadorSubtratorTest.vwf.vht
 l0
 L31
 V[jIi1VDKKjWXN]8mZ[9N^3
 !s100 z7@GAd>iSB^d?Q8ca72P63
-R24
+R21
 32
-R46
+R69
 !i10b 1
-R47
-Z50 !s90 -work|work|somadorSubtratorTest.vwf.vht|
-Z51 !s107 somadorSubtratorTest.vwf.vht|
+R70
+Z73 !s90 -work|work|somadorSubtratorTest.vwf.vht|
+Z74 !s107 somadorSubtratorTest.vwf.vht|
 !i113 1
 R10
-R29
+R26
 Asomadorsubtrator7bts_arch
-R20
-R21
+R17
+R18
 DEx4 work 32 somadorsubtrator7bts_vhd_vec_tst 0 22 [jIi1VDKKjWXN]8mZ[9N^3
 l50
 L33
 V2m;K=:8;T3YIcBj?FfdmF1
 !s100 ih<]5BP25=:PBD:ljW9Me3
-R24
+R21
 32
-R46
+R69
 !i10b 1
-R47
-R50
-R51
+R70
+R73
+R74
 !i113 1
 R10
-R29
+R26

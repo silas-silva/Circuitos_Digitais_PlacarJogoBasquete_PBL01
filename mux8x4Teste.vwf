@@ -1,14 +1,14 @@
 /*<simulation_settings>
-<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off placar -c Placar --vector_source="C:/intelFPGA_lite/Circuitos_Digitais_PlacarJogoBasquete_PBL01/mux8x4Teste.vwf" --testbench_file="C:/intelFPGA_lite/Circuitos_Digitais_PlacarJogoBasquete_PBL01/simulation/qsim/mux8x4Teste.vwf.vt"</ftestbench_cmd>
-<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off placar -c Placar --vector_source="C:/intelFPGA_lite/Circuitos_Digitais_PlacarJogoBasquete_PBL01/mux8x4Teste.vwf" --testbench_file="C:/intelFPGA_lite/Circuitos_Digitais_PlacarJogoBasquete_PBL01/simulation/qsim/mux8x4Teste.vwf.vt"</ttestbench_cmd>
-<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/intelFPGA_lite/Circuitos_Digitais_PlacarJogoBasquete_PBL01/simulation/qsim/" placar -c Placar</fnetlist_cmd>
-<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=verilog --output_directory="C:/intelFPGA_lite/Circuitos_Digitais_PlacarJogoBasquete_PBL01/simulation/qsim/" placar -c Placar</tnetlist_cmd>
+<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off Placar -c Placar --vector_source="C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/mux8x4Teste.vwf" --testbench_file="C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/simulation/qsim/mux8x4Teste.vwf.vt"</ftestbench_cmd>
+<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off Placar -c Placar --vector_source="C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/mux8x4Teste.vwf" --testbench_file="C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/simulation/qsim/mux8x4Teste.vwf.vt"</ttestbench_cmd>
+<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/simulation/qsim/" Placar -c Placar</fnetlist_cmd>
+<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=verilog --output_directory="C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/simulation/qsim/" Placar -c Placar</tnetlist_cmd>
 <modelsim_script>onerror {exit -code 1}
 vlib work
 vlog -work work Placar.vo
 vlog -work work mux8x4Teste.vwf.vt
 vsim -c -t 1ps -L maxii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.mux8pra4_vlg_vec_tst
-vcd file -direction placar.msim.vcd
+vcd file -direction Placar.msim.vcd
 vcd add -internal mux8pra4_vlg_vec_tst/*
 vcd add -internal mux8pra4_vlg_vec_tst/i1/*
 proc simTimestamp {} {
@@ -26,7 +26,7 @@ vlib work
 vlog -work work Placar.vo
 vlog -work work mux8x4Teste.vwf.vt
 vsim -novopt -c -t 1ps -L maxii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.mux8pra4_vlg_vec_tst
-vcd file -direction placar.msim.vcd
+vcd file -direction Placar.msim.vcd
 vcd add -internal mux8pra4_vlg_vec_tst/*
 vcd add -internal mux8pra4_vlg_vec_tst/i1/*
 proc simTimestamp {} {
@@ -489,7 +489,7 @@ DISPLAY_LINE
 DISPLAY_LINE
 {
 	CHANNEL = "S";
-	EXPAND_STATUS = COLLAPSED;
+	EXPAND_STATUS = EXPANDED;
 	RADIX = Binary;
 	TREE_INDEX = 10;
 	TREE_LEVEL = 0;
@@ -538,7 +538,7 @@ DISPLAY_LINE
 
 TIME_BAR
 {
-	TIME = 0;
+	TIME = 80000;
 	MASTER = TRUE;
 }
 ;
