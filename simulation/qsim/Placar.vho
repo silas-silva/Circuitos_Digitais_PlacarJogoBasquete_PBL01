@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
 
--- DATE "04/13/2022 11:13:31"
+-- DATE "04/13/2022 12:15:55"
 
 -- 
 -- Device: Altera EPM240T100C5 Package TQFP100
@@ -31,17 +31,19 @@ LIBRARY MAXII;
 USE IEEE.STD_LOGIC_1164.ALL;
 USE MAXII.MAXII_COMPONENTS.ALL;
 
-ENTITY 	decod7segs IS
+ENTITY 	comparadorDeMagnitude IS
     PORT (
-	BCD : IN std_logic_vector(3 DOWNTO 0);
-	n7Segs : BUFFER std_logic_vector(6 DOWNTO 0)
+	chavePN : IN std_logic;
+	B : IN std_logic_vector(1 DOWNTO 0);
+	A : IN std_logic_vector(6 DOWNTO 0);
+	F : BUFFER std_logic
 	);
-END decod7segs;
+END comparadorDeMagnitude;
 
 -- Design Ports Information
 
 
-ARCHITECTURE structure OF decod7segs IS
+ARCHITECTURE structure OF comparadorDeMagnitude IS
 SIGNAL gnd : std_logic := '0';
 SIGNAL vcc : std_logic := '1';
 SIGNAL unknown : std_logic := 'X';
@@ -51,229 +53,79 @@ SIGNAL devpor : std_logic := '1';
 SIGNAL ww_devoe : std_logic;
 SIGNAL ww_devclrn : std_logic;
 SIGNAL ww_devpor : std_logic;
-SIGNAL ww_BCD : std_logic_vector(3 DOWNTO 0);
-SIGNAL ww_n7Segs : std_logic_vector(6 DOWNTO 0);
-SIGNAL \ors00~0_combout\ : std_logic;
-SIGNAL \ors01~0_combout\ : std_logic;
-SIGNAL \ors02~0_combout\ : std_logic;
-SIGNAL \ors03~0_combout\ : std_logic;
-SIGNAL \ors04~combout\ : std_logic;
-SIGNAL \ors05~0_combout\ : std_logic;
-SIGNAL \ors06~0_combout\ : std_logic;
-SIGNAL \BCD~combout\ : std_logic_vector(3 DOWNTO 0);
-SIGNAL \ALT_INV_ors01~0_combout\ : std_logic;
-SIGNAL \ALT_INV_ors00~0_combout\ : std_logic;
-SIGNAL \ALT_INV_ors03~0_combout\ : std_logic;
-SIGNAL \ALT_INV_ors02~0_combout\ : std_logic;
-SIGNAL \ALT_INV_ors05~0_combout\ : std_logic;
-SIGNAL \ALT_INV_ors04~combout\ : std_logic;
-SIGNAL \ALT_INV_ors06~0_combout\ : std_logic;
+SIGNAL ww_chavePN : std_logic;
+SIGNAL ww_B : std_logic_vector(1 DOWNTO 0);
+SIGNAL ww_A : std_logic_vector(6 DOWNTO 0);
+SIGNAL ww_F : std_logic;
+SIGNAL \and05~0_combout\ : std_logic;
+SIGNAL \chavePN~combout\ : std_logic;
+SIGNAL \and05~1_combout\ : std_logic;
+SIGNAL \and05~2_combout\ : std_logic;
+SIGNAL \B~combout\ : std_logic_vector(1 DOWNTO 0);
+SIGNAL \A~combout\ : std_logic_vector(6 DOWNTO 0);
 
 BEGIN
 
-ww_BCD <= BCD;
-n7Segs <= ww_n7Segs;
+ww_chavePN <= chavePN;
+ww_B <= B;
+ww_A <= A;
+F <= ww_F;
 ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
-\ALT_INV_ors01~0_combout\ <= NOT \ors01~0_combout\;
-\ALT_INV_ors00~0_combout\ <= NOT \ors00~0_combout\;
-\ALT_INV_ors03~0_combout\ <= NOT \ors03~0_combout\;
-\ALT_INV_ors02~0_combout\ <= NOT \ors02~0_combout\;
-\ALT_INV_ors05~0_combout\ <= NOT \ors05~0_combout\;
-\ALT_INV_ors04~combout\ <= NOT \ors04~combout\;
-\ALT_INV_ors06~0_combout\ <= NOT \ors06~0_combout\;
 
--- Location: PIN_36,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-\BCD[0]~I\ : maxii_io
+-- Location: PIN_91,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+\B[1]~I\ : maxii_io
 -- pragma translate_off
 GENERIC MAP (
 	operation_mode => "input")
 -- pragma translate_on
 PORT MAP (
 	oe => GND,
-	padio => ww_BCD(0),
-	combout => \BCD~combout\(0));
+	padio => ww_B(1),
+	combout => \B~combout\(1));
 
--- Location: PIN_30,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-\BCD[2]~I\ : maxii_io
+-- Location: PIN_37,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+\A[1]~I\ : maxii_io
 -- pragma translate_off
 GENERIC MAP (
 	operation_mode => "input")
 -- pragma translate_on
 PORT MAP (
 	oe => GND,
-	padio => ww_BCD(2),
-	combout => \BCD~combout\(2));
+	padio => ww_A(1),
+	combout => \A~combout\(1));
 
--- Location: PIN_18,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-\BCD[1]~I\ : maxii_io
+-- Location: PIN_38,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+\B[0]~I\ : maxii_io
 -- pragma translate_off
 GENERIC MAP (
 	operation_mode => "input")
 -- pragma translate_on
 PORT MAP (
 	oe => GND,
-	padio => ww_BCD(1),
-	combout => \BCD~combout\(1));
+	padio => ww_B(0),
+	combout => \B~combout\(0));
 
--- Location: PIN_39,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-\BCD[3]~I\ : maxii_io
+-- Location: PIN_51,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+\A[0]~I\ : maxii_io
 -- pragma translate_off
 GENERIC MAP (
 	operation_mode => "input")
 -- pragma translate_on
 PORT MAP (
 	oe => GND,
-	padio => ww_BCD(3),
-	combout => \BCD~combout\(3));
-
--- Location: LC_X4_Y1_N4
-\ors00~0\ : maxii_lcell
--- Equation(s):
--- \ors00~0_combout\ = (\BCD~combout\(2) & (!\BCD~combout\(3) & ((\BCD~combout\(0)) # (\BCD~combout\(1))))) # (!\BCD~combout\(2) & ((\BCD~combout\(1) $ (\BCD~combout\(3)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "03f8",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \BCD~combout\(0),
-	datab => \BCD~combout\(2),
-	datac => \BCD~combout\(1),
-	datad => \BCD~combout\(3),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \ors00~0_combout\);
-
--- Location: LC_X4_Y1_N7
-\ors01~0\ : maxii_lcell
--- Equation(s):
--- \ors01~0_combout\ = (\BCD~combout\(1) & (!\BCD~combout\(3) & ((\BCD~combout\(0)) # (!\BCD~combout\(2))))) # (!\BCD~combout\(1) & (\BCD~combout\(2) $ (((\BCD~combout\(0)) # (\BCD~combout\(3))))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "03b6",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \BCD~combout\(0),
-	datab => \BCD~combout\(2),
-	datac => \BCD~combout\(1),
-	datad => \BCD~combout\(3),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \ors01~0_combout\);
-
--- Location: LC_X4_Y1_N6
-\ors02~0\ : maxii_lcell
--- Equation(s):
--- \ors02~0_combout\ = (\BCD~combout\(2) & (((!\BCD~combout\(3))))) # (!\BCD~combout\(2) & ((\BCD~combout\(3) & ((!\BCD~combout\(1)))) # (!\BCD~combout\(3) & (\BCD~combout\(0)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "03ee",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \BCD~combout\(0),
-	datab => \BCD~combout\(2),
-	datac => \BCD~combout\(1),
-	datad => \BCD~combout\(3),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \ors02~0_combout\);
-
--- Location: LC_X4_Y1_N8
-\ors03~0\ : maxii_lcell
--- Equation(s):
--- \ors03~0_combout\ = (\BCD~combout\(2) & (!\BCD~combout\(3) & (\BCD~combout\(0) $ (\BCD~combout\(1))))) # (!\BCD~combout\(2) & ((\BCD~combout\(1) $ (\BCD~combout\(3)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0378",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \BCD~combout\(0),
-	datab => \BCD~combout\(2),
-	datac => \BCD~combout\(1),
-	datad => \BCD~combout\(3),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \ors03~0_combout\);
-
--- Location: LC_X4_Y1_N2
-ors04 : maxii_lcell
--- Equation(s):
--- \ors04~combout\ = (\BCD~combout\(2) & (!\BCD~combout\(3) & (\BCD~combout\(0) $ (\BCD~combout\(1))))) # (!\BCD~combout\(2) & (!\BCD~combout\(0) & (\BCD~combout\(1) $ (\BCD~combout\(3)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0158",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \BCD~combout\(0),
-	datab => \BCD~combout\(2),
-	datac => \BCD~combout\(1),
-	datad => \BCD~combout\(3),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \ors04~combout\);
-
--- Location: LC_X4_Y1_N9
-\ors05~0\ : maxii_lcell
--- Equation(s):
--- \ors05~0_combout\ = (\BCD~combout\(2) & (!\BCD~combout\(0) & ((!\BCD~combout\(3))))) # (!\BCD~combout\(2) & (((!\BCD~combout\(1) & \BCD~combout\(3)))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0344",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \BCD~combout\(0),
-	datab => \BCD~combout\(2),
-	datac => \BCD~combout\(1),
-	datad => \BCD~combout\(3),
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \ors05~0_combout\);
+	padio => ww_A(0),
+	combout => \A~combout\(0));
 
 -- Location: LC_X4_Y1_N5
-\ors06~0\ : maxii_lcell
+\and05~0\ : maxii_lcell
 -- Equation(s):
--- \ors06~0_combout\ = (\BCD~combout\(3) & (((!\BCD~combout\(2) & !\BCD~combout\(1))))) # (!\BCD~combout\(3) & ((\BCD~combout\(2) $ (\BCD~combout\(1))) # (!\BCD~combout\(0))))
+-- \and05~0_combout\ = (\B~combout\(1) & (((\B~combout\(0) & !\A~combout\(0))) # (!\A~combout\(1)))) # (!\B~combout\(1) & (!\A~combout\(1) & (\B~combout\(0) & !\A~combout\(0))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "037d",
+	lut_mask => "22b2",
 	operation_mode => "normal",
 	output_mode => "comb_only",
 	register_cascade_mode => "off",
@@ -281,90 +133,136 @@ GENERIC MAP (
 	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \BCD~combout\(0),
-	datab => \BCD~combout\(2),
-	datac => \BCD~combout\(1),
-	datad => \BCD~combout\(3),
+	dataa => \B~combout\(1),
+	datab => \A~combout\(1),
+	datac => \B~combout\(0),
+	datad => \A~combout\(0),
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	combout => \ors06~0_combout\);
+	combout => \and05~0_combout\);
+
+-- Location: PIN_30,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+\A[4]~I\ : maxii_io
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "input")
+-- pragma translate_on
+PORT MAP (
+	oe => GND,
+	padio => ww_A(4),
+	combout => \A~combout\(4));
+
+-- Location: PIN_20,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+\A[2]~I\ : maxii_io
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "input")
+-- pragma translate_on
+PORT MAP (
+	oe => GND,
+	padio => ww_A(2),
+	combout => \A~combout\(2));
+
+-- Location: PIN_95,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+\A[3]~I\ : maxii_io
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "input")
+-- pragma translate_on
+PORT MAP (
+	oe => GND,
+	padio => ww_A(3),
+	combout => \A~combout\(3));
+
+-- Location: PIN_49,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+\chavePN~I\ : maxii_io
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "input")
+-- pragma translate_on
+PORT MAP (
+	oe => GND,
+	padio => ww_chavePN,
+	combout => \chavePN~combout\);
+
+-- Location: LC_X4_Y1_N2
+\and05~1\ : maxii_lcell
+-- Equation(s):
+-- \and05~1_combout\ = (!\A~combout\(4) & (!\A~combout\(2) & (!\A~combout\(3) & \chavePN~combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0100",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \A~combout\(4),
+	datab => \A~combout\(2),
+	datac => \A~combout\(3),
+	datad => \chavePN~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \and05~1_combout\);
+
+-- Location: PIN_36,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+\A[5]~I\ : maxii_io
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "input")
+-- pragma translate_on
+PORT MAP (
+	oe => GND,
+	padio => ww_A(5),
+	combout => \A~combout\(5));
+
+-- Location: PIN_39,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+\A[6]~I\ : maxii_io
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "input")
+-- pragma translate_on
+PORT MAP (
+	oe => GND,
+	padio => ww_A(6),
+	combout => \A~combout\(6));
+
+-- Location: LC_X4_Y1_N4
+\and05~2\ : maxii_lcell
+-- Equation(s):
+-- \and05~2_combout\ = (\and05~0_combout\ & (\and05~1_combout\ & (!\A~combout\(5) & !\A~combout\(6))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0008",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \and05~0_combout\,
+	datab => \and05~1_combout\,
+	datac => \A~combout\(5),
+	datad => \A~combout\(6),
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \and05~2_combout\);
 
 -- Location: PIN_19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
-\n7Segs[0]~I\ : maxii_io
+\F~I\ : maxii_io
 -- pragma translate_off
 GENERIC MAP (
 	operation_mode => "output")
 -- pragma translate_on
 PORT MAP (
-	datain => \ALT_INV_ors00~0_combout\,
+	datain => \and05~2_combout\,
 	oe => VCC,
-	padio => ww_n7Segs(0));
-
--- Location: PIN_40,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
-\n7Segs[1]~I\ : maxii_io
--- pragma translate_off
-GENERIC MAP (
-	operation_mode => "output")
--- pragma translate_on
-PORT MAP (
-	datain => \ALT_INV_ors01~0_combout\,
-	oe => VCC,
-	padio => ww_n7Segs(1));
-
--- Location: PIN_37,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
-\n7Segs[2]~I\ : maxii_io
--- pragma translate_off
-GENERIC MAP (
-	operation_mode => "output")
--- pragma translate_on
-PORT MAP (
-	datain => \ALT_INV_ors02~0_combout\,
-	oe => VCC,
-	padio => ww_n7Segs(2));
-
--- Location: PIN_20,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
-\n7Segs[3]~I\ : maxii_io
--- pragma translate_off
-GENERIC MAP (
-	operation_mode => "output")
--- pragma translate_on
-PORT MAP (
-	datain => \ALT_INV_ors03~0_combout\,
-	oe => VCC,
-	padio => ww_n7Segs(3));
-
--- Location: PIN_34,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
-\n7Segs[4]~I\ : maxii_io
--- pragma translate_off
-GENERIC MAP (
-	operation_mode => "output")
--- pragma translate_on
-PORT MAP (
-	datain => \ALT_INV_ors04~combout\,
-	oe => VCC,
-	padio => ww_n7Segs(4));
-
--- Location: PIN_33,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
-\n7Segs[5]~I\ : maxii_io
--- pragma translate_off
-GENERIC MAP (
-	operation_mode => "output")
--- pragma translate_on
-PORT MAP (
-	datain => \ALT_INV_ors05~0_combout\,
-	oe => VCC,
-	padio => ww_n7Segs(5));
-
--- Location: PIN_38,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
-\n7Segs[6]~I\ : maxii_io
--- pragma translate_off
-GENERIC MAP (
-	operation_mode => "output")
--- pragma translate_on
-PORT MAP (
-	datain => \ALT_INV_ors06~0_combout\,
-	oe => VCC,
-	padio => ww_n7Segs(6));
+	padio => ww_F);
 END structure;
 
 

@@ -16,7 +16,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
 
-// DATE "04/13/2022 11:07:42"
+// DATE "04/13/2022 12:17:10"
 
 // 
 // Device: Altera EPM240T100C5 Package TQFP100
@@ -80,10 +80,10 @@ wire \somador|r3|Or0~0_combout ;
 wire \somador|r5|Or0~0_combout ;
 wire \somador|r6|Xor1~combout ;
 wire \bin_bcd|orP1~2_combout ;
-wire \comparar|and6~0_combout ;
+wire \comparar|and05~0_combout ;
 wire \somaBotoes|Xor1~0_combout ;
-wire \comparar|Or2~0_combout ;
-wire \comparar|and6~combout ;
+wire \comparar|Or1~0_combout ;
+wire \comparar|and05~combout ;
 wire \digitoMostrarDisplay|S[1]~30_combout ;
 wire \somador|r7|Xor1~0_combout ;
 wire \digitoMostrarDisplay|S[1]~31_combout ;
@@ -882,9 +882,9 @@ defparam \bin_bcd|orP1~2 .synch_mode = "off";
 // synopsys translate_on
 
 // Location: LC_X3_Y1_N7
-maxii_lcell \comparar|and6~0 (
+maxii_lcell \comparar|and05~0 (
 // Equation(s):
-// \comparar|and6~0_combout  = (!\nSimulacao~combout [4] & (!\nSimulacao~combout [2] & (!\nSimulacao~combout [3] & !\nSimulacao~combout [5])))
+// \comparar|and05~0_combout  = (!\nSimulacao~combout [4] & (!\nSimulacao~combout [2] & (!\nSimulacao~combout [3] & !\nSimulacao~combout [5])))
 
 	.clk(gnd),
 	.dataa(\nSimulacao~combout [4]),
@@ -903,18 +903,18 @@ maxii_lcell \comparar|and6~0 (
 	.regcascin(gnd),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.combout(\comparar|and6~0_combout ),
+	.combout(\comparar|and05~0_combout ),
 	.regout(),
 	.cout(),
 	.cout0(),
 	.cout1());
 // synopsys translate_off
-defparam \comparar|and6~0 .lut_mask = "0001";
-defparam \comparar|and6~0 .operation_mode = "normal";
-defparam \comparar|and6~0 .output_mode = "comb_only";
-defparam \comparar|and6~0 .register_cascade_mode = "off";
-defparam \comparar|and6~0 .sum_lutc_input = "datac";
-defparam \comparar|and6~0 .synch_mode = "off";
+defparam \comparar|and05~0 .lut_mask = "0001";
+defparam \comparar|and05~0 .operation_mode = "normal";
+defparam \comparar|and05~0 .output_mode = "comb_only";
+defparam \comparar|and05~0 .register_cascade_mode = "off";
+defparam \comparar|and05~0 .sum_lutc_input = "datac";
+defparam \comparar|and05~0 .synch_mode = "off";
 // synopsys translate_on
 
 // Location: LC_X4_Y1_N5
@@ -954,9 +954,9 @@ defparam \somaBotoes|Xor1~0 .synch_mode = "off";
 // synopsys translate_on
 
 // Location: LC_X4_Y1_N9
-maxii_lcell \comparar|Or2~0 (
+maxii_lcell \comparar|Or1~0 (
 // Equation(s):
-// \comparar|Or2~0_combout  = (\nSimulacao~combout [1] & (!\nSimulacao~combout [0] & (\somaBotoes|Xor1~0_combout  & \somaBotoes|Xor0~0_combout ))) # (!\nSimulacao~combout [1] & ((\somaBotoes|Xor1~0_combout ) # ((!\nSimulacao~combout [0] & 
+// \comparar|Or1~0_combout  = (\nSimulacao~combout [1] & (!\nSimulacao~combout [0] & (\somaBotoes|Xor1~0_combout  & \somaBotoes|Xor0~0_combout ))) # (!\nSimulacao~combout [1] & ((\somaBotoes|Xor1~0_combout ) # ((!\nSimulacao~combout [0] & 
 // \somaBotoes|Xor0~0_combout ))))
 
 	.clk(gnd),
@@ -976,30 +976,30 @@ maxii_lcell \comparar|Or2~0 (
 	.regcascin(gnd),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.combout(\comparar|Or2~0_combout ),
+	.combout(\comparar|Or1~0_combout ),
 	.regout(),
 	.cout(),
 	.cout0(),
 	.cout1());
 // synopsys translate_off
-defparam \comparar|Or2~0 .lut_mask = "7130";
-defparam \comparar|Or2~0 .operation_mode = "normal";
-defparam \comparar|Or2~0 .output_mode = "comb_only";
-defparam \comparar|Or2~0 .register_cascade_mode = "off";
-defparam \comparar|Or2~0 .sum_lutc_input = "datac";
-defparam \comparar|Or2~0 .synch_mode = "off";
+defparam \comparar|Or1~0 .lut_mask = "7130";
+defparam \comparar|Or1~0 .operation_mode = "normal";
+defparam \comparar|Or1~0 .output_mode = "comb_only";
+defparam \comparar|Or1~0 .register_cascade_mode = "off";
+defparam \comparar|Or1~0 .sum_lutc_input = "datac";
+defparam \comparar|Or1~0 .synch_mode = "off";
 // synopsys translate_on
 
 // Location: LC_X4_Y1_N4
-maxii_lcell \comparar|and6 (
+maxii_lcell \comparar|and05 (
 // Equation(s):
-// \comparar|and6~combout  = (\chaveNP~combout  & (\comparar|and6~0_combout  & (!\nSimulacao~combout [6] & \comparar|Or2~0_combout )))
+// \comparar|and05~combout  = (\chaveNP~combout  & (\comparar|and05~0_combout  & (!\nSimulacao~combout [6] & \comparar|Or1~0_combout )))
 
 	.clk(gnd),
 	.dataa(\chaveNP~combout ),
-	.datab(\comparar|and6~0_combout ),
+	.datab(\comparar|and05~0_combout ),
 	.datac(\nSimulacao~combout [6]),
-	.datad(\comparar|Or2~0_combout ),
+	.datad(\comparar|Or1~0_combout ),
 	.aclr(gnd),
 	.aload(gnd),
 	.sclr(gnd),
@@ -1012,18 +1012,18 @@ maxii_lcell \comparar|and6 (
 	.regcascin(gnd),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.combout(\comparar|and6~combout ),
+	.combout(\comparar|and05~combout ),
 	.regout(),
 	.cout(),
 	.cout0(),
 	.cout1());
 // synopsys translate_off
-defparam \comparar|and6 .lut_mask = "0800";
-defparam \comparar|and6 .operation_mode = "normal";
-defparam \comparar|and6 .output_mode = "comb_only";
-defparam \comparar|and6 .register_cascade_mode = "off";
-defparam \comparar|and6 .sum_lutc_input = "datac";
-defparam \comparar|and6 .synch_mode = "off";
+defparam \comparar|and05 .lut_mask = "0800";
+defparam \comparar|and05 .operation_mode = "normal";
+defparam \comparar|and05 .output_mode = "comb_only";
+defparam \comparar|and05 .register_cascade_mode = "off";
+defparam \comparar|and05 .sum_lutc_input = "datac";
+defparam \comparar|and05 .synch_mode = "off";
 // synopsys translate_on
 
 // Location: LC_X5_Y1_N0
@@ -3520,7 +3520,7 @@ defparam \buzzer~I .operation_mode = "output";
 
 // Location: PIN_89,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 maxii_io \led~I (
-	.datain(\comparar|and6~combout ),
+	.datain(\comparar|and05~combout ),
 	.oe(vcc),
 	.combout(),
 	.padio(led));
