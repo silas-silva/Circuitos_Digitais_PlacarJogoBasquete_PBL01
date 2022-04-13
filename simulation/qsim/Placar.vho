@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
 
--- DATE "04/13/2022 01:44:03"
+-- DATE "04/13/2022 11:13:31"
 
 -- 
 -- Device: Altera EPM240T100C5 Package TQFP100
@@ -34,7 +34,7 @@ USE MAXII.MAXII_COMPONENTS.ALL;
 ENTITY 	decod7segs IS
     PORT (
 	BCD : IN std_logic_vector(3 DOWNTO 0);
-	n7Segs : OUT std_logic_vector(6 DOWNTO 0)
+	n7Segs : BUFFER std_logic_vector(6 DOWNTO 0)
 	);
 END decod7segs;
 

@@ -1,11 +1,11 @@
-Fitter Status : Successful - Wed Apr 13 10:57:32 2022
+Fitter Status : Successful - Wed Apr 13 11:13:24 2022
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : Placar
-Top-level Entity Name : main
+Top-level Entity Name : decod7segs
 Family : MAX II
 Device : EPM240T100C5
 Timing Models : Final
-Total logic elements : 89 / 240 ( 37 % )
-Total pins : 26 / 80 ( 33 % )
+Total logic elements : 7 / 240 ( 3 % )
+Total pins : 11 / 80 ( 14 % )
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )
