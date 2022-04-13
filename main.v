@@ -39,11 +39,11 @@ module main (nSimulacao ,cBotoes ,chaveNP, chaveTime ,clock ,buzzer ,led ,displa
 	conversorBinarioBcd bin_bcd ( .A(soma), .B(digitosBCD), .Passou99(buzzer));
 	
 	
-	mux8pra4 digitoMostrarDisplay (.N(digitosBCD), .escolha(clock), .S(digitosBCDdisplay));
-	
-	
 	mux16pra4 escolherDisplay (.seletor1(clock), .seletorTime(chaveTime) , .saida(escolhaDisplay));
 	
+	
+	mux8pra4 digitoMostrarDisplay (.N(digitosBCD), .escolha(clock), .S(digitosBCDdisplay));
+
 	
 	decod7segs decodificador7segs (.BCD(digitosBCDdisplay), .n7Segs(display));
 	

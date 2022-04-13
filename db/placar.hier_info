@@ -12,19 +12,19 @@ cBotoes[2] => cBotoes[2].IN1
 chaveNP => chaveNP.IN2
 chaveTime => chaveTime.IN1
 clock => clock.IN2
-buzzer << conversorBinarioBcd:bin_bcd.Passou99
-led << comparadorDeMagnitude:comparar.F
-display[0] << decod7segs:decodificador7segs.n7Segs
-display[1] << decod7segs:decodificador7segs.n7Segs
-display[2] << decod7segs:decodificador7segs.n7Segs
-display[3] << decod7segs:decodificador7segs.n7Segs
-display[4] << decod7segs:decodificador7segs.n7Segs
-display[5] << decod7segs:decodificador7segs.n7Segs
-display[6] << decod7segs:decodificador7segs.n7Segs
-escolhaDisplay[0] << mux16pra4:escolherDisplay.saida
-escolhaDisplay[1] << mux16pra4:escolherDisplay.saida
-escolhaDisplay[2] << mux16pra4:escolherDisplay.saida
-escolhaDisplay[3] << mux16pra4:escolherDisplay.saida
+buzzer <= conversorBinarioBcd:bin_bcd.Passou99
+led <= comparadorDeMagnitude:comparar.F
+display[0] <= decod7segs:decodificador7segs.n7Segs
+display[1] <= decod7segs:decodificador7segs.n7Segs
+display[2] <= decod7segs:decodificador7segs.n7Segs
+display[3] <= decod7segs:decodificador7segs.n7Segs
+display[4] <= decod7segs:decodificador7segs.n7Segs
+display[5] <= decod7segs:decodificador7segs.n7Segs
+display[6] <= decod7segs:decodificador7segs.n7Segs
+escolhaDisplay[0] <= mux16pra4:escolherDisplay.saida
+escolhaDisplay[1] <= mux16pra4:escolherDisplay.saida
+escolhaDisplay[2] <= mux16pra4:escolherDisplay.saida
+escolhaDisplay[3] <= mux16pra4:escolherDisplay.saida
 
 
 |main|btnsEntrada:somaBotoes
@@ -482,29 +482,6 @@ B[7] <= orB00.DB_MAX_OUTPUT_PORT_TYPE
 Passou99 <= orP1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main|mux8pra4:digitoMostrarDisplay
-N[0] => ands00.IN0
-N[1] => ands10.IN0
-N[2] => ands20.IN0
-N[3] => ands30.IN0
-N[4] => ands01.IN0
-N[5] => ands11.IN0
-N[6] => ands21.IN0
-N[7] => ands31.IN0
-escolha => ands01.IN1
-escolha => ands11.IN1
-escolha => ands21.IN1
-escolha => ands31.IN1
-escolha => ands00.IN1
-escolha => ands10.IN1
-escolha => ands20.IN1
-escolha => ands30.IN1
-S[0] <= ors00.DB_MAX_OUTPUT_PORT_TYPE
-S[1] <= ors10.DB_MAX_OUTPUT_PORT_TYPE
-S[2] <= ors20.DB_MAX_OUTPUT_PORT_TYPE
-S[3] <= ors30.DB_MAX_OUTPUT_PORT_TYPE
-
-
 |main|mux16pra4:escolherDisplay
 seletor1 => Decoder0.IN0
 seletorTime => Decoder1.IN0
@@ -512,6 +489,22 @@ saida[0] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 saida[1] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 saida[2] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 saida[3] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|main|mux8pra4:digitoMostrarDisplay
+N[0] => S.DATAA
+N[1] => S.DATAA
+N[2] => S.DATAA
+N[3] => S.DATAA
+N[4] => S.DATAB
+N[5] => S.DATAB
+N[6] => S.DATAB
+N[7] => S.DATAB
+escolha => Decoder0.IN0
+S[0] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= S.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |main|decod7segs:decodificador7segs
