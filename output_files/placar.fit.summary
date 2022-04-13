@@ -1,11 +1,11 @@
-Fitter Status : Successful - Tue Apr 12 20:02:14 2022
+Fitter Status : Successful - Wed Apr 13 02:27:58 2022
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : Placar
-Top-level Entity Name : mux8pra4
+Top-level Entity Name : main
 Family : MAX II
 Device : EPM240T100C5
 Timing Models : Final
-Total logic elements : 4 / 240 ( 2 % )
-Total pins : 13 / 80 ( 16 % )
+Total logic elements : 89 / 240 ( 37 % )
+Total pins : 26 / 80 ( 33 % )
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )

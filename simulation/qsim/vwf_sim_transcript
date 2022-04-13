@@ -7,7 +7,7 @@ Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-A
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Placar -c Placar --vector_source="C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/testeTotal.vwf" --testbench_file="C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/simulation/qsim/testeTotal.vwf.vht"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off Placar -c Placar --vector_source="C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/testeTotal.vwf" --testbench_file="C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/simulation/qsim/testeTotal.vwf.vt"
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -25,15 +25,17 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Tue Apr 12 20:06:39 2022
-Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Placar -c Placar --vector_source=C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/testeTotal.vwf --testbench_file=C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/simulation/qsim/testeTotal.vwf.vht
+    Info: Processing started: Wed Apr 13 02:28:13 2022
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off Placar -c Placar --vector_source=C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/testeTotal.vwf --testbench_file=C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/simulation/qsim/testeTotal.vwf.vt
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+
+Completed successfully. 
 
 Completed successfully. 
 
 **** Generating the functional simulation netlist ****
 
-quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/simulation/qsim/" Placar -c Placar
+quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/simulation/qsim/" Placar -c Placar
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -51,13 +53,13 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Tue Apr 12 20:06:40 2022
-Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/simulation/qsim/ Placar -c Placar
+    Info: Processing started: Wed Apr 13 02:28:14 2022
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/simulation/qsim/ Placar -c Placar
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204019): Generated file Placar.vho in folder "C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file Placar.vo in folder "C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4611 megabytes
-    Info: Processing ended: Tue Apr 12 20:06:41 2022
+    Info: Processing ended: Wed Apr 13 02:28:15 2022
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
@@ -77,54 +79,42 @@ Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
 
 # 10.5b
 
-
 # do Placar.do
+
 # ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:06:42 on Apr 12,2022
-# vcom -work work Placar.vho 
-# -- Loading package STANDARD
-
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package VITAL_Timing
-# -- Loading package VITAL_Primitives
-# -- Loading package maxii_atom_pack
-# -- Loading package maxii_components
-# -- Compiling entity mux8pra4
-# -- Compiling architecture structure of mux8pra4
-# End time: 20:06:42 on Apr 12,2022, Elapsed time: 0:00:00
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 02:28:15 on Apr 13,2022
+# vlog -work work Placar.vo 
+# -- Compiling module main
+# 
+# Top level modules:
+# 	main
+# End time: 02:28:15 on Apr 13,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:06:42 on Apr 12,2022
-# vcom -work work testeTotal.vwf.vht 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity mux8pra4_vhd_vec_tst
-# -- Compiling architecture mux8pra4_arch of mux8pra4_vhd_vec_tst
-# End time: 20:06:42 on Apr 12,2022, Elapsed time: 0:00:00
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 02:28:15 on Apr 13,2022
+# vlog -work work testeTotal.vwf.vt 
+
+# -- Compiling module main_vlg_vec_tst
+# 
+# Top level modules:
+# 	main_vlg_vec_tst
+# End time: 02:28:16 on Apr 13,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 
-# vsim -c -t 1ps -L maxii -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.mux8pra4_vhd_vec_tst 
-# Start time: 20:06:42 on Apr 12,2022
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.mux8pra4_vhd_vec_tst(mux8pra4_arch)
-# Loading ieee.vital_timing(body)
-# Loading ieee.vital_primitives(body)
-# Loading maxii.maxii_atom_pack(body)
-# Loading maxii.maxii_components
-# Loading work.mux8pra4(structure)
-# Loading ieee.std_logic_arith(body)
-# Loading maxii.maxii_io(behave)
-# Loading maxii.maxii_lcell(vital_le_atom)
-# Loading maxii.maxii_asynch_lcell(vital_le)
-# Loading maxii.maxii_lcell_register(vital_le_reg)
-# after#31
+# vsim -c -t 1ps -L maxii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.main_vlg_vec_tst 
+# Start time: 02:28:16 on Apr 13,2022
+# Loading work.main_vlg_vec_tst
+# Loading work.main
+# Loading maxii_ver.maxii_io
+# Loading maxii_ver.maxii_lcell
+# Loading maxii_ver.maxii_asynch_lcell
+# Loading maxii_ver.maxii_lcell_register
+# after#25
 
-# End time: 20:06:43 on Apr 12,2022, Elapsed time: 0:00:01
+# ** Note: $finish    : testeTotal.vwf.vt(58)
+#    Time: 4096 ns  Iteration: 0  Instance: /main_vlg_vec_tst
+# End time: 02:28:16 on Apr 13,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 Completed successfully. 
@@ -137,59 +127,7 @@ Reading C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_P
 
 Processing channel transitions... 
 
-Warning: buzzer - signal not found in VCD.
-
-Warning: cBotoes[2] - signal not found in VCD.
-
-Warning: cBotoes[1] - signal not found in VCD.
-
-Warning: cBotoes[0] - signal not found in VCD.
-
-Warning: chaveNP - signal not found in VCD.
-
-Warning: chaveTime - signal not found in VCD.
-
-Warning: clock - signal not found in VCD.
-
-Warning: display[6] - signal not found in VCD.
-
-Warning: display[5] - signal not found in VCD.
-
-Warning: display[4] - signal not found in VCD.
-
-Warning: display[3] - signal not found in VCD.
-
-Warning: display[2] - signal not found in VCD.
-
-Warning: display[1] - signal not found in VCD.
-
-Warning: display[0] - signal not found in VCD.
-
-Warning: escolhaDisplay[3] - signal not found in VCD.
-
-Warning: escolhaDisplay[2] - signal not found in VCD.
-
-Warning: escolhaDisplay[1] - signal not found in VCD.
-
-Warning: escolhaDisplay[0] - signal not found in VCD.
-
-Warning: led - signal not found in VCD.
-
-Warning: nSimulacao[6] - signal not found in VCD.
-
-Warning: nSimulacao[5] - signal not found in VCD.
-
-Warning: nSimulacao[4] - signal not found in VCD.
-
-Warning: nSimulacao[3] - signal not found in VCD.
-
-Warning: nSimulacao[2] - signal not found in VCD.
-
-Warning: nSimulacao[1] - signal not found in VCD.
-
-Warning: nSimulacao[0] - signal not found in VCD.
-
-Writing the resulting VWF to C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/simulation/qsim/Placar_20220412200643.sim.vwf
+Writing the resulting VWF to C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/simulation/qsim/Placar_20220413022816.sim.vwf
 
 Finished VCD to VWF conversion.
 

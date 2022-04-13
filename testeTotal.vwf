@@ -1,16 +1,16 @@
 /*<simulation_settings>
-<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Placar -c Placar --vector_source="C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/testeTotal.vwf" --testbench_file="C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/simulation/qsim/testeTotal.vwf.vht"</ftestbench_cmd>
-<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Placar -c Placar --vector_source="C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/testeTotal.vwf" --testbench_file="C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/simulation/qsim/testeTotal.vwf.vht"</ttestbench_cmd>
-<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/simulation/qsim/" Placar -c Placar</fnetlist_cmd>
-<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/simulation/qsim/" Placar -c Placar</tnetlist_cmd>
+<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off Placar -c Placar --vector_source="C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/testeTotal.vwf" --testbench_file="C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/simulation/qsim/testeTotal.vwf.vt"</ftestbench_cmd>
+<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off Placar -c Placar --vector_source="C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/testeTotal.vwf" --testbench_file="C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/simulation/qsim/testeTotal.vwf.vt"</ttestbench_cmd>
+<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/simulation/qsim/" Placar -c Placar</fnetlist_cmd>
+<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=verilog --output_directory="C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/simulation/qsim/" Placar -c Placar</tnetlist_cmd>
 <modelsim_script>onerror {exit -code 1}
 vlib work
-vcom -work work Placar.vho
-vcom -work work testeTotal.vwf.vht
-vsim  -c -t 1ps -L maxii -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.mux8pra4_vhd_vec_tst
+vlog -work work Placar.vo
+vlog -work work testeTotal.vwf.vt
+vsim -c -t 1ps -L maxii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.main_vlg_vec_tst
 vcd file -direction Placar.msim.vcd
-vcd add -internal mux8pra4_vhd_vec_tst/*
-vcd add -internal mux8pra4_vhd_vec_tst/i1/*
+vcd add -internal main_vlg_vec_tst/*
+vcd add -internal main_vlg_vec_tst/i1/*
 proc simTimestamp {} {
     echo "Simulation time: $::now ps"
     if { [string equal running [runStatus]] } {
@@ -20,15 +20,17 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
+
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
-vcom -work work Placar.vho
-vcom -work work testeTotal.vwf.vht
-vsim -novopt -c -t 1ps -sdfmax mux8pra4_vhd_vec_tst/i1=Placar_vhd.sdo -L maxii -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.mux8pra4_vhd_vec_tst
+vlog -work work Placar.vo
+vlog -work work testeTotal.vwf.vt
+vsim -novopt -c -t 1ps -L maxii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.main_vlg_vec_tst
 vcd file -direction Placar.msim.vcd
-vcd add -internal mux8pra4_vhd_vec_tst/*
-vcd add -internal mux8pra4_vhd_vec_tst/i1/*
+vcd add -internal main_vlg_vec_tst/*
+vcd add -internal main_vlg_vec_tst/i1/*
 proc simTimestamp {} {
     echo "Simulation time: $::now ps"
     if { [string equal running [runStatus]] } {
@@ -38,8 +40,10 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
+
 </modelsim_script_timing>
-<hdl_lang>vhdl</hdl_lang>
+<hdl_lang>verilog</hdl_lang>
 </simulation_settings>*/
 /*
 WARNING: Do NOT edit the input and output ports in this file in a text
@@ -68,7 +72,7 @@ HEADER
 	VERSION = 1;
 	TIME_UNIT = ns;
 	DATA_OFFSET = 0.0;
-	DATA_DURATION = 1000.0;
+	DATA_DURATION = 4096.0;
 	SIMULATION_TIME = 0.0;
 	GRID_PHASE = 0.0;
 	GRID_PERIOD = 10.0;
@@ -380,7 +384,7 @@ TRANSITION_LIST("buzzer")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL 0 FOR 4096.0;
 	}
 }
 
@@ -391,11 +395,10 @@ TRANSITION_LIST("cBotoes[2]")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 12;
-			LEVEL 0 FOR 40.0;
-			LEVEL 1 FOR 40.0;
+			REPEAT = 512;
+			LEVEL 0 FOR 4.0;
+			LEVEL 1 FOR 4.0;
 		}
-		LEVEL 0 FOR 40.0;
 	}
 }
 
@@ -406,9 +409,9 @@ TRANSITION_LIST("cBotoes[1]")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 25;
-			LEVEL 0 FOR 20.0;
-			LEVEL 1 FOR 20.0;
+			REPEAT = 1024;
+			LEVEL 0 FOR 2.0;
+			LEVEL 1 FOR 2.0;
 		}
 	}
 }
@@ -420,9 +423,9 @@ TRANSITION_LIST("cBotoes[0]")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 50;
-			LEVEL 0 FOR 10.0;
-			LEVEL 1 FOR 10.0;
+			REPEAT = 2048;
+			LEVEL 0 FOR 1.0;
+			LEVEL 1 FOR 1.0;
 		}
 	}
 }
@@ -434,9 +437,9 @@ TRANSITION_LIST("chaveNP")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 50;
-			LEVEL 0 FOR 10.0;
-			LEVEL 1 FOR 10.0;
+			REPEAT = 2;
+			LEVEL 0 FOR 1024.0;
+			LEVEL 1 FOR 1024.0;
 		}
 	}
 }
@@ -448,9 +451,9 @@ TRANSITION_LIST("chaveTime")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 50;
-			LEVEL 0 FOR 10.0;
-			LEVEL 1 FOR 10.0;
+			REPEAT = 1;
+			LEVEL 0 FOR 2048.0;
+			LEVEL 1 FOR 2048.0;
 		}
 	}
 }
@@ -462,10 +465,12 @@ TRANSITION_LIST("clock")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 50;
-			LEVEL 0 FOR 10.0;
-			LEVEL 1 FOR 10.0;
+			REPEAT = 409;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
 		}
+		LEVEL 0 FOR 5.0;
+		LEVEL 1 FOR 1.0;
 	}
 }
 
@@ -474,8 +479,7 @@ TRANSITION_LIST("display[6]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 640.0;
-		LEVEL 1 FOR 360.0;
+		LEVEL 0 FOR 4096.0;
 	}
 }
 
@@ -484,14 +488,7 @@ TRANSITION_LIST("display[5]")
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 1;
-			LEVEL 0 FOR 320.0;
-			LEVEL 1 FOR 320.0;
-		}
-		LEVEL 0 FOR 320.0;
-		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 4096.0;
 	}
 }
 
@@ -500,13 +497,7 @@ TRANSITION_LIST("display[4]")
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 3;
-			LEVEL 0 FOR 160.0;
-			LEVEL 1 FOR 160.0;
-		}
-		LEVEL 0 FOR 40.0;
+		LEVEL 0 FOR 4096.0;
 	}
 }
 
@@ -515,13 +506,7 @@ TRANSITION_LIST("display[3]")
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 6;
-			LEVEL 0 FOR 80.0;
-			LEVEL 1 FOR 80.0;
-		}
-		LEVEL 0 FOR 40.0;
+		LEVEL 0 FOR 4096.0;
 	}
 }
 
@@ -530,13 +515,7 @@ TRANSITION_LIST("display[2]")
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 12;
-			LEVEL 0 FOR 40.0;
-			LEVEL 1 FOR 40.0;
-		}
-		LEVEL 0 FOR 40.0;
+		LEVEL 0 FOR 4096.0;
 	}
 }
 
@@ -545,12 +524,7 @@ TRANSITION_LIST("display[1]")
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 25;
-			LEVEL 0 FOR 20.0;
-			LEVEL 1 FOR 20.0;
-		}
+		LEVEL 0 FOR 4096.0;
 	}
 }
 
@@ -559,12 +533,7 @@ TRANSITION_LIST("display[0]")
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 50;
-			LEVEL 0 FOR 10.0;
-			LEVEL 1 FOR 10.0;
-		}
+		LEVEL 0 FOR 4096.0;
 	}
 }
 
@@ -573,13 +542,7 @@ TRANSITION_LIST("escolhaDisplay[3]")
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 6;
-			LEVEL 0 FOR 80.0;
-			LEVEL 1 FOR 80.0;
-		}
-		LEVEL 0 FOR 40.0;
+		LEVEL 0 FOR 4096.0;
 	}
 }
 
@@ -588,13 +551,7 @@ TRANSITION_LIST("escolhaDisplay[2]")
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 12;
-			LEVEL 0 FOR 40.0;
-			LEVEL 1 FOR 40.0;
-		}
-		LEVEL 0 FOR 40.0;
+		LEVEL 0 FOR 4096.0;
 	}
 }
 
@@ -603,12 +560,7 @@ TRANSITION_LIST("escolhaDisplay[1]")
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 25;
-			LEVEL 0 FOR 20.0;
-			LEVEL 1 FOR 20.0;
-		}
+		LEVEL 0 FOR 4096.0;
 	}
 }
 
@@ -617,12 +569,7 @@ TRANSITION_LIST("escolhaDisplay[0]")
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 50;
-			LEVEL 0 FOR 10.0;
-			LEVEL 1 FOR 10.0;
-		}
+		LEVEL 0 FOR 4096.0;
 	}
 }
 
@@ -631,7 +578,7 @@ TRANSITION_LIST("led")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL 0 FOR 4096.0;
 	}
 }
 
@@ -640,8 +587,12 @@ TRANSITION_LIST("nSimulacao[6]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 640.0;
-		LEVEL 1 FOR 360.0;
+		NODE
+		{
+			REPEAT = 4;
+			LEVEL 0 FOR 512.0;
+			LEVEL 1 FOR 512.0;
+		}
 	}
 }
 
@@ -652,12 +603,10 @@ TRANSITION_LIST("nSimulacao[5]")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 1;
-			LEVEL 0 FOR 320.0;
-			LEVEL 1 FOR 320.0;
+			REPEAT = 8;
+			LEVEL 0 FOR 256.0;
+			LEVEL 1 FOR 256.0;
 		}
-		LEVEL 0 FOR 320.0;
-		LEVEL 1 FOR 40.0;
 	}
 }
 
@@ -668,11 +617,10 @@ TRANSITION_LIST("nSimulacao[4]")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 3;
-			LEVEL 0 FOR 160.0;
-			LEVEL 1 FOR 160.0;
+			REPEAT = 16;
+			LEVEL 0 FOR 128.0;
+			LEVEL 1 FOR 128.0;
 		}
-		LEVEL 0 FOR 40.0;
 	}
 }
 
@@ -683,11 +631,10 @@ TRANSITION_LIST("nSimulacao[3]")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 6;
-			LEVEL 0 FOR 80.0;
-			LEVEL 1 FOR 80.0;
+			REPEAT = 32;
+			LEVEL 0 FOR 64.0;
+			LEVEL 1 FOR 64.0;
 		}
-		LEVEL 0 FOR 40.0;
 	}
 }
 
@@ -698,11 +645,10 @@ TRANSITION_LIST("nSimulacao[2]")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 12;
-			LEVEL 0 FOR 40.0;
-			LEVEL 1 FOR 40.0;
+			REPEAT = 64;
+			LEVEL 0 FOR 32.0;
+			LEVEL 1 FOR 32.0;
 		}
-		LEVEL 0 FOR 40.0;
 	}
 }
 
@@ -713,9 +659,9 @@ TRANSITION_LIST("nSimulacao[1]")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 25;
-			LEVEL 0 FOR 20.0;
-			LEVEL 1 FOR 20.0;
+			REPEAT = 128;
+			LEVEL 0 FOR 16.0;
+			LEVEL 1 FOR 16.0;
 		}
 	}
 }
@@ -727,9 +673,9 @@ TRANSITION_LIST("nSimulacao[0]")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 50;
-			LEVEL 0 FOR 10.0;
-			LEVEL 1 FOR 10.0;
+			REPEAT = 256;
+			LEVEL 0 FOR 8.0;
+			LEVEL 1 FOR 8.0;
 		}
 	}
 }
@@ -776,10 +722,90 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "chaveNP";
+	CHANNEL = "nSimulacao";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 4;
+	TREE_LEVEL = 0;
+	CHILDREN = 5, 6, 7, 8, 9, 10, 11;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "nSimulacao[6]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 5;
+	TREE_LEVEL = 1;
+	PARENT = 4;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "nSimulacao[5]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 6;
+	TREE_LEVEL = 1;
+	PARENT = 4;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "nSimulacao[4]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 7;
+	TREE_LEVEL = 1;
+	PARENT = 4;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "nSimulacao[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 8;
+	TREE_LEVEL = 1;
+	PARENT = 4;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "nSimulacao[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 9;
+	TREE_LEVEL = 1;
+	PARENT = 4;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "nSimulacao[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 10;
+	TREE_LEVEL = 1;
+	PARENT = 4;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "nSimulacao[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 11;
+	TREE_LEVEL = 1;
+	PARENT = 4;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "chaveNP";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 12;
 	TREE_LEVEL = 0;
 }
 
@@ -788,7 +814,7 @@ DISPLAY_LINE
 	CHANNEL = "chaveTime";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 5;
+	TREE_INDEX = 13;
 	TREE_LEVEL = 0;
 }
 
@@ -797,7 +823,7 @@ DISPLAY_LINE
 	CHANNEL = "clock";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 6;
+	TREE_INDEX = 14;
 	TREE_LEVEL = 0;
 }
 
@@ -806,94 +832,14 @@ DISPLAY_LINE
 	CHANNEL = "display";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 7;
+	TREE_INDEX = 15;
 	TREE_LEVEL = 0;
-	CHILDREN = 8, 9, 10, 11, 12, 13, 14;
+	CHILDREN = 16, 17, 18, 19, 20, 21, 22;
 }
 
 DISPLAY_LINE
 {
 	CHANNEL = "display[6]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 8;
-	TREE_LEVEL = 1;
-	PARENT = 7;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "display[5]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 9;
-	TREE_LEVEL = 1;
-	PARENT = 7;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "display[4]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 10;
-	TREE_LEVEL = 1;
-	PARENT = 7;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "display[3]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 11;
-	TREE_LEVEL = 1;
-	PARENT = 7;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "display[2]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 12;
-	TREE_LEVEL = 1;
-	PARENT = 7;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "display[1]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 13;
-	TREE_LEVEL = 1;
-	PARENT = 7;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "display[0]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 14;
-	TREE_LEVEL = 1;
-	PARENT = 7;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "escolhaDisplay";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 15;
-	TREE_LEVEL = 0;
-	CHILDREN = 16, 17, 18, 19;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "escolhaDisplay[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 16;
@@ -903,7 +849,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "escolhaDisplay[2]";
+	CHANNEL = "display[5]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 17;
@@ -913,7 +859,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "escolhaDisplay[1]";
+	CHANNEL = "display[4]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 18;
@@ -923,7 +869,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "escolhaDisplay[0]";
+	CHANNEL = "display[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 19;
@@ -933,82 +879,82 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "nSimulacao";
+	CHANNEL = "display[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 20;
-	TREE_LEVEL = 0;
-	CHILDREN = 21, 22, 23, 24, 25, 26, 27;
+	TREE_LEVEL = 1;
+	PARENT = 15;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "nSimulacao[6]";
+	CHANNEL = "display[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 21;
 	TREE_LEVEL = 1;
-	PARENT = 20;
+	PARENT = 15;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "nSimulacao[5]";
+	CHANNEL = "display[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 22;
 	TREE_LEVEL = 1;
-	PARENT = 20;
+	PARENT = 15;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "nSimulacao[4]";
+	CHANNEL = "escolhaDisplay";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 23;
-	TREE_LEVEL = 1;
-	PARENT = 20;
+	TREE_LEVEL = 0;
+	CHILDREN = 24, 25, 26, 27;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "nSimulacao[3]";
+	CHANNEL = "escolhaDisplay[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 24;
 	TREE_LEVEL = 1;
-	PARENT = 20;
+	PARENT = 23;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "nSimulacao[2]";
+	CHANNEL = "escolhaDisplay[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 25;
 	TREE_LEVEL = 1;
-	PARENT = 20;
+	PARENT = 23;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "nSimulacao[1]";
+	CHANNEL = "escolhaDisplay[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 26;
 	TREE_LEVEL = 1;
-	PARENT = 20;
+	PARENT = 23;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "nSimulacao[0]";
+	CHANNEL = "escolhaDisplay[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 27;
 	TREE_LEVEL = 1;
-	PARENT = 20;
+	PARENT = 23;
 }
 
 DISPLAY_LINE

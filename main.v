@@ -14,6 +14,7 @@ module main (nSimulacao ,cBotoes ,chaveNP, chaveTime ,clock ,buzzer ,led ,displa
 	output buzzer ,led;
 	output [6:0] display;
 	output [3:0] escolhaDisplay;
+
 	
 	
 	wire [1:0] somaBTNs;
@@ -33,16 +34,12 @@ module main (nSimulacao ,cBotoes ,chaveNP, chaveTime ,clock ,buzzer ,led ,displa
 	
 	
 	somadorSubtrator7bts somador (.A(nSimulacao), .B(somaBTNs), .Cin(chaveNP), .S(soma), .Cout(Cout));
-	
+
 	
 	conversorBinarioBcd bin_bcd ( .A(soma), .B(digitosBCD), .Passou99(buzzer));
 	
 	
-	
-	mudarOrdem padraomux (digitosBCD, digitosBCDPadraoMux);
-	
-	
-	mux8pra4 digitoMostrarDisplay (.N(digitosBCDPadraoMux), .escolha(clock), .S(digitosBCDdisplay));
+	mux8pra4 digitoMostrarDisplay (.N(digitosBCD), .escolha(clock), .S(digitosBCDdisplay));
 	
 	
 	mux16pra4 escolherDisplay (.seletor1(clock), .seletorTime(chaveTime) , .saida(escolhaDisplay));

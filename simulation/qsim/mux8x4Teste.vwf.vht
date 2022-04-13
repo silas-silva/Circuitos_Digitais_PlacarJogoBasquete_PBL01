@@ -18,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "04/12/2022 20:02:22"
+-- Generated on "04/12/2022 23:29:23"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          mux8pra4
 -- 
@@ -39,7 +39,7 @@ SIGNAL escolha : STD_LOGIC;
 COMPONENT mux8pra4
 	PORT (
 	N : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-	S : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+	S : BUFFER STD_LOGIC_VECTOR(3 DOWNTO 0);
 	escolha : IN STD_LOGIC
 	);
 END COMPONENT;

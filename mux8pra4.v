@@ -9,7 +9,7 @@ module mux8pra4(N, escolha, S);
 	//S3 = N3 escolha' + N7 escolha
 	
 	wire EN;
-	not (EN, escolha);
+	not not1 (EN, escolha);
 	
 	// N0 escolha' + N4 escolha
 	// ============================= Saida S0 =================================

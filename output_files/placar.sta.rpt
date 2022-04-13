@@ -1,5 +1,5 @@
 Timing Analyzer report for Placar
-Tue Apr 12 20:02:18 2022
+Wed Apr 13 02:28:01 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -144,69 +144,95 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 9     ; 9    ;
-; Unconstrained Input Port Paths  ; 12    ; 12   ;
-; Unconstrained Output Ports      ; 4     ; 4    ;
-; Unconstrained Output Port Paths ; 12    ; 12   ;
+; Unconstrained Input Ports       ; 13    ; 13   ;
+; Unconstrained Input Port Paths  ; 114   ; 114  ;
+; Unconstrained Output Ports      ; 13    ; 13   ;
+; Unconstrained Output Port Paths ; 114   ; 114  ;
 +---------------------------------+-------+------+
 
 
-+---------------------------------------------------------------------------------------------------+
-; Unconstrained Input Ports                                                                         ;
-+------------+--------------------------------------------------------------------------------------+
-; Input Port ; Comment                                                                              ;
-+------------+--------------------------------------------------------------------------------------+
-; N[0]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; N[1]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; N[2]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; N[3]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; N[4]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; N[5]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; N[6]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; N[7]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; escolha    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+------------+--------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                            ;
++---------------+--------------------------------------------------------------------------------------+
+; Input Port    ; Comment                                                                              ;
++---------------+--------------------------------------------------------------------------------------+
+; cBotoes[0]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cBotoes[1]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cBotoes[2]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; chaveNP       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; chaveTime     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; clock         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nSimulacao[0] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nSimulacao[1] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nSimulacao[2] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nSimulacao[3] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nSimulacao[4] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nSimulacao[5] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nSimulacao[6] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++---------------+--------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------+
-; Unconstrained Output Ports                                                                          ;
-+-------------+---------------------------------------------------------------------------------------+
-; Output Port ; Comment                                                                               ;
-+-------------+---------------------------------------------------------------------------------------+
-; S[0]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; S[1]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; S[2]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; S[3]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+-------------+---------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                                ;
++-------------------+---------------------------------------------------------------------------------------+
+; Output Port       ; Comment                                                                               ;
++-------------------+---------------------------------------------------------------------------------------+
+; buzzer            ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; display[0]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; display[1]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; display[2]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; display[3]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; display[4]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; display[5]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; display[6]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; escolhaDisplay[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; escolhaDisplay[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; escolhaDisplay[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; escolhaDisplay[3] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led               ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------------+---------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------+
-; Unconstrained Input Ports                                                                         ;
-+------------+--------------------------------------------------------------------------------------+
-; Input Port ; Comment                                                                              ;
-+------------+--------------------------------------------------------------------------------------+
-; N[0]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; N[1]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; N[2]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; N[3]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; N[4]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; N[5]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; N[6]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; N[7]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; escolha    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+------------+--------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                            ;
++---------------+--------------------------------------------------------------------------------------+
+; Input Port    ; Comment                                                                              ;
++---------------+--------------------------------------------------------------------------------------+
+; cBotoes[0]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cBotoes[1]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; cBotoes[2]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; chaveNP       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; chaveTime     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; clock         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nSimulacao[0] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nSimulacao[1] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nSimulacao[2] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nSimulacao[3] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nSimulacao[4] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nSimulacao[5] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; nSimulacao[6] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++---------------+--------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------+
-; Unconstrained Output Ports                                                                          ;
-+-------------+---------------------------------------------------------------------------------------+
-; Output Port ; Comment                                                                               ;
-+-------------+---------------------------------------------------------------------------------------+
-; S[0]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; S[1]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; S[2]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; S[3]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-+-------------+---------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                                ;
++-------------------+---------------------------------------------------------------------------------------+
+; Output Port       ; Comment                                                                               ;
++-------------------+---------------------------------------------------------------------------------------+
+; buzzer            ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; display[0]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; display[1]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; display[2]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; display[3]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; display[4]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; display[5]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; display[6]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; escolhaDisplay[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; escolhaDisplay[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; escolhaDisplay[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; escolhaDisplay[3] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led               ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------------+---------------------------------------------------------------------------------------+
 
 
 +--------------------------+
@@ -215,7 +241,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Apr 12 20:02:17 2022
+    Info: Processing started: Wed Apr 13 02:28:00 2022
 Info: Command: quartus_sta Placar -c Placar
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -242,7 +268,7 @@ Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 3 warnings
     Info: Peak virtual memory: 4669 megabytes
-    Info: Processing ended: Tue Apr 12 20:02:18 2022
+    Info: Processing ended: Wed Apr 13 02:28:01 2022
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
