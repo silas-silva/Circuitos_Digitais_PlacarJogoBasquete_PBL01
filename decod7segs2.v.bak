@@ -1,0 +1,9 @@
+module decod7segs2(BCD, n7Segs);
+	
+	input [3:0] BCD;
+	output [6:0] n7Segs;
+	
+	
+	
+	
+endmodule 

@@ -89,3 +89,4 @@ set_location_assignment PIN_12 -to clock
 set_global_assignment -name VECTOR_WAVEFORM_FILE testeTotal.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE mux16x4Teste.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE comparadorTeste.vwf
+set_global_assignment -name VERILOG_FILE decod7segs2.v

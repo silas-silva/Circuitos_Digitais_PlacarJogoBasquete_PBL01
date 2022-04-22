@@ -117,8 +117,8 @@ chaveTime                    : 52        : input  : 3.3-V LVTTL       :         
 GND*                         : 53        :        :                   :         : 2         :                
 GND*                         : 54        :        :                   :         : 2         :                
 GND*                         : 55        :        :                   :         : 2         :                
-buzzer                       : 56        : output : 3.3-V LVTTL       :         : 2         : N              
-GND*                         : 57        :        :                   :         : 2         :                
+GND*                         : 56        :        :                   :         : 2         :                
+led                          : 57        : output : 3.3-V LVTTL       :         : 2         : N              
 GND*                         : 58        :        :                   :         : 2         :                
 VCCIO2                       : 59        : power  :                   : 3.3V    : 2         :                
 GNDIO                        : 60        : gnd    :                   :         :           :                
@@ -148,9 +148,9 @@ GND*                         : 83        :        :                   :         
 GND*                         : 84        :        :                   :         : 2         :                
 GND*                         : 85        :        :                   :         : 2         :                
 GND*                         : 86        :        :                   :         : 2         :                
-GND*                         : 87        :        :                   :         : 2         :                
+buzzer                       : 87        : output : 3.3-V LVTTL       :         : 2         : N              
 escolhaDisplay[3]            : 88        : output : 3.3-V LVTTL       :         : 2         : Y              
-led                          : 89        : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : 89        :        :                   :         : 2         :                
 display[6]                   : 90        : output : 3.3-V LVTTL       :         : 2         : Y              
 GND*                         : 91        :        :                   :         : 2         :                
 display[1]                   : 92        : output : 3.3-V LVTTL       :         : 2         : Y              
