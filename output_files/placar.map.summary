@@ -1,9 +1,9 @@
-Analysis & Synthesis Status : Successful - Fri Apr 22 09:27:36 2022
+Analysis & Synthesis Status : Successful - Sun Apr 24 23:35:45 2022
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : Placar
-Top-level Entity Name : main
+Top-level Entity Name : clockDivider
 Family : MAX II
-Total logic elements : 84
-Total pins : 26
+Total logic elements : 5
+Total pins : 6
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )

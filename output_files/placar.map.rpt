@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Placar
-Fri Apr 22 09:27:36 2022
+Sun Apr 24 23:35:45 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -14,8 +14,7 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Port Connectivity Checks: "somadorSubtrator7bts:somador"
- 10. Analysis & Synthesis Messages
+  9. Analysis & Synthesis Messages
 
 
 
@@ -41,13 +40,13 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Fri Apr 22 09:27:36 2022       ;
+; Analysis & Synthesis Status ; Successful - Sun Apr 24 23:35:45 2022       ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; Placar                                      ;
-; Top-level Entity Name       ; main                                        ;
+; Top-level Entity Name       ; clockDivider                                ;
 ; Family                      ; MAX II                                      ;
-; Total logic elements        ; 84                                          ;
-; Total pins                  ; 26                                          ;
+; Total logic elements        ; 5                                           ;
+; Total pins                  ; 6                                           ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
 +-----------------------------+---------------------------------------------+
@@ -59,7 +58,7 @@ refer to the applicable agreement for further details.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EPM240T100C5       ;                    ;
-; Top-level entity name                                            ; main               ; Placar             ;
+; Top-level entity name                                            ; clockDivider       ; Placar             ;
 ; Family name                                                      ; MAX II             ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -140,77 +139,57 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                       ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                         ; Library ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------+---------+
-; somador1bt.v                     ; yes             ; User Verilog HDL File  ; C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/somador1bt.v            ;         ;
-; btnsEntrada.v                    ; yes             ; User Verilog HDL File  ; C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/btnsEntrada.v           ;         ;
-; somadorSubtrator7bts.v           ; yes             ; User Verilog HDL File  ; C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/somadorSubtrator7bts.v  ;         ;
-; comparadorDeMagnitude.v          ; yes             ; User Verilog HDL File  ; C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/comparadorDeMagnitude.v ;         ;
-; conversorBinarioBcd.v            ; yes             ; User Verilog HDL File  ; C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/conversorBinarioBcd.v   ;         ;
-; mux8pra4.v                       ; yes             ; User Verilog HDL File  ; C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/mux8pra4.v              ;         ;
-; decod7segs.v                     ; yes             ; User Verilog HDL File  ; C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/decod7segs.v            ;         ;
-; mux16pra4.v                      ; yes             ; User Verilog HDL File  ; C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/mux16pra4.v             ;         ;
-; main.v                           ; yes             ; User Verilog HDL File  ; C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/main.v                  ;         ;
-+----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                              ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                ; Library ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------+---------+
+; clockDivider.v                   ; yes             ; User Verilog HDL File  ; C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/clockDivider.v ;         ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary           ;
-+---------------------------------------------+---------+
-; Resource                                    ; Usage   ;
-+---------------------------------------------+---------+
-; Total logic elements                        ; 84      ;
-;     -- Combinational with no register       ; 84      ;
-;     -- Register only                        ; 0       ;
-;     -- Combinational with a register        ; 0       ;
-;                                             ;         ;
-; Logic element usage by number of LUT inputs ;         ;
-;     -- 4 input functions                    ; 64      ;
-;     -- 3 input functions                    ; 16      ;
-;     -- 2 input functions                    ; 4       ;
-;     -- 1 input functions                    ; 0       ;
-;     -- 0 input functions                    ; 0       ;
-;                                             ;         ;
-; Logic elements by mode                      ;         ;
-;     -- normal mode                          ; 84      ;
-;     -- arithmetic mode                      ; 0       ;
-;     -- qfbk mode                            ; 0       ;
-;     -- register cascade mode                ; 0       ;
-;     -- synchronous clear/load mode          ; 0       ;
-;     -- asynchronous clear/load mode         ; 0       ;
-;                                             ;         ;
-; Total registers                             ; 0       ;
-; I/O pins                                    ; 26      ;
-; Maximum fan-out node                        ; chaveNP ;
-; Maximum fan-out                             ; 24      ;
-; Total fan-out                               ; 325     ;
-; Average fan-out                             ; 2.95    ;
-+---------------------------------------------+---------+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+; Total logic elements                        ; 5        ;
+;     -- Combinational with no register       ; 0        ;
+;     -- Register only                        ; 0        ;
+;     -- Combinational with a register        ; 5        ;
+;                                             ;          ;
+; Logic element usage by number of LUT inputs ;          ;
+;     -- 4 input functions                    ; 0        ;
+;     -- 3 input functions                    ; 0        ;
+;     -- 2 input functions                    ; 4        ;
+;     -- 1 input functions                    ; 1        ;
+;     -- 0 input functions                    ; 0        ;
+;                                             ;          ;
+; Logic elements by mode                      ;          ;
+;     -- normal mode                          ; 1        ;
+;     -- arithmetic mode                      ; 4        ;
+;     -- qfbk mode                            ; 0        ;
+;     -- register cascade mode                ; 0        ;
+;     -- synchronous clear/load mode          ; 0        ;
+;     -- asynchronous clear/load mode         ; 0        ;
+;                                             ;          ;
+; Total registers                             ; 5        ;
+; Total logic cells in carry chains           ; 5        ;
+; I/O pins                                    ; 6        ;
+; Maximum fan-out node                        ; clock_in ;
+; Maximum fan-out                             ; 5        ;
+; Total fan-out                               ; 19       ;
+; Average fan-out                             ; 1.73     ;
++---------------------------------------------+----------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                ;
-+-------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------+-----------------------+--------------+
-; Compilation Hierarchy Node          ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                              ; Entity Name           ; Library Name ;
-+-------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------+-----------------------+--------------+
-; |main                               ; 84 (0)      ; 0            ; 0          ; 26   ; 0            ; 84 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main                                            ; main                  ; work         ;
-;    |btnsEntrada:somaBotoes|         ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|btnsEntrada:somaBotoes                     ; btnsEntrada           ; work         ;
-;    |comparadorDeMagnitude:comparar| ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|comparadorDeMagnitude:comparar             ; comparadorDeMagnitude ; work         ;
-;    |decod7segs:decodificador7segs|  ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|decod7segs:decodificador7segs              ; decod7segs            ; work         ;
-;    |mux16pra4:escolherDisplay|      ; 4 (4)       ; 0            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|mux16pra4:escolherDisplay                  ; mux16pra4             ; work         ;
-;    |mux8pra4:digitoMostrarDisplay|  ; 52 (52)     ; 0            ; 0          ; 0    ; 0            ; 52 (52)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|mux8pra4:digitoMostrarDisplay              ; mux8pra4              ; work         ;
-;    |somadorSubtrator7bts:somador|   ; 16 (1)      ; 0            ; 0          ; 0    ; 0            ; 16 (1)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|somadorSubtrator7bts:somador               ; somadorSubtrator7bts  ; work         ;
-;       |somador1bt:r1|               ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|somadorSubtrator7bts:somador|somador1bt:r1 ; somador1bt            ; work         ;
-;       |somador1bt:r2|               ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|somadorSubtrator7bts:somador|somador1bt:r2 ; somador1bt            ; work         ;
-;       |somador1bt:r3|               ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|somadorSubtrator7bts:somador|somador1bt:r3 ; somador1bt            ; work         ;
-;       |somador1bt:r4|               ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|somadorSubtrator7bts:somador|somador1bt:r4 ; somador1bt            ; work         ;
-;       |somador1bt:r5|               ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|somadorSubtrator7bts:somador|somador1bt:r5 ; somador1bt            ; work         ;
-;       |somador1bt:r6|               ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|somadorSubtrator7bts:somador|somador1bt:r6 ; somador1bt            ; work         ;
-;       |somador1bt:r7|               ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main|somadorSubtrator7bts:somador|somador1bt:r7 ; somador1bt            ; work         ;
-+-------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------+-----------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                 ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Entity Name  ; Library Name ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+--------------+
+; |clockDivider              ; 5 (5)       ; 5            ; 0          ; 6    ; 0            ; 0 (0)        ; 0 (0)             ; 5 (5)            ; 5 (5)           ; 0 (0)      ; |clockDivider       ; clockDivider ; work         ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -219,7 +198,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 5     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -229,22 +208,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "somadorSubtrator7bts:somador"                                                       ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri Apr 22 09:27:25 2022
+    Info: Processing started: Sun Apr 24 23:35:35 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Placar -c Placar
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -268,24 +238,21 @@ Info (12021): Found 1 design units, including 1 entities, in source file main.v
     Info (12023): Found entity 1: main File: C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/main.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file decod7segs2.v
     Info (12023): Found entity 1: decod7segs2 File: C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/decod7segs2.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file clockdivider.v
+    Info (12023): Found entity 1: clockDivider File: C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/clockDivider.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file cronometroregressivo.v
+    Info (12023): Found entity 1: cronometroRegressivo File: C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/cronometroRegressivo.v Line: 1
 Warning (10236): Verilog HDL Implicit Net warning at somadorSubtrator7bts.v(8): created implicit net for "x" File: C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/somadorSubtrator7bts.v Line: 8
-Info (12127): Elaborating entity "main" for the top level hierarchy
-Info (12128): Elaborating entity "btnsEntrada" for hierarchy "btnsEntrada:somaBotoes" File: C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/main.v Line: 30
-Info (12128): Elaborating entity "comparadorDeMagnitude" for hierarchy "comparadorDeMagnitude:comparar" File: C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/main.v Line: 33
-Info (12128): Elaborating entity "somadorSubtrator7bts" for hierarchy "somadorSubtrator7bts:somador" File: C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/main.v Line: 36
-Info (12128): Elaborating entity "somador1bt" for hierarchy "somadorSubtrator7bts:somador|somador1bt:r1" File: C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/somadorSubtrator7bts.v Line: 22
-Info (12128): Elaborating entity "conversorBinarioBcd" for hierarchy "conversorBinarioBcd:bin_bcd" File: C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/main.v Line: 39
-Info (12128): Elaborating entity "mux16pra4" for hierarchy "mux16pra4:escolherDisplay" File: C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/main.v Line: 42
-Info (12128): Elaborating entity "mux8pra4" for hierarchy "mux8pra4:digitoMostrarDisplay" File: C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/main.v Line: 45
-Info (12128): Elaborating entity "decod7segs" for hierarchy "decod7segs:decodificador7segs" File: C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/main.v Line: 48
-Info (21057): Implemented 110 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 13 input pins
-    Info (21059): Implemented 13 output pins
-    Info (21061): Implemented 84 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+Info (12127): Elaborating entity "clockDivider" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at clockDivider.v(25): truncated value with size 32 to match size of target (5) File: C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/clockDivider.v Line: 25
+Info (21057): Implemented 11 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 1 input pins
+    Info (21059): Implemented 5 output pins
+    Info (21061): Implemented 5 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
     Info: Peak virtual memory: 4705 megabytes
-    Info: Processing ended: Fri Apr 22 09:27:36 2022
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:25
+    Info: Processing ended: Sun Apr 24 23:35:45 2022
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:23
 
 

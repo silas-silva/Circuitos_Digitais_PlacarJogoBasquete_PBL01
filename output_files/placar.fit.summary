@@ -1,11 +1,11 @@
-Fitter Status : Successful - Fri Apr 22 09:27:38 2022
+Fitter Status : Successful - Sun Apr 24 23:35:47 2022
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : Placar
-Top-level Entity Name : main
+Top-level Entity Name : clockDivider
 Family : MAX II
 Device : EPM240T100C5
 Timing Models : Final
-Total logic elements : 84 / 240 ( 35 % )
-Total pins : 26 / 80 ( 33 % )
+Total logic elements : 5 / 240 ( 2 % )
+Total pins : 6 / 80 ( 8 % )
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )

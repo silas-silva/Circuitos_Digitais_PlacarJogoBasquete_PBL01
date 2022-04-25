@@ -1,0 +1,26 @@
+module cronometroRegressivo(clock_in, saida, buzzer);
+
+	//entradas
+	input clock_in;
+	
+	//saidas
+	output[4:0] saida;
+	output buzzer;
+	
+	//Registrador
+	reg [4:0] counter;
+	initial counter = 5'b11000;
+	
+	assign saida = counter;
+	
+	always @(posedge clock_in)
+	begin
+		counter <= counter - 1; // A cada mudança do clock o counter é decrementado
+		if ( counter == 4'b00000 ) // Verificar se chegou em 0, para tratar o numero
+		begin
+			buzzer <= 1'b1; //Ativa o buzzer
+		end
+	
+	end 
+
+endmodule 
