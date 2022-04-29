@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Placar
-Sun Apr 24 23:35:45 2022
+Fri Apr 29 10:45:42 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,13 +40,13 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Sun Apr 24 23:35:45 2022       ;
+; Analysis & Synthesis Status ; Successful - Fri Apr 29 10:45:42 2022       ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; Placar                                      ;
-; Top-level Entity Name       ; clockDivider                                ;
+; Top-level Entity Name       ; controleCronometro                          ;
 ; Family                      ; MAX II                                      ;
-; Total logic elements        ; 5                                           ;
-; Total pins                  ; 6                                           ;
+; Total logic elements        ; 2                                           ;
+; Total pins                  ; 7                                           ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
 +-----------------------------+---------------------------------------------+
@@ -58,7 +58,7 @@ refer to the applicable agreement for further details.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EPM240T100C5       ;                    ;
-; Top-level entity name                                            ; clockDivider       ; Placar             ;
+; Top-level entity name                                            ; controleCronometro ; Placar             ;
 ; Family name                                                      ; MAX II             ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -139,57 +139,56 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                              ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                ; Library ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------+---------+
-; clockDivider.v                   ; yes             ; User Verilog HDL File  ; C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/clockDivider.v ;         ;
-+----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                    ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                      ; Library ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------+---------+
+; controleCronometro.v             ; yes             ; User Verilog HDL File  ; C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/controleCronometro.v ;         ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary            ;
-+---------------------------------------------+----------+
-; Resource                                    ; Usage    ;
-+---------------------------------------------+----------+
-; Total logic elements                        ; 5        ;
-;     -- Combinational with no register       ; 0        ;
-;     -- Register only                        ; 0        ;
-;     -- Combinational with a register        ; 5        ;
-;                                             ;          ;
-; Logic element usage by number of LUT inputs ;          ;
-;     -- 4 input functions                    ; 0        ;
-;     -- 3 input functions                    ; 0        ;
-;     -- 2 input functions                    ; 4        ;
-;     -- 1 input functions                    ; 1        ;
-;     -- 0 input functions                    ; 0        ;
-;                                             ;          ;
-; Logic elements by mode                      ;          ;
-;     -- normal mode                          ; 1        ;
-;     -- arithmetic mode                      ; 4        ;
-;     -- qfbk mode                            ; 0        ;
-;     -- register cascade mode                ; 0        ;
-;     -- synchronous clear/load mode          ; 0        ;
-;     -- asynchronous clear/load mode         ; 0        ;
-;                                             ;          ;
-; Total registers                             ; 5        ;
-; Total logic cells in carry chains           ; 5        ;
-; I/O pins                                    ; 6        ;
-; Maximum fan-out node                        ; clock_in ;
-; Maximum fan-out                             ; 5        ;
-; Total fan-out                               ; 19       ;
-; Average fan-out                             ; 1.73     ;
-+---------------------------------------------+----------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Total logic elements                        ; 2     ;
+;     -- Combinational with no register       ; 2     ;
+;     -- Register only                        ; 0     ;
+;     -- Combinational with a register        ; 0     ;
+;                                             ;       ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- 2 input functions                    ; 2     ;
+;     -- 1 input functions                    ; 0     ;
+;     -- 0 input functions                    ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 2     ;
+;     -- arithmetic mode                      ; 0     ;
+;     -- qfbk mode                            ; 0     ;
+;     -- register cascade mode                ; 0     ;
+;     -- synchronous clear/load mode          ; 0     ;
+;     -- asynchronous clear/load mode         ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+; I/O pins                                    ; 7     ;
+; Maximum fan-out node                        ; ch14  ;
+; Maximum fan-out                             ; 4     ;
+; Total fan-out                               ; 8     ;
+; Average fan-out                             ; 0.89  ;
++---------------------------------------------+-------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                 ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+--------------+
-; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Entity Name  ; Library Name ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+--------------+
-; |clockDivider              ; 5 (5)       ; 5            ; 0          ; 6    ; 0            ; 0 (0)        ; 0 (0)             ; 5 (5)            ; 5 (5)           ; 0 (0)      ; |clockDivider       ; clockDivider ; work         ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                       ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Entity Name        ; Library Name ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------------+--------------+
+; |controleCronometro        ; 2 (2)       ; 0            ; 0          ; 7    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |controleCronometro ; controleCronometro ; work         ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -198,7 +197,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 5     ;
+; Total registers                              ; 0     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -214,7 +213,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun Apr 24 23:35:35 2022
+    Info: Processing started: Fri Apr 29 10:45:25 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Placar -c Placar
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -242,17 +241,23 @@ Info (12021): Found 1 design units, including 1 entities, in source file clockdi
     Info (12023): Found entity 1: clockDivider File: C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/clockDivider.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file cronometroregressivo.v
     Info (12023): Found entity 1: cronometroRegressivo File: C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/cronometroRegressivo.v Line: 1
+Warning (10259): Verilog HDL error at clockDivider50mhzTo1hz.v(11): constant value overflow File: C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/clockDivider50mhzTo1hz.v Line: 11
+Info (12021): Found 1 design units, including 1 entities, in source file clockdivider50mhzto1hz.v
+    Info (12023): Found entity 1: clockDivider50mhzTo1hz File: C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/clockDivider50mhzTo1hz.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file controlecronometro.v
+    Info (12023): Found entity 1: controleCronometro File: C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/controleCronometro.v Line: 1
 Warning (10236): Verilog HDL Implicit Net warning at somadorSubtrator7bts.v(8): created implicit net for "x" File: C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/somadorSubtrator7bts.v Line: 8
-Info (12127): Elaborating entity "clockDivider" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at clockDivider.v(25): truncated value with size 32 to match size of target (5) File: C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/clockDivider.v Line: 25
-Info (21057): Implemented 11 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 1 input pins
+Info (12127): Elaborating entity "controleCronometro" for the top level hierarchy
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "N[0]" is stuck at GND File: C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/controleCronometro.v Line: 3
+Info (21057): Implemented 9 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
     Info (21059): Implemented 5 output pins
-    Info (21061): Implemented 5 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info (21061): Implemented 2 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 4705 megabytes
-    Info: Processing ended: Sun Apr 24 23:35:45 2022
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:23
+    Info: Processing ended: Fri Apr 29 10:45:42 2022
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:40
 
 

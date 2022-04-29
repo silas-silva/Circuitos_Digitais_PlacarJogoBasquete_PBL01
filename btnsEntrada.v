@@ -2,7 +2,6 @@ module btnsEntrada ( A, B, C, N);
 	input A, B, C;
 	output [1:0] N;
 	
-	
 	wire T1, T2, T3;
 	wire CN, BN, AN;
 	

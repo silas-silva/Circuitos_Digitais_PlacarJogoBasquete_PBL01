@@ -1,13 +1,10 @@
-|clockDivider
-clock_in => counter[0].CLK
-clock_in => counter[1].CLK
-clock_in => counter[2].CLK
-clock_in => counter[3].CLK
-clock_in => counter[4].CLK
-frequencias[0] <= counter[0].DB_MAX_OUTPUT_PORT_TYPE
-frequencias[1] <= counter[1].DB_MAX_OUTPUT_PORT_TYPE
-frequencias[2] <= counter[2].DB_MAX_OUTPUT_PORT_TYPE
-frequencias[3] <= counter[3].DB_MAX_OUTPUT_PORT_TYPE
-frequencias[4] <= counter[4].DB_MAX_OUTPUT_PORT_TYPE
+|controleCronometro
+ch24 => Decoder1.IN0
+ch14 => Decoder0.IN0
+N[0] <= <GND>
+N[1] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+N[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+N[3] <= N.DB_MAX_OUTPUT_PORT_TYPE
+N[4] <= N.DB_MAX_OUTPUT_PORT_TYPE
 
 

@@ -2,16 +2,4 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Setup 'clock_in'
-Slack : -3.100
-TNS   : -13.437
-
-Type  : Hold 'clock_in'
-Slack : 1.640
-TNS   : 0.000
-
-Type  : Minimum Pulse Width 'clock_in'
-Slack : -2.289
-TNS   : -2.289
-
 ------------------------------------------------------------

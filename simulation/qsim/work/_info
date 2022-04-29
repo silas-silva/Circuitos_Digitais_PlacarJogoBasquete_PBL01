@@ -160,6 +160,50 @@ R25
 R15
 R26
 nclock@divider
+vclockDivider50mhzTo1hz
+Z35 !s110 1651180299
+!i10b 1
+!s100 `FkoF:IBP6GN89AJbXCk]3
+IFn@ZbYDMTCT;f1Y5lfQ@91
+R18
+R0
+w1651180298
+R19
+R20
+R21
+R22
+r1
+!s85 0
+31
+Z36 !s108 1651180299.000000
+R24
+R25
+!i113 1
+R15
+R26
+nclock@divider50mhz@to1hz
+vclockDivider50mhzTo1hz_vlg_vec_tst
+R35
+!i10b 1
+!s100 nnGB3KN`m`iAHfDG@z9[42
+IeaRCOeCP>^ER5dEk?l7Ho3
+R18
+R0
+w1651180297
+8clockDivider50mhzTo1hz.vwf.vt
+FclockDivider50mhzTo1hz.vwf.vt
+R32
+R22
+r1
+!s85 0
+31
+R36
+!s107 clockDivider50mhzTo1hz.vwf.vt|
+!s90 -work|work|clockDivider50mhzTo1hz.vwf.vt|
+!i113 1
+R15
+R26
+nclock@divider50mhz@to1hz_vlg_vec_tst
 vclockDivider_vlg_vec_tst
 R33
 !i10b 1
@@ -183,7 +227,7 @@ R15
 R26
 nclock@divider_vlg_vec_tst
 Ecomparadordemagnitude
-Z35 w1649862955
+Z37 w1649862955
 R2
 R3
 R4
@@ -199,9 +243,9 @@ VVjEBIHm?_jC3UZDhRDb^G1
 !s100 c[D8^5;`VfKZSznjEBB>Q3
 R10
 32
-Z36 !s110 1649862955
+Z38 !s110 1649862955
 !i10b 1
-Z37 !s108 1649862955.000000
+Z39 !s108 1649862955.000000
 R13
 R14
 !i113 1
@@ -221,22 +265,22 @@ V1lPW35O:OX]3UT>5D[mGQ3
 !s100 z^l@[3gILldSUi_l0ORb32
 R10
 32
-R36
+R38
 !i10b 1
-R37
+R39
 R13
 R14
 !i113 1
 R15
 R16
 vcomparadorDeMagnitude
-Z38 !s110 1649862975
+Z40 !s110 1649862975
 !i10b 1
 !s100 o;9SznjRc1ZUdKX2m8=630
 IVAb_k@`IoWGN2F[RbRl=V1
 R18
 R0
-Z39 w1649862974
+Z41 w1649862974
 R19
 R20
 R21
@@ -244,7 +288,7 @@ R22
 r1
 !s85 0
 31
-Z40 !s108 1649862975.000000
+Z42 !s108 1649862975.000000
 R24
 R25
 !i113 1
@@ -252,23 +296,23 @@ R15
 R26
 ncomparador@de@magnitude
 Ecomparadordemagnitude_vhd_vec_tst
-Z41 w1649862954
+Z43 w1649862954
 R6
 R7
 R0
-Z42 8comparadorTeste.vwf.vht
-Z43 FcomparadorTeste.vwf.vht
+Z44 8comparadorTeste.vwf.vht
+Z45 FcomparadorTeste.vwf.vht
 l0
 L31
 V=7WIkX_`gF3h?oSalI82O3
 !s100 EVBScYl77V7UKH;E5`dJK2
 R10
 32
-R36
+R38
 !i10b 1
-R37
-Z44 !s90 -work|work|comparadorTeste.vwf.vht|
-Z45 !s107 comparadorTeste.vwf.vht|
+R39
+Z46 !s90 -work|work|comparadorTeste.vwf.vht|
+Z47 !s107 comparadorTeste.vwf.vht|
 !i113 1
 R15
 R16
@@ -282,38 +326,82 @@ V8=?iC0KJOIT?GEh_<>fG`0
 !s100 ADHg8dM=F[`_:7BfnaU3?2
 R10
 32
-R36
+R38
 !i10b 1
-R37
-R44
-R45
+R39
+R46
+R47
 !i113 1
 R15
 R16
 vcomparadorDeMagnitude_vlg_vec_tst
-R38
+R40
 !i10b 1
 !s100 RUEFE7PZQOe<dQPhPke4<3
 IW1a=Z9DQjW94DRoz>=9PL3
 R18
 R0
-R39
-Z46 8testeTotal.vwf.vt
-Z47 FtesteTotal.vwf.vt
+R41
+Z48 8testeTotal.vwf.vt
+Z49 FtesteTotal.vwf.vt
 R32
 R22
 r1
 !s85 0
 31
-R40
-Z48 !s107 testeTotal.vwf.vt|
-Z49 !s90 -work|work|testeTotal.vwf.vt|
+R42
+Z50 !s107 testeTotal.vwf.vt|
+Z51 !s90 -work|work|testeTotal.vwf.vt|
 !i113 1
 R15
 R26
 ncomparador@de@magnitude_vlg_vec_tst
+vcontroleCronometro
+Z52 !s110 1651240126
+!i10b 1
+!s100 5VI60DjKeB4fYNEc<EYjF0
+I2PGNJ:Dfkc8O2b2]C8d293
+R18
+R0
+w1651240122
+R19
+R20
+R21
+R22
+r1
+!s85 0
+31
+!s108 1651240125.000000
+R24
+R25
+!i113 1
+R15
+R26
+ncontrole@cronometro
+vcontroleCronometro_vlg_vec_tst
+R52
+!i10b 1
+!s100 <k@Dh[TFJ[dWSomUZ4LoV1
+I8?k=caH?S;OlVMRXQ:ME33
+R18
+R0
+w1651240121
+8controleCronometro.vwf.vt
+FcontroleCronometro.vwf.vt
+R32
+R22
+r1
+!s85 0
+31
+!s108 1651240126.000000
+!s107 controleCronometro.vwf.vt|
+!s90 -work|work|controleCronometro.vwf.vt|
+!i113 1
+R15
+R26
+ncontrole@cronometro_vlg_vec_tst
 Econversorbinariobcd
-Z50 w1649799717
+Z53 w1649799717
 R2
 R3
 R4
@@ -329,9 +417,9 @@ Vfcn95RSOo?]B?igf[QPK`0
 !s100 ESd4[I@mm4O5TegV1GWbo3
 R10
 32
-Z51 !s110 1649799719
+Z54 !s110 1649799719
 !i10b 1
-Z52 !s108 1649799719.000000
+Z55 !s108 1649799719.000000
 R13
 R14
 !i113 1
@@ -351,21 +439,21 @@ V3iKNWMA587Z@=;?^@e:732
 !s100 LNEZ[eo`Y=mNKX5XRTLz<3
 R10
 32
-R51
+R54
 !i10b 1
-R52
+R55
 R13
 R14
 !i113 1
 R15
 R16
 vconversorBinarioBcd
-Z53 !s110 1649718735
+Z56 !s110 1649718735
 !i10b 1
 !s100 IUlN=6OdTVG@@;<F4f:i;2
 IzBEXeg7do1o?ajHWjGI0c1
 R18
-Z54 dC:/intelFPGA_lite/Circuitos_Digitais_PlacarJogoBasquete_PBL01/simulation/qsim
+Z57 dC:/intelFPGA_lite/Circuitos_Digitais_PlacarJogoBasquete_PBL01/simulation/qsim
 w1649718733
 R19
 R20
@@ -374,7 +462,7 @@ R22
 r1
 !s85 0
 31
-Z55 !s108 1649718735.000000
+Z58 !s108 1649718735.000000
 R24
 R25
 !i113 1
@@ -382,23 +470,23 @@ R15
 R26
 nconversor@binario@bcd
 Econversorbinariobcd_vhd_vec_tst
-R50
+R53
 R6
 R7
 R0
-Z56 8ConversorBinarioBcdTest.vwf.vht
-Z57 FConversorBinarioBcdTest.vwf.vht
+Z59 8ConversorBinarioBcdTest.vwf.vht
+Z60 FConversorBinarioBcdTest.vwf.vht
 l0
 L31
 V1ddN;5B^cZ;<P=^GodLUO3
 !s100 5<_:jCnD2XF[>NU`Y75CM0
 R10
 32
-R51
+R54
 !i10b 1
-R52
-Z58 !s90 -work|work|ConversorBinarioBcdTest.vwf.vht|
-Z59 !s107 ConversorBinarioBcdTest.vwf.vht|
+R55
+Z61 !s90 -work|work|ConversorBinarioBcdTest.vwf.vht|
+Z62 !s107 ConversorBinarioBcdTest.vwf.vht|
 !i113 1
 R15
 R16
@@ -412,21 +500,21 @@ VLkZP_=m1CSL`JXe?:^K4g0
 !s100 PbK9cnV>;9i7g3_AREiaU1
 R10
 32
-R51
+R54
 !i10b 1
-R52
-R58
-R59
+R55
+R61
+R62
 !i113 1
 R15
 R16
 vconversorBinarioBcd_vlg_vec_tst
-R53
+R56
 !i10b 1
 !s100 HjAUcc[7KHZ`n8nlB4D3P3
 IeQ^geg8`o]CY;UbSRLcP>3
 R18
-R54
+R57
 w1649718731
 8ConversorBinarioBcdTest.vwf.vt
 FConversorBinarioBcdTest.vwf.vt
@@ -435,7 +523,7 @@ R22
 r1
 !s85 0
 31
-R55
+R58
 !s107 ConversorBinarioBcdTest.vwf.vt|
 !s90 -work|work|ConversorBinarioBcdTest.vwf.vt|
 !i113 1
@@ -443,7 +531,7 @@ R15
 R26
 nconversor@binario@bcd_vlg_vec_tst
 vcronometroRegressivo
-Z60 !s110 1650845793
+Z63 !s110 1650845793
 !i10b 1
 !s100 ]9QS<f?IOVZXBYG_Rd[Cb1
 IF4`HbXLQ]eLFeRjzBN^e;2
@@ -457,7 +545,7 @@ R22
 r1
 !s85 0
 31
-Z61 !s108 1650845793.000000
+Z64 !s108 1650845793.000000
 R24
 R25
 !i113 1
@@ -465,7 +553,7 @@ R15
 R26
 ncronometro@regressivo
 vcronometroRegressivo_vlg_vec_tst
-R60
+R63
 !i10b 1
 !s100 lEB`Uc7zjbR1lXLT^L38F2
 IXb;1>Mh;O4C@oDed99UFT3
@@ -479,7 +567,7 @@ R22
 r1
 !s85 0
 31
-R61
+R64
 !s107 cronometroRegressivo.vwf.vt|
 !s90 -work|work|cronometroRegressivo.vwf.vt|
 !i113 1
@@ -487,7 +575,7 @@ R15
 R26
 ncronometro@regressivo_vlg_vec_tst
 Edecod7segs
-Z62 w1649859211
+Z65 w1649859211
 R2
 R3
 R4
@@ -503,9 +591,9 @@ Vc`0R_l5VIY1XWH;n0GEOF3
 !s100 Cn[ck;=kTXDGdKKQ@Q?LH1
 R10
 32
-Z63 !s110 1649859212
+Z66 !s110 1649859212
 !i10b 1
-Z64 !s108 1649859212.000000
+Z67 !s108 1649859212.000000
 R13
 R14
 !i113 1
@@ -525,32 +613,32 @@ VVQUf8eb:H4NN2Ef7P7[>B2
 !s100 HzZzFak9in31MJEMR;_:j1
 R10
 32
-R63
+R66
 !i10b 1
-R64
+R67
 R13
 R14
 !i113 1
 R15
 R16
 Edecod7segs_vhd_vec_tst
-R62
+R65
 R6
 R7
 R0
-Z65 8decod7segs.vwf.vht
-Z66 Fdecod7segs.vwf.vht
+Z68 8decod7segs.vwf.vht
+Z69 Fdecod7segs.vwf.vht
 l0
 L31
 VMU2nKKN8BodK;gnNElFJc2
 !s100 RRGP=CS>;n@IY>Be8U<g=1
 R10
 32
-R63
+R66
 !i10b 1
-R64
-Z67 !s90 -work|work|decod7segs.vwf.vht|
-Z68 !s107 decod7segs.vwf.vht|
+R67
+Z70 !s90 -work|work|decod7segs.vwf.vht|
+Z71 !s107 decod7segs.vwf.vht|
 !i113 1
 R15
 R16
@@ -564,16 +652,16 @@ V73nM?c?9S;J>1OB:k0?^R0
 !s100 mmXFR:Wzaf43A=mzR>k^13
 R10
 32
-R63
+R66
 !i10b 1
-R64
 R67
-R68
+R70
+R71
 !i113 1
 R15
 R16
 vmain
-Z69 !s110 1649863030
+Z72 !s110 1649863030
 !i10b 1
 !s100 ?Ge>nTbLaT2ln88mIDKnQ3
 I7MjnWQB2CUeMS9[2?HI052
@@ -587,30 +675,30 @@ R22
 r1
 !s85 0
 31
-Z70 !s108 1649863030.000000
+Z73 !s108 1649863030.000000
 R24
 R25
 !i113 1
 R15
 R26
 Emain_vhd_vec_tst
-Z71 w1649822870
+Z74 w1649822870
 R6
 R7
 R0
-Z72 8testeTotal.vwf.vht
-Z73 FtesteTotal.vwf.vht
+Z75 8testeTotal.vwf.vht
+Z76 FtesteTotal.vwf.vht
 l0
 L31
 VbAjZJ?=XSki31j0b2A<jS0
 !s100 fM3k[XY;>:GRR>BhNKBHQ1
 R10
 32
-Z74 !s110 1649822872
+Z77 !s110 1649822872
 !i10b 1
-Z75 !s108 1649822872.000000
-Z76 !s90 -work|work|testeTotal.vwf.vht|
-Z77 !s107 testeTotal.vwf.vht|
+Z78 !s108 1649822872.000000
+Z79 !s90 -work|work|testeTotal.vwf.vht|
+Z80 !s107 testeTotal.vwf.vht|
 !i113 1
 R15
 R16
@@ -624,37 +712,37 @@ V;?E8gDbZECE86mT[no;B03
 !s100 oc2`B:hom=k9dQaXWz>Vd0
 R10
 32
-R74
-!i10b 1
-R75
-R76
 R77
+!i10b 1
+R78
+R79
+R80
 !i113 1
 R15
 R16
 vmain_vlg_vec_tst
-R69
+R72
 !i10b 1
 !s100 G31EhH6h<^jd=Rm9Oj<i01
 Ij7le4P^PE^@WEgZn__gUZ2
 R18
 R0
 w1649863029
-R46
-R47
+R48
+R49
 R32
 R22
 r1
 !s85 0
 31
-R70
-R48
-R49
+R73
+R50
+R51
 !i113 1
 R15
 R26
 Emux16pra4
-Z78 w1649822828
+Z81 w1649822828
 R2
 R3
 R4
@@ -670,9 +758,9 @@ VJn6Rb_kIVeD?BTgM0UU7<0
 !s100 ]C1SEdAe33Pnz]ZZ=EE2e2
 R10
 32
-Z79 !s110 1649822829
+Z82 !s110 1649822829
 !i10b 1
-Z80 !s108 1649822829.000000
+Z83 !s108 1649822829.000000
 R13
 R14
 !i113 1
@@ -692,32 +780,32 @@ Vc>JIPkO[BW0T<WZTfjV_?3
 !s100 YdSI4oI>;AEmQ8kWe8N_;0
 R10
 32
-R79
+R82
 !i10b 1
-R80
+R83
 R13
 R14
 !i113 1
 R15
 R16
 Emux16pra4_vhd_vec_tst
-R78
+R81
 R6
 R7
 R0
-R72
-R73
+R75
+R76
 l0
 L31
 V2EeLY]SUbgE6>n=3Y<5;e1
 !s100 5DM@XkkU0750>a8KAhOJ<0
 R10
 32
-R79
+R82
 !i10b 1
+R83
+R79
 R80
-R76
-R77
 !i113 1
 R15
 R16
@@ -731,11 +819,11 @@ V=:CReU6COM`ckh;=^l1H43
 !s100 7BOIP8goO;>CY8e_7a>7Z2
 R10
 32
-R79
+R82
 !i10b 1
+R83
+R79
 R80
-R76
-R77
 !i113 1
 R15
 R16
@@ -761,7 +849,7 @@ r1
 R15
 R26
 vmux8pra4
-Z81 !s110 1649819696
+Z84 !s110 1649819696
 !i10b 1
 !s100 :Wj3m9WHeB:8Vh>VGAS^l1
 I]]b@4N_dKzSeg@5ERJ?F20
@@ -775,14 +863,14 @@ R22
 r1
 !s85 0
 31
-Z82 !s108 1649819696.000000
+Z85 !s108 1649819696.000000
 R24
 R25
 !i113 1
 R15
 R26
 Emux8pra4_vhd_vec_tst
-Z83 w1649816963
+Z86 w1649816963
 R6
 R7
 R0
@@ -794,9 +882,9 @@ Vk8i67A]9?T>zZ5@E:^XCT1
 !s100 AnNl`gSz?JIY1=?R3_5LO2
 R10
 32
-Z84 !s110 1649816964
+Z87 !s110 1649816964
 !i10b 1
-Z85 !s108 1649816964.000000
+Z88 !s108 1649816964.000000
 R30
 R31
 !i113 1
@@ -812,16 +900,16 @@ VFdPI8R6OXAj]I2I03AYn42
 !s100 1KR?@KhQE_oIMPN^[I=>M2
 R10
 32
-R84
+R87
 !i10b 1
-R85
+R88
 R30
 R31
 !i113 1
 R15
 R16
 vmux8pra4_vlg_vec_tst
-R81
+R84
 !i10b 1
 !s100 >L22EF@Dfj9YNf`]k1HlW0
 IO2b?oCb;`l>;7h>LA0D[V2
@@ -835,14 +923,14 @@ R22
 r1
 !s85 0
 31
-R82
+R85
 !s107 mux8x4Teste.vwf.vt|
 !s90 -work|work|mux8x4Teste.vwf.vt|
 !i113 1
 R15
 R26
 Eretornar8
-Z86 w1649817437
+Z89 w1649817437
 R2
 R3
 R4
@@ -858,9 +946,9 @@ VAP4@N9T^gEcBFR4MUSM]f3
 !s100 AdSB^=Ua4hUYj5fReEf;42
 R10
 32
-Z87 !s110 1649817437
+Z90 !s110 1649817437
 !i10b 1
-Z88 !s108 1649817437.000000
+Z91 !s108 1649817437.000000
 R13
 R14
 !i113 1
@@ -880,32 +968,32 @@ VST]1fdc3NXMLEE:^[V=M_1
 !s100 z1232;T3A4a5Uec4JY^hD0
 R10
 32
-R87
+R90
 !i10b 1
-R88
+R91
 R13
 R14
 !i113 1
 R15
 R16
 Eretornar8_vhd_vec_tst
-Z89 w1649817436
+Z92 w1649817436
 R6
 R7
 R0
-Z90 8retornar8Teste.vwf.vht
-Z91 Fretornar8Teste.vwf.vht
+Z93 8retornar8Teste.vwf.vht
+Z94 Fretornar8Teste.vwf.vht
 l0
 L31
 VU8XW]4ZUBBQ2EQVhoiYDT3
 !s100 b:OC;WibSEO`A=W[C]7Qa0
 R10
 32
-R87
+R90
 !i10b 1
-R88
-Z92 !s90 -work|work|retornar8Teste.vwf.vht|
-Z93 !s107 retornar8Teste.vwf.vht|
+R91
+Z95 !s90 -work|work|retornar8Teste.vwf.vht|
+Z96 !s107 retornar8Teste.vwf.vht|
 !i113 1
 R15
 R16
@@ -919,11 +1007,11 @@ VXA3f8@Y552KeDQd;JzXSV1
 !s100 Zf]<U9Hz>gd<:jYE[hb5Z1
 R10
 32
-R87
+R90
 !i10b 1
-R88
-R92
-R93
+R91
+R95
+R96
 !i113 1
 R15
 R16
@@ -949,7 +1037,7 @@ r1
 R15
 R26
 Esomador1bt
-Z94 w1649714513
+Z97 w1649714513
 R2
 R3
 R4
@@ -965,9 +1053,9 @@ VCkS;SiBg?aP9z[4HBbOg03
 !s100 iUg4K3ZYGNYjHg;>iCSQD3
 R10
 32
-Z95 !s110 1649714516
+Z98 !s110 1649714516
 !i10b 1
-Z96 !s108 1649714516.000000
+Z99 !s108 1649714516.000000
 R13
 R14
 !i113 1
@@ -987,32 +1075,32 @@ VIZbD49jSOWOLY[l9JJYlf2
 !s100 eml1R@E2>]gZWc1e<B06Z2
 R10
 32
-R95
+R98
 !i10b 1
-R96
+R99
 R13
 R14
 !i113 1
 R15
 R16
 Esomador1bt_vhd_vec_tst
-R94
+R97
 R6
 R7
 R0
-Z97 8somador1btsTest.vwf.vht
-Z98 Fsomador1btsTest.vwf.vht
+Z100 8somador1btsTest.vwf.vht
+Z101 Fsomador1btsTest.vwf.vht
 l0
 L31
 VRj[eUJ>QQbWBi_6GH41Z]1
 !s100 2G]k=ch?8_J1JNWF>L5n50
 R10
 32
-R95
+R98
 !i10b 1
-R96
-Z99 !s90 -work|work|somador1btsTest.vwf.vht|
-Z100 !s107 somador1btsTest.vwf.vht|
+R99
+Z102 !s90 -work|work|somador1btsTest.vwf.vht|
+Z103 !s107 somador1btsTest.vwf.vht|
 !i113 1
 R15
 R16
@@ -1026,16 +1114,16 @@ V7RHVm][NBXh`R6=C9_amE0
 !s100 ]lIzmO3`0OTCM8STZ@N4_1
 R10
 32
-R95
+R98
 !i10b 1
-R96
 R99
-R100
+R102
+R103
 !i113 1
 R15
 R16
 Esomadorsubtrator7bts
-Z101 w1649716704
+Z104 w1649716704
 R2
 R3
 R4
@@ -1051,9 +1139,9 @@ V8LP_gPFeYOMQ2:?DfV[m81
 !s100 3S@Tk^[A2N=RcQ6h84DkS2
 R10
 32
-Z102 !s110 1649716705
+Z105 !s110 1649716705
 !i10b 1
-Z103 !s108 1649716705.000000
+Z106 !s108 1649716705.000000
 R13
 R14
 !i113 1
@@ -1073,32 +1161,32 @@ Vg_nHC7U14Hl3LQQC<Qz^V3
 !s100 >3Wgmfb;`KE1@1zC8]3A83
 R10
 32
-R102
+R105
 !i10b 1
-R103
+R106
 R13
 R14
 !i113 1
 R15
 R16
 Esomadorsubtrator7bts_vhd_vec_tst
-R101
+R104
 R6
 R7
 R0
-Z104 8somadorSubtratorTest.vwf.vht
-Z105 FsomadorSubtratorTest.vwf.vht
+Z107 8somadorSubtratorTest.vwf.vht
+Z108 FsomadorSubtratorTest.vwf.vht
 l0
 L31
 V[jIi1VDKKjWXN]8mZ[9N^3
 !s100 z7@GAd>iSB^d?Q8ca72P63
 R10
 32
-R102
+R105
 !i10b 1
-R103
-Z106 !s90 -work|work|somadorSubtratorTest.vwf.vht|
-Z107 !s107 somadorSubtratorTest.vwf.vht|
+R106
+Z109 !s90 -work|work|somadorSubtratorTest.vwf.vht|
+Z110 !s107 somadorSubtratorTest.vwf.vht|
 !i113 1
 R15
 R16
@@ -1112,11 +1200,11 @@ V2m;K=:8;T3YIcBj?FfdmF1
 !s100 ih<]5BP25=:PBD:ljW9Me3
 R10
 32
-R102
+R105
 !i10b 1
-R103
 R106
-R107
+R109
+R110
 !i113 1
 R15
 R16
