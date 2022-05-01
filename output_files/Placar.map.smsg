@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at cronometroRegressivo.v(17): always construct contains both blocking and non-blocking assignments File: C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/cronometroRegressivo.v Line: 17
+Warning (10268): Verilog HDL information at conversorBinarioBcd.v(158): always construct contains both blocking and non-blocking assignments File: C:/Users/silas/Documents/Quartus/Circuitos_Digitais_PlacarJogoBasquete_PBL01/conversorBinarioBcd.v Line: 158

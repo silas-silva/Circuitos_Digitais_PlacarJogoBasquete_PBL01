@@ -18,9 +18,9 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "04/12/2022 23:49:47"
+-- Generated on "05/01/2022 11:39:15"
                                                              
--- Vhdl Test Bench(with test vectors) for design  :          mux16pra4
+-- Vhdl Test Bench(with test vectors) for design  :          conversorBinarioBcd
 -- 
 -- Simulation tool : 3rd Party
 -- 
@@ -28,27 +28,104 @@
 LIBRARY ieee;                                               
 USE ieee.std_logic_1164.all;                                
 
-ENTITY mux16pra4_vhd_vec_tst IS
-END mux16pra4_vhd_vec_tst;
-ARCHITECTURE mux16pra4_arch OF mux16pra4_vhd_vec_tst IS
+ENTITY conversorBinarioBcd_vhd_vec_tst IS
+END conversorBinarioBcd_vhd_vec_tst;
+ARCHITECTURE conversorBinarioBcd_arch OF conversorBinarioBcd_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
-SIGNAL saida : STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL seletor1 : STD_LOGIC;
-SIGNAL seletorTime : STD_LOGIC;
-COMPONENT mux16pra4
+SIGNAL A : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL B : STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL Passou99 : STD_LOGIC;
+COMPONENT conversorBinarioBcd
 	PORT (
-	saida : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-	seletor1 : IN STD_LOGIC;
-	seletorTime : IN STD_LOGIC
+	A : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
+	B : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+	Passou99 : OUT STD_LOGIC
 	);
 END COMPONENT;
 BEGIN
-	i1 : mux16pra4
+	i1 : conversorBinarioBcd
 	PORT MAP (
 -- list connections between master ports and signals
-	saida => saida,
-	seletor1 => seletor1,
-	seletorTime => seletorTime
+	A => A,
+	B => B,
+	Passou99 => Passou99
 	);
-END mux16pra4_arch;
+-- A[6]
+t_prcs_A_6: PROCESS
+BEGIN
+LOOP
+	A(6) <= '0';
+	WAIT FOR 640000 ps;
+	A(6) <= '1';
+	WAIT FOR 640000 ps;
+	IF (NOW >= 1280000 ps) THEN WAIT; END IF;
+END LOOP;
+END PROCESS t_prcs_A_6;
+-- A[5]
+t_prcs_A_5: PROCESS
+BEGIN
+LOOP
+	A(5) <= '0';
+	WAIT FOR 320000 ps;
+	A(5) <= '1';
+	WAIT FOR 320000 ps;
+	IF (NOW >= 1280000 ps) THEN WAIT; END IF;
+END LOOP;
+END PROCESS t_prcs_A_5;
+-- A[4]
+t_prcs_A_4: PROCESS
+BEGIN
+LOOP
+	A(4) <= '0';
+	WAIT FOR 160000 ps;
+	A(4) <= '1';
+	WAIT FOR 160000 ps;
+	IF (NOW >= 1280000 ps) THEN WAIT; END IF;
+END LOOP;
+END PROCESS t_prcs_A_4;
+-- A[3]
+t_prcs_A_3: PROCESS
+BEGIN
+LOOP
+	A(3) <= '0';
+	WAIT FOR 80000 ps;
+	A(3) <= '1';
+	WAIT FOR 80000 ps;
+	IF (NOW >= 1280000 ps) THEN WAIT; END IF;
+END LOOP;
+END PROCESS t_prcs_A_3;
+-- A[2]
+t_prcs_A_2: PROCESS
+BEGIN
+LOOP
+	A(2) <= '0';
+	WAIT FOR 40000 ps;
+	A(2) <= '1';
+	WAIT FOR 40000 ps;
+	IF (NOW >= 1280000 ps) THEN WAIT; END IF;
+END LOOP;
+END PROCESS t_prcs_A_2;
+-- A[1]
+t_prcs_A_1: PROCESS
+BEGIN
+LOOP
+	A(1) <= '0';
+	WAIT FOR 20000 ps;
+	A(1) <= '1';
+	WAIT FOR 20000 ps;
+	IF (NOW >= 1280000 ps) THEN WAIT; END IF;
+END LOOP;
+END PROCESS t_prcs_A_1;
+-- A[0]
+t_prcs_A_0: PROCESS
+BEGIN
+LOOP
+	A(0) <= '0';
+	WAIT FOR 10000 ps;
+	A(0) <= '1';
+	WAIT FOR 10000 ps;
+	IF (NOW >= 1280000 ps) THEN WAIT; END IF;
+END LOOP;
+END PROCESS t_prcs_A_0;
+END conversorBinarioBcd_arch;

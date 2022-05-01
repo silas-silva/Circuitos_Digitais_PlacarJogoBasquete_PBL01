@@ -1,11 +1,11 @@
-Fitter Status : Successful - Fri Apr 29 10:45:48 2022
+Fitter Status : Successful - Sun May 01 11:55:45 2022
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : Placar
-Top-level Entity Name : controleCronometro
+Top-level Entity Name : conversorBinarioBcd
 Family : MAX II
 Device : EPM240T100C5
 Timing Models : Final
-Total logic elements : 2 / 240 ( < 1 % )
-Total pins : 7 / 80 ( 9 % )
+Total logic elements : 27 / 240 ( 11 % )
+Total pins : 16 / 80 ( 20 % )
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )
