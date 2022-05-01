@@ -1,26 +1,14 @@
-|conversorBinarioBcd
-A[0] => Decoder0.IN6
-A[0] => Ram0.RADDR
-A[1] => Decoder0.IN5
-A[1] => Ram0.RADDR1
-A[2] => Decoder0.IN4
-A[2] => Ram0.RADDR2
-A[3] => Decoder0.IN3
-A[3] => Ram0.RADDR3
-A[4] => Decoder0.IN2
-A[4] => Ram0.RADDR4
-A[5] => Decoder0.IN1
-A[5] => Ram0.RADDR5
-A[6] => Decoder0.IN0
-A[6] => Ram0.RADDR6
-B[0] <= Ram0.DATAOUT
-B[1] <= Ram0.DATAOUT1
-B[2] <= Ram0.DATAOUT2
-B[3] <= Ram0.DATAOUT3
-B[4] <= Ram0.DATAOUT4
-B[5] <= Ram0.DATAOUT5
-B[6] <= Ram0.DATAOUT6
-B[7] <= Ram0.DATAOUT7
-Passou99 <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+|decod7segs
+BCD[0] => Decoder0.IN3
+BCD[1] => Decoder0.IN2
+BCD[2] => Decoder0.IN1
+BCD[3] => Decoder0.IN0
+n7Segs[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+n7Segs[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+n7Segs[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+n7Segs[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+n7Segs[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+n7Segs[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+n7Segs[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 

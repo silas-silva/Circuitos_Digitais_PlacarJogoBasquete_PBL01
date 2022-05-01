@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "MAX II"
 set_global_assignment -name DEVICE EPM240T100C5
-set_global_assignment -name TOP_LEVEL_ENTITY conversorBinarioBcd
+set_global_assignment -name TOP_LEVEL_ENTITY decod7segs
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "15:11:51  APRIL 09, 2022"
 set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
@@ -89,7 +89,6 @@ set_location_assignment PIN_12 -to clock
 set_global_assignment -name VECTOR_WAVEFORM_FILE testeTotal.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE mux16x4Teste.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE comparadorTeste.vwf
-set_global_assignment -name VERILOG_FILE decod7segs2.v
 set_global_assignment -name VERILOG_FILE clockDivider.v
 set_global_assignment -name VECTOR_WAVEFORM_FILE clockDivider.vwf
 set_global_assignment -name VERILOG_FILE cronometroRegressivo.v
