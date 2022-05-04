@@ -1,9 +1,9 @@
-Analysis & Synthesis Status : Successful - Sun May 01 12:09:35 2022
+Analysis & Synthesis Status : Successful - Wed May 04 12:27:02 2022
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : Placar
-Top-level Entity Name : decod7segs
+Top-level Entity Name : cronometroTeste
 Family : MAX II
-Total logic elements : 7
-Total pins : 11
+Total logic elements : 55
+Total pins : 13
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )

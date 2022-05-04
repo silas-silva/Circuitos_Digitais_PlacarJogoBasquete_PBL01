@@ -2,4 +2,28 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
+Type  : Setup 'clock'
+Slack : -4.568
+TNS   : -99.080
+
+Type  : Setup 'clockDivider:divisorDeClock|counter[25]'
+Slack : -4.419
+TNS   : -25.171
+
+Type  : Hold 'clock'
+Slack : -1.607
+TNS   : -1.607
+
+Type  : Hold 'clockDivider:divisorDeClock|counter[25]'
+Slack : 1.899
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'clock'
+Slack : -2.289
+TNS   : -2.289
+
+Type  : Minimum Pulse Width 'clockDivider:divisorDeClock|counter[25]'
+Slack : 0.234
+TNS   : 0.000
+
 ------------------------------------------------------------

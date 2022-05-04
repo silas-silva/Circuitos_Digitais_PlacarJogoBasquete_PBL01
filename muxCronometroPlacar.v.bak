@@ -1,7 +1,9 @@
-module mux16pra4(seletor1 ,seletorTime , saida);
-	input seletor1, seletorTime;
-	output reg [3:0] saida;
-		
+module muxCronometroPlacar(placar, cronometro ,clock2segs , saida);
+	input [13:0] placar;
+	input [4:0] cronometro;
+	input clock2segs;
+	output reg [6:0] saida;
+	
 	always @* begin
 		case (seletorTime)
 			1'b0 : begin 

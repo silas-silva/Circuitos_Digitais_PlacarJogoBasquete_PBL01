@@ -4,23 +4,21 @@ module clockDivider50mhzTo1hz(clock_in, clock_out);
 	input clock_in;
 	
 	//saidas
-	output [25:0] clock_out;
+	output reg clock_out;
 	
 	//Registrador
-	reg [25:0] counter;
-	initial counter = 10111110101111000010000000;
+	reg [24:0] counter;
+	initial counter = 0;
+	initial clock_out = 0;
 	
-	//Entrada vai ser 50MHz
-	// Bit 26 do contador sai : 1Hz
-
-	assign clock_out = counter; 
+	//1011111010111100000111111
 	
-	always @(posedge clock_in)
-	begin
-		counter <= counter + 1; // A cada mudança do clock o counter é incrementado
-		if ( counter == 26'd0 ) // Verificar se em zero para resetar o valor
-		begin
-			counter <= 26'b10111110101111000010000000; //Reseta o contador
+	always @(posedge clock_in) begin
+		if ( counter == 25'b0 ) begin // Verificar se em zero para resetar o valor
+			counter <= 25'b1011111010111100000111111; //Reseta o contador
+			clock_out <= ~clock_out; 
+		end else begin
+			counter <= counter -1;
 		end
 	end 
 

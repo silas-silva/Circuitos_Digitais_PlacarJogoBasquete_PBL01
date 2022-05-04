@@ -7,25 +7,28 @@ module clockDivider(clock_in, frequencias );
 	output [4:0] frequencias;
 	
 	//Registrador
-	reg [4:0] counter;
+	reg [25:0] counter;
 	initial counter = 0;
 	
 	//Entrada vai ser 50MHz
-	// Bit 1 do contador : 25MHz
-	// Bit 2 do contador : 12.5MHz
-	// Bit 3 do contador : 6.250MHz
-	// Bit 3 do contador : 3.1250MHz
-	// Bit 3 do contador : 1.5625MHz
-	// Bit 3 do contador : 0.78125MHz
+	// Bit 19 do contador : 95,367hz
+	// Bit 24 do contador : 2,98hz
+	// Bit 25 do contador : 1,49hz
+	// Bit 26 do contador : 0,745hz
 	
-	assign frequencias = counter; 
+	
+	assign frequencias[0] = counter[18];
+	assign frequencias[1] = counter[23];
+	assign frequencias[2] = counter[24];
+	assign frequencias[3] = counter[25];
+	
 	
 	always @(posedge clock_in)
 	begin
 		counter <= counter + 1; // A cada mudança do clock o counter é incrementado
-		if ( counter == 5'b11111 ) // Verificar se chegaou no maximo, para tratar o estouro do numero
+		if ( counter == 26'b11111111111111111111111111 ) // Verificar se chegaou no maximo, para tratar o estouro do numero
 		begin
-			counter <= 5'b0; //Reseta o contador
+			counter <= 26'd0; //Reseta o contador
 		end
 	
 	end 

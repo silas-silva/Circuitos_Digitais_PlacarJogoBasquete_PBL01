@@ -1,7 +1,8 @@
-module cronometroRegressivo(clock_in, saida, buzzer);
+module cronometroRegressivo(clock_in ,saida, buzzer);
 
 	//entradas
 	input clock_in;
+	//input [4:0] segundosEntrada;
 	
 	//saidas
 	output[4:0] saida;

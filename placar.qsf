@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "MAX II"
 set_global_assignment -name DEVICE EPM240T100C5
-set_global_assignment -name TOP_LEVEL_ENTITY decod7segs
+set_global_assignment -name TOP_LEVEL_ENTITY cronometroTeste
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "15:11:51  APRIL 09, 2022"
 set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
@@ -97,3 +97,5 @@ set_global_assignment -name VERILOG_FILE clockDivider50mhzTo1hz.v
 set_global_assignment -name VECTOR_WAVEFORM_FILE clockDivider50mhzTo1hz.vwf
 set_global_assignment -name VERILOG_FILE controleCronometro.v
 set_global_assignment -name VECTOR_WAVEFORM_FILE controleCronometro.vwf
+set_global_assignment -name VERILOG_FILE muxCronometroPlacar.v
+set_global_assignment -name VERILOG_FILE cronometroTeste.v

@@ -1,4 +1,150 @@
-|decod7segs
+|cronometroTeste
+clock => clock.IN2
+buzzer <= cronometroRegressivo:Cronometro.buzzer
+display[0] <= decod7segs:decodificador7segs.n7Segs
+display[1] <= decod7segs:decodificador7segs.n7Segs
+display[2] <= decod7segs:decodificador7segs.n7Segs
+display[3] <= decod7segs:decodificador7segs.n7Segs
+display[4] <= decod7segs:decodificador7segs.n7Segs
+display[5] <= decod7segs:decodificador7segs.n7Segs
+display[6] <= decod7segs:decodificador7segs.n7Segs
+escolhaDisplay[0] <= mux16pra4:escolherDisplay.saida
+escolhaDisplay[1] <= mux16pra4:escolherDisplay.saida
+escolhaDisplay[2] <= mux16pra4:escolherDisplay.saida
+escolhaDisplay[3] <= mux16pra4:escolherDisplay.saida
+
+
+|cronometroTeste|clockDivider50mhzTo1hz:clock1hzz
+clock_in => clock_out~reg0.CLK
+clock_in => counter[0].CLK
+clock_in => counter[1].CLK
+clock_in => counter[2].CLK
+clock_in => counter[3].CLK
+clock_in => counter[4].CLK
+clock_in => counter[5].CLK
+clock_in => counter[6].CLK
+clock_in => counter[7].CLK
+clock_in => counter[8].CLK
+clock_in => counter[9].CLK
+clock_in => counter[10].CLK
+clock_in => counter[11].CLK
+clock_in => counter[12].CLK
+clock_in => counter[13].CLK
+clock_in => counter[14].CLK
+clock_in => counter[15].CLK
+clock_in => counter[16].CLK
+clock_in => counter[17].CLK
+clock_in => counter[18].CLK
+clock_in => counter[19].CLK
+clock_in => counter[20].CLK
+clock_in => counter[21].CLK
+clock_in => counter[22].CLK
+clock_in => counter[23].CLK
+clock_in => counter[24].CLK
+clock_out <= clock_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cronometroTeste|clockDivider:divisorDeClock
+clock_in => counter[0].CLK
+clock_in => counter[1].CLK
+clock_in => counter[2].CLK
+clock_in => counter[3].CLK
+clock_in => counter[4].CLK
+clock_in => counter[5].CLK
+clock_in => counter[6].CLK
+clock_in => counter[7].CLK
+clock_in => counter[8].CLK
+clock_in => counter[9].CLK
+clock_in => counter[10].CLK
+clock_in => counter[11].CLK
+clock_in => counter[12].CLK
+clock_in => counter[13].CLK
+clock_in => counter[14].CLK
+clock_in => counter[15].CLK
+clock_in => counter[16].CLK
+clock_in => counter[17].CLK
+clock_in => counter[18].CLK
+clock_in => counter[19].CLK
+clock_in => counter[20].CLK
+clock_in => counter[21].CLK
+clock_in => counter[22].CLK
+clock_in => counter[23].CLK
+clock_in => counter[24].CLK
+clock_in => counter[25].CLK
+frequencias[0] <= counter[18].DB_MAX_OUTPUT_PORT_TYPE
+frequencias[1] <= counter[23].DB_MAX_OUTPUT_PORT_TYPE
+frequencias[2] <= counter[24].DB_MAX_OUTPUT_PORT_TYPE
+frequencias[3] <= counter[25].DB_MAX_OUTPUT_PORT_TYPE
+frequencias[4] <= <GND>
+
+
+|cronometroTeste|cronometroRegressivo:Cronometro
+clock_in => nBuzzer.CLK
+clock_in => counter[0].CLK
+clock_in => counter[1].CLK
+clock_in => counter[2].CLK
+clock_in => counter[3].CLK
+clock_in => counter[4].CLK
+saida[0] <= counter[0].DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= counter[1].DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= counter[2].DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= counter[3].DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= counter[4].DB_MAX_OUTPUT_PORT_TYPE
+buzzer <= nBuzzer.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cronometroTeste|conversorBinarioBcd:bin_bcd
+A[0] => Decoder0.IN6
+A[0] => Ram0.RADDR
+A[1] => Decoder0.IN5
+A[1] => Ram0.RADDR1
+A[2] => Decoder0.IN4
+A[2] => Ram0.RADDR2
+A[3] => Decoder0.IN3
+A[3] => Ram0.RADDR3
+A[4] => Decoder0.IN2
+A[4] => Ram0.RADDR4
+A[5] => Decoder0.IN1
+A[5] => Ram0.RADDR5
+A[6] => Decoder0.IN0
+A[6] => Ram0.RADDR6
+B[0] <= Ram0.DATAOUT
+B[1] <= Ram0.DATAOUT1
+B[2] <= Ram0.DATAOUT2
+B[3] <= Ram0.DATAOUT3
+B[4] <= Ram0.DATAOUT4
+B[5] <= Ram0.DATAOUT5
+B[6] <= Ram0.DATAOUT6
+B[7] <= Ram0.DATAOUT7
+Passou99 <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cronometroTeste|mux16pra4:escolherDisplay
+seletor1 => Decoder0.IN0
+seletorTime => Decoder1.IN0
+saida[0] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cronometroTeste|mux8pra4:digitoMostrarDisplay
+N[0] => S.DATAA
+N[1] => S.DATAA
+N[2] => S.DATAA
+N[3] => S.DATAA
+N[4] => S.DATAB
+N[5] => S.DATAB
+N[6] => S.DATAB
+N[7] => S.DATAB
+escolha => Decoder0.IN0
+S[0] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cronometroTeste|decod7segs:decodificador7segs
 BCD[0] => Decoder0.IN3
 BCD[1] => Decoder0.IN2
 BCD[2] => Decoder0.IN1
