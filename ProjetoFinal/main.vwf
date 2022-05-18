@@ -20,6 +20,12 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
+
+
+
+
+
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
@@ -38,6 +44,12 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
+
+
+
+
+
 </modelsim_script_timing>
 <hdl_lang>verilog</hdl_lang>
 </simulation_settings>*/
@@ -68,7 +80,7 @@ HEADER
 	VERSION = 1;
 	TIME_UNIT = ns;
 	DATA_OFFSET = 0.0;
-	DATA_DURATION = 1000.0;
+	DATA_DURATION = 100000.0;
 	SIMULATION_TIME = 0.0;
 	GRID_PHASE = 0.0;
 	GRID_PERIOD = 10.0;
@@ -175,12 +187,23 @@ SIGNAL("cronometro[0]")
 	PARENT = "cronometro";
 }
 
+SIGNAL("chaveParar")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
 TRANSITION_LIST("buzzer")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL X FOR 999.0;
+		LEVEL 0 FOR 99001.0;
 	}
 }
 
@@ -192,10 +215,9 @@ TRANSITION_LIST("chave14")
 		NODE
 		{
 			REPEAT = 2;
-			LEVEL 0 FOR 240.0;
-			LEVEL 1 FOR 240.0;
+			LEVEL 0 FOR 25000.0;
+			LEVEL 1 FOR 25000.0;
 		}
-		LEVEL 0 FOR 40.0;
 	}
 }
 
@@ -207,10 +229,9 @@ TRANSITION_LIST("chave24")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 0 FOR 480.0;
-			LEVEL 1 FOR 480.0;
+			LEVEL 0 FOR 50000.0;
+			LEVEL 1 FOR 50000.0;
 		}
-		LEVEL 0 FOR 40.0;
 	}
 }
 
@@ -221,11 +242,11 @@ TRANSITION_LIST("clock")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 12;
-			LEVEL 0 FOR 40.0;
-			LEVEL 1 FOR 40.0;
+			REPEAT = 83;
+			LEVEL 0 FOR 600.0;
+			LEVEL 1 FOR 600.0;
 		}
-		LEVEL 0 FOR 40.0;
+		LEVEL 0 FOR 400.0;
 	}
 }
 
@@ -234,7 +255,8 @@ TRANSITION_LIST("cronometro[4]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL X FOR 999.0;
+		LEVEL 0 FOR 99001.0;
 	}
 }
 
@@ -243,7 +265,8 @@ TRANSITION_LIST("cronometro[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL X FOR 999.0;
+		LEVEL 0 FOR 99001.0;
 	}
 }
 
@@ -252,7 +275,8 @@ TRANSITION_LIST("cronometro[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL X FOR 999.0;
+		LEVEL 0 FOR 99001.0;
 	}
 }
 
@@ -261,7 +285,8 @@ TRANSITION_LIST("cronometro[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL X FOR 999.0;
+		LEVEL 0 FOR 99001.0;
 	}
 }
 
@@ -270,7 +295,17 @@ TRANSITION_LIST("cronometro[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL X FOR 999.0;
+		LEVEL 0 FOR 99001.0;
+	}
+}
+
+TRANSITION_LIST("chaveParar")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 100000.0;
 	}
 }
 
@@ -285,7 +320,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "chave14";
+	CHANNEL = "chaveParar";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 1;
@@ -294,7 +329,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "chave24";
+	CHANNEL = "chave14";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 2;
@@ -303,12 +338,21 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "cronometro";
+	CHANNEL = "chave24";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 3;
 	TREE_LEVEL = 0;
-	CHILDREN = 4, 5, 6, 7, 8;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "cronometro";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 4;
+	TREE_LEVEL = 0;
+	CHILDREN = 5, 6, 7, 8, 9;
 }
 
 DISPLAY_LINE
@@ -316,9 +360,9 @@ DISPLAY_LINE
 	CHANNEL = "cronometro[4]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 4;
+	TREE_INDEX = 5;
 	TREE_LEVEL = 1;
-	PARENT = 3;
+	PARENT = 4;
 }
 
 DISPLAY_LINE
@@ -326,9 +370,9 @@ DISPLAY_LINE
 	CHANNEL = "cronometro[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 5;
+	TREE_INDEX = 6;
 	TREE_LEVEL = 1;
-	PARENT = 3;
+	PARENT = 4;
 }
 
 DISPLAY_LINE
@@ -336,9 +380,9 @@ DISPLAY_LINE
 	CHANNEL = "cronometro[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 6;
+	TREE_INDEX = 7;
 	TREE_LEVEL = 1;
-	PARENT = 3;
+	PARENT = 4;
 }
 
 DISPLAY_LINE
@@ -346,9 +390,9 @@ DISPLAY_LINE
 	CHANNEL = "cronometro[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 7;
+	TREE_INDEX = 8;
 	TREE_LEVEL = 1;
-	PARENT = 3;
+	PARENT = 4;
 }
 
 DISPLAY_LINE
@@ -356,9 +400,9 @@ DISPLAY_LINE
 	CHANNEL = "cronometro[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 8;
+	TREE_INDEX = 9;
 	TREE_LEVEL = 1;
-	PARENT = 3;
+	PARENT = 4;
 }
 
 DISPLAY_LINE
@@ -366,7 +410,7 @@ DISPLAY_LINE
 	CHANNEL = "buzzer";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 9;
+	TREE_INDEX = 10;
 	TREE_LEVEL = 0;
 }
 
