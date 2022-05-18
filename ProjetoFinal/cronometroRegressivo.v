@@ -1,8 +1,7 @@
 module cronometroRegressivo(clock_in, segundosEntrada, chaveParar ,saida, buzzer);
 
 	//entradas
-	input clock_in;
-	input chaveParar;
+	input clock_in, chaveParar;
 	input [4:0] segundosEntrada;
 	
 	//saidas
@@ -19,8 +18,6 @@ module cronometroRegressivo(clock_in, segundosEntrada, chaveParar ,saida, buzzer
 	assign saida = counter;
 	assign buzzer = nBuzzer;
 	
-
-	
 	
 	always @(negedge clock_in)
 	begin
@@ -28,15 +25,15 @@ module cronometroRegressivo(clock_in, segundosEntrada, chaveParar ,saida, buzzer
 			counter <= 5'b11000; 
 			nBuzzer <=  1'b0;
 		end 
-		if(segundosEntrada == 5'b01110) begin
+		else if(segundosEntrada == 5'b01110) begin
 			counter <= 5'b01110; 
 			nBuzzer <=  1'b0;
 		end 
-		if ( counter != 5'b00000 ) // Verificar se é diferente de 0 e se a chave parar ta liberada
+		if ( counter != 5'b00000 && chaveParar == 1'b1 ) // Verificar se é diferente de 0 e se a chave parar ta liberada
 		begin
 			counter <= counter - 1; // A cada mudança do clock o counter é decrementado
 		end
-		if ( counter == 5'b00001)
+		if ( counter == 5'b00001  && chaveParar == 1'b1 )
 		begin 
 			nBuzzer <= 1; //Ativa o buzzer
 		end 
