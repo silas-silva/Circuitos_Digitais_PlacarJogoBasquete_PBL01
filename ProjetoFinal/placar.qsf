@@ -48,7 +48,11 @@ set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR "-1"
 set_global_assignment -name POWER_EXT_SUPPLY_VOLTAGE_TO_REGULATOR 3.3V
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "NO HEAT SINK WITH STILL AIR"
-set_global_assignment -name VERILOG_FILE registradorParalelo8bit.v
+set_global_assignment -name VERILOG_FILE registradorParalelo7bit.v
+set_global_assignment -name VERILOG_FILE muxEscolherTime.v
+set_global_assignment -name VERILOG_FILE muxCronometroPlacar.v
+set_global_assignment -name VERILOG_FILE demuxEscolherTime.v
+set_global_assignment -name VERILOG_FILE clockDivider50mhzTo1hz.v
 set_global_assignment -name VERILOG_FILE muxEscolherDig.v
 set_global_assignment -name VERILOG_FILE decod7segs.v
 set_global_assignment -name VERILOG_FILE conversorBinarioBcd.v
@@ -71,3 +75,4 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE cronometroRegressivo14.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE main.vwf
 set_global_assignment -name VERILOG_FILE cronometroRegressivo.v
 set_global_assignment -name VECTOR_WAVEFORM_FILE cronometroRegressivo.vwf
+set_global_assignment -name VERILOG_FILE muxAlternarCronometroPlacarNoDisplay.v

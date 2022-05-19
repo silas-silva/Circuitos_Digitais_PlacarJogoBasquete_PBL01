@@ -1,9 +1,9 @@
-module registradorParalelo8bit(entrada, clock, saida);
-	input [7:0]entrada;
+module registradorParalelo7bit(entrada, clock, saida);
+	input [6:0]entrada;
 	input clock;
-	output [7:0]saida;
+	output [6:0]saida;
 	
-	reg [7:0] bits;
+	reg [6:0] bits;
 	
 	assign saida = bits;
 	
@@ -16,7 +16,6 @@ module registradorParalelo8bit(entrada, clock, saida);
 		bits[4] <= entrada[4];
 		bits[5] <= entrada[5];
 		bits[6] <= entrada[6];
-		bits[7] <= entrada[7];
 	end
 
 endmodule 
