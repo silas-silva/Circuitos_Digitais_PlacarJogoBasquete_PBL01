@@ -26,6 +26,8 @@ quit -f
 
 
 
+
+
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
@@ -44,6 +46,8 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
+
 
 
 
@@ -127,7 +131,27 @@ SIGNAL("clock")
 	PARENT = "";
 }
 
-SIGNAL("cronometro")
+SIGNAL("chaveParar")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("btnMudar")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("cronometro1")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = BUS;
@@ -137,64 +161,54 @@ SIGNAL("cronometro")
 	PARENT = "";
 }
 
-SIGNAL("cronometro[4]")
+SIGNAL("cronometro1[4]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "cronometro";
+	PARENT = "cronometro1";
 }
 
-SIGNAL("cronometro[3]")
+SIGNAL("cronometro1[3]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "cronometro";
+	PARENT = "cronometro1";
 }
 
-SIGNAL("cronometro[2]")
+SIGNAL("cronometro1[2]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "cronometro";
+	PARENT = "cronometro1";
 }
 
-SIGNAL("cronometro[1]")
+SIGNAL("cronometro1[1]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "cronometro";
+	PARENT = "cronometro1";
 }
 
-SIGNAL("cronometro[0]")
+SIGNAL("cronometro1[0]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "cronometro";
-}
-
-SIGNAL("chaveParar")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
+	PARENT = "cronometro1";
 }
 
 TRANSITION_LIST("buzzer")
@@ -242,61 +256,10 @@ TRANSITION_LIST("clock")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 83;
-			LEVEL 0 FOR 600.0;
-			LEVEL 1 FOR 600.0;
+			REPEAT = 50;
+			LEVEL 0 FOR 1000.0;
+			LEVEL 1 FOR 1000.0;
 		}
-		LEVEL 0 FOR 400.0;
-	}
-}
-
-TRANSITION_LIST("cronometro[4]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 999.0;
-		LEVEL 0 FOR 99001.0;
-	}
-}
-
-TRANSITION_LIST("cronometro[3]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 999.0;
-		LEVEL 0 FOR 99001.0;
-	}
-}
-
-TRANSITION_LIST("cronometro[2]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 999.0;
-		LEVEL 0 FOR 99001.0;
-	}
-}
-
-TRANSITION_LIST("cronometro[1]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 999.0;
-		LEVEL 0 FOR 99001.0;
-	}
-}
-
-TRANSITION_LIST("cronometro[0]")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL X FOR 999.0;
-		LEVEL 0 FOR 99001.0;
 	}
 }
 
@@ -306,6 +269,65 @@ TRANSITION_LIST("chaveParar")
 	{
 		REPEAT = 1;
 		LEVEL 1 FOR 100000.0;
+	}
+}
+
+TRANSITION_LIST("btnMudar")
+{
+	NODE
+	{
+		REPEAT = 1;
+		NODE
+		{
+			REPEAT = 50;
+			LEVEL 0 FOR 1000.0;
+			LEVEL 1 FOR 1000.0;
+		}
+	}
+}
+
+TRANSITION_LIST("cronometro1[4]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 100000.0;
+	}
+}
+
+TRANSITION_LIST("cronometro1[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 100000.0;
+	}
+}
+
+TRANSITION_LIST("cronometro1[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 100000.0;
+	}
+}
+
+TRANSITION_LIST("cronometro1[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 100000.0;
+	}
+}
+
+TRANSITION_LIST("cronometro1[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 100000.0;
 	}
 }
 
@@ -320,7 +342,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "chaveParar";
+	CHANNEL = "btnMudar";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 1;
@@ -329,7 +351,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "chave14";
+	CHANNEL = "chaveParar";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 2;
@@ -338,7 +360,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "chave24";
+	CHANNEL = "chave14";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 3;
@@ -347,62 +369,71 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "cronometro";
+	CHANNEL = "chave24";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 4;
 	TREE_LEVEL = 0;
-	CHILDREN = 5, 6, 7, 8, 9;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "cronometro[4]";
+	CHANNEL = "cronometro1";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 5;
-	TREE_LEVEL = 1;
-	PARENT = 4;
+	TREE_LEVEL = 0;
+	CHILDREN = 6, 7, 8, 9, 10;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "cronometro[3]";
+	CHANNEL = "cronometro1[4]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 6;
 	TREE_LEVEL = 1;
-	PARENT = 4;
+	PARENT = 5;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "cronometro[2]";
+	CHANNEL = "cronometro1[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 7;
 	TREE_LEVEL = 1;
-	PARENT = 4;
+	PARENT = 5;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "cronometro[1]";
+	CHANNEL = "cronometro1[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 8;
 	TREE_LEVEL = 1;
-	PARENT = 4;
+	PARENT = 5;
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "cronometro[0]";
+	CHANNEL = "cronometro1[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 9;
 	TREE_LEVEL = 1;
-	PARENT = 4;
+	PARENT = 5;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "cronometro1[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 10;
+	TREE_LEVEL = 1;
+	PARENT = 5;
 }
 
 DISPLAY_LINE
@@ -410,7 +441,7 @@ DISPLAY_LINE
 	CHANNEL = "buzzer";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 10;
+	TREE_INDEX = 11;
 	TREE_LEVEL = 0;
 }
 
