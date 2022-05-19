@@ -57,9 +57,6 @@ set_global_assignment -name VERILOG_FILE muxEscolherDig.v
 set_global_assignment -name VERILOG_FILE decod7segs.v
 set_global_assignment -name VERILOG_FILE conversorBinarioBcd.v
 set_global_assignment -name VERILOG_FILE main.v
-set_global_assignment -name VERILOG_FILE cronometroRegressivo24.v
-set_global_assignment -name VERILOG_FILE cronometroRegressivo14.v
-set_global_assignment -name VERILOG_FILE controleCronometro.v
 set_global_assignment -name VERILOG_FILE comparadorDeMagnitude.v
 set_global_assignment -name VERILOG_FILE somadorSubtrator7bts.v
 set_global_assignment -name VERILOG_FILE somador1bt.v

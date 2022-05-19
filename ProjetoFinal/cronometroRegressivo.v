@@ -11,10 +11,7 @@ module cronometroRegressivo(clock_in, segundosEntrada, chave14, chave24, btnMuda
 	//Registrador
 	reg [4:0] counter;
 	initial counter = 5'b00000;
-	
-	reg [4:0] segundos;
-	initial segundos = 5'b00000;
-	
+		
 	reg nBuzzer;
 	initial nBuzzer = 1'b0;
 	

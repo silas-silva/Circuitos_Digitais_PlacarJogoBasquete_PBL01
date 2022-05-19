@@ -21,7 +21,7 @@ module clockDivider(clock_in, frequencias );
 	
 	assign frequencias[0] = counter[18]; // 120hz
 	assign frequencias[1] = counter[19]; // 60hz
-	assign frequencias[2] = counter[25]; // 1 seg
+	assign frequencias[2] = counter[24]; // 1 seg
 	assign frequencias[3] = counter[26]; // 2 segs
 	
 	
