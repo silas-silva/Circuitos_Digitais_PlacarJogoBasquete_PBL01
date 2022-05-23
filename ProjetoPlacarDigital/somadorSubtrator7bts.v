@@ -5,7 +5,8 @@ module somadorSubtrator7bts (A, B, Cin, S, Cout);
 	input Cin;
 	output [6:0] S;
 	output Cout;
-	assign x = 1'b0;
+	
+	wire x = 1'b0;
 	
 	wire c1, c2, c3, c4, c5, c6;
 	

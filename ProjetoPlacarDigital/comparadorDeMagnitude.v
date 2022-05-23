@@ -1,4 +1,4 @@
-module comparadorDeMagnitude( chavePN, B, A, F);
+module comparadorDeMagnitude( chavePN, A, B, F);
 	input chavePN;
 	input [6:0] A;
 	input [1:0] B;

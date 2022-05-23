@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "MAX II"
 set_global_assignment -name DEVICE EPM240T100C5
-set_global_assignment -name TOP_LEVEL_ENTITY placarTimes
+set_global_assignment -name TOP_LEVEL_ENTITY main
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "22:59:38  MAY 22, 2022"
 set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
@@ -62,3 +62,7 @@ set_global_assignment -name VERILOG_FILE cronometroRegressivo.v
 set_global_assignment -name VERILOG_FILE comparadorDeMagnitude.v
 set_global_assignment -name VERILOG_FILE clockDivider.v
 set_global_assignment -name VERILOG_FILE btnsEntrada.v
+set_global_assignment -name VERILOG_FILE main.v
+set_global_assignment -name VERILOG_FILE muxCronometroPlacar.v
+set_global_assignment -name VERILOG_FILE muxAlternarCronometroPlacarNoDisplay.v
+set_global_assignment -name VERILOG_FILE muxEscolherDigBCD.v

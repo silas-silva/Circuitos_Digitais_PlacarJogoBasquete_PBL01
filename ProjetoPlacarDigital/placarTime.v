@@ -1,4 +1,4 @@
-module placarTime (clr, pr ,clock,chaveNP, somaBTNs, somaTime);
+module placarTime (clr, pr ,clock, chaveNP, somaBTNs, somaTime);
 	
 	input clr, pr, clock, chaveNP;
 	input [1:0] somaBTNs;

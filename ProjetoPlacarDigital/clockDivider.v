@@ -11,10 +11,11 @@ module clockDivider(clock_in, frequencias );
 	initial counter = 0;
 	
 	//Entrada vai ser 50MHz
-	// Bit 19 do contador : 95,367hz
-	// Bit 24 do contador : 2,98hz
-	// Bit 25 do contador : 1,49hz
-	// Bit 26 do contador : 0,745hz
+	// Bit 00 do contador : 25mhz
+	// Bit 18 do contador : 95,367hz
+	// Bit 23 do contador : 2,98hz
+	// Bit 24 do contador : 1,49hz
+	// Bit 25 do contador : 0,745hz
 	
 	
 	assign frequencias[0] = counter[18];
