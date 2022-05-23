@@ -1,0 +1,1382 @@
+$comment
+	File created using the following command:
+		vcd file placar.msim.vcd -direction
+$end
+$date
+	Thu May 19 00:13:57 2022
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module main_vlg_vec_tst $end
+$var reg 1 ! btnMudar $end
+$var reg 1 " chave14 $end
+$var reg 1 # chave24 $end
+$var reg 1 $ chaveParar $end
+$var reg 1 % clock $end
+$var wire 1 & buzzer $end
+$var wire 1 ' cronometro1 [4] $end
+$var wire 1 ( cronometro1 [3] $end
+$var wire 1 ) cronometro1 [2] $end
+$var wire 1 * cronometro1 [1] $end
+$var wire 1 + cronometro1 [0] $end
+$var wire 1 , display [6] $end
+$var wire 1 - display [5] $end
+$var wire 1 . display [4] $end
+$var wire 1 / display [3] $end
+$var wire 1 0 display [2] $end
+$var wire 1 1 display [1] $end
+$var wire 1 2 display [0] $end
+$var wire 1 3 escolhaDisplay [3] $end
+$var wire 1 4 escolhaDisplay [2] $end
+$var wire 1 5 escolhaDisplay [1] $end
+$var wire 1 6 escolhaDisplay [0] $end
+
+$scope module i1 $end
+$var wire 1 7 gnd $end
+$var wire 1 8 vcc $end
+$var wire 1 9 unknown $end
+$var tri1 1 : devclrn $end
+$var tri1 1 ; devpor $end
+$var tri1 1 < devoe $end
+$var wire 1 = clock~combout $end
+$var wire 1 > moduleCronometro|Add0~20_combout $end
+$var wire 1 ? chaveParar~combout $end
+$var wire 1 @ btnMudar~combout $end
+$var wire 1 A chave24~combout $end
+$var wire 1 B chave14~combout $end
+$var wire 1 C moduleCronometro|validar24~regout $end
+$var wire 1 D moduleCronometro|validar14~regout $end
+$var wire 1 E moduleCronometro|Add0~22 $end
+$var wire 1 F moduleCronometro|Add0~22COUT1_26 $end
+$var wire 1 G moduleCronometro|Add0~0_combout $end
+$var wire 1 H moduleCronometro|counter[1]~0_combout $end
+$var wire 1 I moduleCronometro|Add0~2 $end
+$var wire 1 J moduleCronometro|Add0~2COUT1_27 $end
+$var wire 1 K moduleCronometro|Add0~5_combout $end
+$var wire 1 L moduleCronometro|counter[2]~2_combout $end
+$var wire 1 M moduleCronometro|nBuzzer~0_combout $end
+$var wire 1 N moduleCronometro|Add0~7 $end
+$var wire 1 O moduleCronometro|Add0~7COUT1_28 $end
+$var wire 1 P moduleCronometro|Add0~10_combout $end
+$var wire 1 Q moduleCronometro|Add0~12 $end
+$var wire 1 R moduleCronometro|Add0~12COUT1_29 $end
+$var wire 1 S moduleCronometro|Add0~15_combout $end
+$var wire 1 T moduleCronometro|counter[4]~5_combout $end
+$var wire 1 U moduleCronometro|Equal0~0_combout $end
+$var wire 1 V moduleCronometro|always0~0_combout $end
+$var wire 1 W comb_16|counter[0]~39 $end
+$var wire 1 X comb_16|counter[0]~39COUT1_41 $end
+$var wire 1 Y comb_16|counter[1]~37 $end
+$var wire 1 Z comb_16|counter[1]~37COUT1_42 $end
+$var wire 1 [ comb_16|counter[2]~35 $end
+$var wire 1 \ comb_16|counter[2]~35COUT1_43 $end
+$var wire 1 ] comb_16|counter[3]~33 $end
+$var wire 1 ^ comb_16|counter[3]~33COUT1_44 $end
+$var wire 1 _ comb_16|counter[4]~31 $end
+$var wire 1 ` comb_16|counter[5]~29 $end
+$var wire 1 a comb_16|counter[5]~29COUT1_45 $end
+$var wire 1 b comb_16|counter[6]~27 $end
+$var wire 1 c comb_16|counter[6]~27COUT1_46 $end
+$var wire 1 d comb_16|counter[7]~25 $end
+$var wire 1 e comb_16|counter[7]~25COUT1_47 $end
+$var wire 1 f comb_16|counter[8]~23 $end
+$var wire 1 g comb_16|counter[8]~23COUT1_48 $end
+$var wire 1 h comb_16|counter[9]~21 $end
+$var wire 1 i comb_16|counter[10]~19 $end
+$var wire 1 j comb_16|counter[10]~19COUT1_49 $end
+$var wire 1 k comb_16|counter[11]~17 $end
+$var wire 1 l comb_16|counter[11]~17COUT1_50 $end
+$var wire 1 m comb_16|counter[12]~15 $end
+$var wire 1 n comb_16|counter[12]~15COUT1_51 $end
+$var wire 1 o comb_16|counter[13]~13 $end
+$var wire 1 p comb_16|counter[13]~13COUT1_52 $end
+$var wire 1 q comb_16|counter[14]~11 $end
+$var wire 1 r comb_16|counter[15]~9 $end
+$var wire 1 s comb_16|counter[15]~9COUT1_53 $end
+$var wire 1 t comb_16|counter[16]~7 $end
+$var wire 1 u comb_16|counter[16]~7COUT1_54 $end
+$var wire 1 v comb_16|counter[17]~5 $end
+$var wire 1 w comb_16|counter[17]~5COUT1_55 $end
+$var wire 1 x comb_16|counter[18]~3 $end
+$var wire 1 y comb_16|counter[18]~3COUT1_56 $end
+$var wire 1 z convertBinBCD|Ram0~0_combout $end
+$var wire 1 { comb_17|S[0]~0_combout $end
+$var wire 1 | convertBinBCD|Ram0~1_combout $end
+$var wire 1 } comb_17|S[1]~1_combout $end
+$var wire 1 ~ comb_17|S[1]~2_combout $end
+$var wire 1 !! convertBinBCD|Ram0~2_combout $end
+$var wire 1 "! convertBinBCD|Ram0~3_combout $end
+$var wire 1 #! convertBinBCD|Ram0~4_combout $end
+$var wire 1 $! convertBinBCD|Ram0~5_combout $end
+$var wire 1 %! comb_18|WideOr6~0_combout $end
+$var wire 1 &! comb_18|WideOr5~7_combout $end
+$var wire 1 '! comb_18|WideOr5~8_combout $end
+$var wire 1 (! comb_18|WideOr4~0_combout $end
+$var wire 1 )! comb_18|WideOr3~0_combout $end
+$var wire 1 *! comb_18|WideOr2~0_combout $end
+$var wire 1 +! comb_18|WideOr1~0_combout $end
+$var wire 1 ,! comb_18|WideOr0~0_combout $end
+$var wire 1 -! moduleCronometro|always0~1_combout $end
+$var wire 1 .! moduleCronometro|nBuzzer~regout $end
+$var wire 1 /! comb_16|counter [26] $end
+$var wire 1 0! comb_16|counter [25] $end
+$var wire 1 1! comb_16|counter [24] $end
+$var wire 1 2! comb_16|counter [23] $end
+$var wire 1 3! comb_16|counter [22] $end
+$var wire 1 4! comb_16|counter [21] $end
+$var wire 1 5! comb_16|counter [20] $end
+$var wire 1 6! comb_16|counter [19] $end
+$var wire 1 7! comb_16|counter [18] $end
+$var wire 1 8! comb_16|counter [17] $end
+$var wire 1 9! comb_16|counter [16] $end
+$var wire 1 :! comb_16|counter [15] $end
+$var wire 1 ;! comb_16|counter [14] $end
+$var wire 1 <! comb_16|counter [13] $end
+$var wire 1 =! comb_16|counter [12] $end
+$var wire 1 >! comb_16|counter [11] $end
+$var wire 1 ?! comb_16|counter [10] $end
+$var wire 1 @! comb_16|counter [9] $end
+$var wire 1 A! comb_16|counter [8] $end
+$var wire 1 B! comb_16|counter [7] $end
+$var wire 1 C! comb_16|counter [6] $end
+$var wire 1 D! comb_16|counter [5] $end
+$var wire 1 E! comb_16|counter [4] $end
+$var wire 1 F! comb_16|counter [3] $end
+$var wire 1 G! comb_16|counter [2] $end
+$var wire 1 H! comb_16|counter [1] $end
+$var wire 1 I! comb_16|counter [0] $end
+$var wire 1 J! moduleCronometro|counter [4] $end
+$var wire 1 K! moduleCronometro|counter [3] $end
+$var wire 1 L! moduleCronometro|counter [2] $end
+$var wire 1 M! moduleCronometro|counter [1] $end
+$var wire 1 N! moduleCronometro|counter [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+0#
+1$
+0%
+0&
+0+
+0*
+0)
+0(
+0'
+02
+01
+00
+0/
+0.
+0-
+1,
+16
+05
+14
+13
+07
+18
+x9
+1:
+1;
+1<
+0=
+1>
+1?
+0@
+0A
+0B
+0C
+0D
+0E
+0F
+1G
+0H
+1I
+1J
+1K
+0L
+1M
+0N
+0O
+1P
+1Q
+1R
+1S
+0T
+1U
+0V
+0W
+0X
+1Y
+1Z
+0[
+0\
+1]
+1^
+0_
+1`
+1a
+0b
+0c
+1d
+1e
+0f
+0g
+1h
+0i
+0j
+1k
+1l
+0m
+0n
+1o
+1p
+0q
+1r
+1s
+0t
+0u
+1v
+1w
+0x
+0y
+0z
+0{
+0|
+1}
+0~
+0!!
+0"!
+0#!
+0$!
+0%!
+0&!
+0'!
+0(!
+0)!
+0*!
+0+!
+0,!
+0-!
+0.!
+0I!
+0H!
+0G!
+0F!
+0E!
+0D!
+0C!
+0B!
+0A!
+0@!
+0?!
+0>!
+0=!
+0<!
+0;!
+0:!
+09!
+08!
+07!
+06!
+z5!
+z4!
+z3!
+z2!
+z1!
+z0!
+z/!
+0N!
+0M!
+0L!
+0K!
+0J!
+$end
+#1000000
+1%
+1!
+1=
+1@
+1I!
+1X
+1W
+#2000000
+0%
+0!
+0=
+0@
+#3000000
+1%
+1!
+1=
+1@
+1H!
+0I!
+0Z
+0Y
+0X
+0W
+1Z
+1Y
+#4000000
+0%
+0!
+0=
+0@
+#5000000
+1%
+1!
+1=
+1@
+1I!
+1X
+1W
+0Z
+0Y
+#6000000
+0%
+0!
+0=
+0@
+#7000000
+1%
+1!
+1=
+1@
+1G!
+0H!
+0I!
+1\
+1[
+1Z
+1Y
+0X
+0W
+0\
+0[
+#8000000
+0%
+0!
+0=
+0@
+#9000000
+1%
+1!
+1=
+1@
+1I!
+1X
+1W
+#10000000
+0%
+0!
+0=
+0@
+#11000000
+1%
+1!
+1=
+1@
+1H!
+0I!
+0Z
+0Y
+0X
+0W
+1\
+1[
+1Z
+1Y
+0\
+0[
+#12000000
+0%
+0!
+0=
+0@
+#13000000
+1%
+1!
+1=
+1@
+1I!
+1X
+1W
+0Z
+0Y
+1\
+1[
+#14000000
+0%
+0!
+0=
+0@
+#15000000
+1%
+1!
+1=
+1@
+1F!
+0G!
+0H!
+0I!
+0^
+0]
+0\
+0[
+1Z
+1Y
+0X
+0W
+1^
+1]
+#16000000
+0%
+0!
+0=
+0@
+#17000000
+1%
+1!
+1=
+1@
+1I!
+1X
+1W
+#18000000
+0%
+0!
+0=
+0@
+#19000000
+1%
+1!
+1=
+1@
+1H!
+0I!
+0Z
+0Y
+0X
+0W
+1Z
+1Y
+#20000000
+0%
+0!
+0=
+0@
+#21000000
+1%
+1!
+1=
+1@
+1I!
+1X
+1W
+0Z
+0Y
+#22000000
+0%
+0!
+0=
+0@
+#23000000
+1%
+1!
+1=
+1@
+1G!
+0H!
+0I!
+1\
+1[
+1Z
+1Y
+0X
+0W
+0^
+0]
+0\
+0[
+1^
+1]
+#24000000
+0%
+0!
+0=
+0@
+#25000000
+1"
+1%
+1!
+1B
+1=
+1@
+1I!
+1X
+1W
+#26000000
+0%
+0!
+0=
+0@
+1D
+0M
+#27000000
+1%
+1!
+1=
+1@
+1H!
+0I!
+0Z
+0Y
+0X
+0W
+1\
+1[
+1Z
+1Y
+0^
+0]
+0\
+0[
+1^
+1]
+#28000000
+0%
+0!
+0=
+0@
+1K!
+1L!
+1M!
+0D
+1!!
+0}
+1z
+0U
+0R
+0Q
+0P
+1L
+1O
+1N
+0K
+1H
+0J
+0I
+0G
+1M
+1(
+1)
+1*
+1"!
+0S
+1P
+1K
+1,!
+1*!
+1)!
+1%!
+1.
+1/
+12
+0,
+#29000000
+1%
+1!
+1=
+1@
+1I!
+1X
+1W
+0Z
+0Y
+1\
+1[
+0^
+0]
+#30000000
+0%
+0!
+0=
+0@
+1D
+0M
+#31000000
+1%
+1!
+1=
+1@
+1E!
+0F!
+0G!
+0H!
+0I!
+1_
+1^
+1]
+0\
+0[
+1Z
+1Y
+0X
+0W
+0_
+#32000000
+0%
+0!
+0=
+0@
+0D
+1M
+#33000000
+1%
+1!
+1=
+1@
+1I!
+1X
+1W
+#34000000
+0%
+0!
+0=
+0@
+1D
+0M
+#35000000
+1%
+1!
+1=
+1@
+1H!
+0I!
+0Z
+0Y
+0X
+0W
+1Z
+1Y
+#36000000
+0%
+0!
+0=
+0@
+0D
+1M
+#37000000
+1%
+1!
+1=
+1@
+1I!
+1X
+1W
+0Z
+0Y
+#38000000
+0%
+0!
+0=
+0@
+1D
+0M
+#39000000
+1%
+1!
+1=
+1@
+1G!
+0H!
+0I!
+1\
+1[
+1Z
+1Y
+0X
+0W
+0\
+0[
+#40000000
+0%
+0!
+0=
+0@
+0D
+1M
+#41000000
+1%
+1!
+1=
+1@
+1I!
+1X
+1W
+#42000000
+0%
+0!
+0=
+0@
+1D
+0M
+#43000000
+1%
+1!
+1=
+1@
+1H!
+0I!
+0Z
+0Y
+0X
+0W
+1\
+1[
+1Z
+1Y
+0\
+0[
+#44000000
+0%
+0!
+0=
+0@
+0D
+1M
+#45000000
+1%
+1!
+1=
+1@
+1I!
+1X
+1W
+0Z
+0Y
+1\
+1[
+#46000000
+0%
+0!
+0=
+0@
+1D
+0M
+#47000000
+1%
+1!
+1=
+1@
+1F!
+0G!
+0H!
+0I!
+0^
+0]
+0\
+0[
+1Z
+1Y
+0X
+0W
+1_
+1^
+1]
+0_
+#48000000
+0%
+0!
+0=
+0@
+0D
+1M
+#49000000
+1%
+1!
+1=
+1@
+1I!
+1X
+1W
+#50000000
+1#
+0"
+0%
+0!
+1A
+0B
+0=
+0@
+1D
+0M
+#51000000
+1%
+1!
+1=
+1@
+1H!
+0I!
+0Z
+0Y
+0X
+0W
+1Z
+1Y
+#52000000
+0%
+0!
+0=
+0@
+0D
+1C
+#53000000
+1%
+1!
+1=
+1@
+1I!
+1X
+1W
+0Z
+0Y
+#54000000
+0%
+0!
+0=
+0@
+1J!
+0L!
+0M!
+0C
+0z
+1T
+1S
+0L
+0K
+0H
+1J
+1I
+1G
+1M
+1'
+0)
+0*
+0O
+0N
+1K
+0P
+#55000000
+1%
+1!
+1=
+1@
+1G!
+0H!
+0I!
+1\
+1[
+1Z
+1Y
+0X
+0W
+0^
+0]
+0\
+0[
+1_
+1^
+1]
+0_
+#56000000
+0%
+0!
+0=
+0@
+1C
+0M
+#57000000
+1%
+1!
+1=
+1@
+1I!
+1X
+1W
+#58000000
+0%
+0!
+0=
+0@
+0C
+1M
+#59000000
+1%
+1!
+1=
+1@
+1H!
+0I!
+0Z
+0Y
+0X
+0W
+1\
+1[
+1Z
+1Y
+0^
+0]
+0\
+0[
+1_
+1^
+1]
+0_
+#60000000
+0%
+0!
+0=
+0@
+1C
+0M
+#61000000
+1%
+1!
+1=
+1@
+1I!
+1X
+1W
+0Z
+0Y
+1\
+1[
+0^
+0]
+1_
+#62000000
+0%
+0!
+0=
+0@
+0C
+1M
+#63000000
+1%
+1!
+1=
+1@
+1D!
+0E!
+0F!
+0G!
+0H!
+0I!
+0a
+0_
+1^
+1]
+0\
+0[
+1Z
+1Y
+0X
+0W
+#64000000
+0%
+0!
+0=
+0@
+1C
+0M
+#65000000
+1%
+1!
+1=
+1@
+1I!
+1X
+1W
+#66000000
+0%
+0!
+0=
+0@
+0C
+1M
+#67000000
+1%
+1!
+1=
+1@
+1H!
+0I!
+0Z
+0Y
+0X
+0W
+1Z
+1Y
+#68000000
+0%
+0!
+0=
+0@
+1C
+0M
+#69000000
+1%
+1!
+1=
+1@
+1I!
+1X
+1W
+0Z
+0Y
+#70000000
+0%
+0!
+0=
+0@
+0C
+1M
+#71000000
+1%
+1!
+1=
+1@
+1G!
+0H!
+0I!
+1\
+1[
+1Z
+1Y
+0X
+0W
+0\
+0[
+#72000000
+0%
+0!
+0=
+0@
+1C
+0M
+#73000000
+1%
+1!
+1=
+1@
+1I!
+1X
+1W
+#74000000
+0%
+0!
+0=
+0@
+0C
+1M
+#75000000
+1"
+1%
+1!
+1B
+1=
+1@
+1H!
+0I!
+0Z
+0Y
+0X
+0W
+1\
+1[
+1Z
+1Y
+0\
+0[
+#76000000
+0%
+0!
+0=
+0@
+1D
+0M
+#77000000
+1%
+1!
+1=
+1@
+1I!
+1X
+1W
+0Z
+0Y
+1\
+1[
+#78000000
+0%
+0!
+0=
+0@
+0J!
+1L!
+1M!
+0D
+1z
+0T
+0S
+1L
+1O
+1N
+0K
+1H
+0J
+0I
+0G
+1M
+0'
+1)
+1*
+1P
+1K
+#79000000
+1%
+1!
+1=
+1@
+1F!
+0G!
+0H!
+0I!
+0^
+0]
+0\
+0[
+1Z
+1Y
+0X
+0W
+1^
+1]
+#80000000
+0%
+0!
+0=
+0@
+1D
+0M
+#81000000
+1%
+1!
+1=
+1@
+1I!
+1X
+1W
+#82000000
+0%
+0!
+0=
+0@
+0D
+1M
+#83000000
+1%
+1!
+1=
+1@
+1H!
+0I!
+0Z
+0Y
+0X
+0W
+1Z
+1Y
+#84000000
+0%
+0!
+0=
+0@
+1D
+0M
+#85000000
+1%
+1!
+1=
+1@
+1I!
+1X
+1W
+0Z
+0Y
+#86000000
+0%
+0!
+0=
+0@
+0D
+1M
+#87000000
+1%
+1!
+1=
+1@
+1G!
+0H!
+0I!
+1\
+1[
+1Z
+1Y
+0X
+0W
+0^
+0]
+0\
+0[
+1^
+1]
+#88000000
+0%
+0!
+0=
+0@
+1D
+0M
+#89000000
+1%
+1!
+1=
+1@
+1I!
+1X
+1W
+#90000000
+0%
+0!
+0=
+0@
+0D
+1M
+#91000000
+1%
+1!
+1=
+1@
+1H!
+0I!
+0Z
+0Y
+0X
+0W
+1\
+1[
+1Z
+1Y
+0^
+0]
+0\
+0[
+1^
+1]
+#92000000
+0%
+0!
+0=
+0@
+1D
+0M
+#93000000
+1%
+1!
+1=
+1@
+1I!
+1X
+1W
+0Z
+0Y
+1\
+1[
+0^
+0]
+#94000000
+0%
+0!
+0=
+0@
+0D
+1M
+#95000000
+1%
+1!
+1=
+1@
+1E!
+0F!
+0G!
+0H!
+0I!
+1_
+1^
+1]
+0\
+0[
+1Z
+1Y
+0X
+0W
+0_
+#96000000
+0%
+0!
+0=
+0@
+1D
+0M
+#97000000
+1%
+1!
+1=
+1@
+1I!
+1X
+1W
+#98000000
+0%
+0!
+0=
+0@
+0D
+1M
+#99000000
+1%
+1!
+1=
+1@
+1H!
+0I!
+0Z
+0Y
+0X
+0W
+1Z
+1Y
+#100000000
