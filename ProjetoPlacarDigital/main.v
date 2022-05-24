@@ -37,6 +37,7 @@ module main (clk, czp, cnp, ct, chpc, c1424, b, buzzer, ledV, bled, display, esc
 	//Cronometro 24 e 14
 	cronometroRegressivo Cronometro(.clock_in(clks[2]), .resetNumero(czp), .chaveParar(chpc), .chaveEscolherCronometro(c1424), .saida(cronometro), .buzzer(buzzer));	
 	
+	// ==============================================
 	
 	//Escolher Cronometro ou placar
 	muxCronometroPlacar CronometroOuPlacar(.placarT1(somaT1), .placarT2(somaT2), .cronometro(cronometro), .clock2segs(clks[3]), .clock60hz(clks[1]), .saida(entradaParaCodificarBDC));
