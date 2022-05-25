@@ -1,0 +1,230 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Lucas Gabriel/Desktop/ProjetoPlacarDigital-20220524T154109Z-001/ProjetoPlacarDigital/simulation/qsim
+vclockDivider
+Z1 !s110 1653420807
+!i10b 1
+!s100 4S80eCi[`GI@giE0A3T>k2
+Ij_X6R75CKM`T[MlfFT93;3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1653420806
+Z3 8placarDigital.vo
+Z4 FplacarDigital.vo
+Z5 L0 31
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1653420807.000000
+Z8 !s107 placarDigital.vo|
+Z9 !s90 -work|work|placarDigital.vo|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+nclock@divider
+vclockDivider_vlg_vec_tst
+R1
+!i10b 1
+!s100 h_5KB970oa6EmPQTOkAIG1
+Ic2AeIS8PX?JPddW_cO?^W2
+R2
+R0
+w1653420805
+8ClockDividerTeste2.vwf.vt
+FClockDividerTeste2.vwf.vt
+Z12 L0 29
+R6
+r1
+!s85 0
+31
+R7
+!s107 ClockDividerTeste2.vwf.vt|
+!s90 -work|work|ClockDividerTeste2.vwf.vt|
+!i113 1
+R10
+R11
+nclock@divider_vlg_vec_tst
+vcronometroRegressivo
+Z13 !s110 1653419712
+!i10b 1
+!s100 MFBJc68EBJ<@BhOU`?_Ch1
+I[Z47jc3E_ch]JF4jW`1LJ0
+R2
+R0
+w1653419710
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z14 !s108 1653419712.000000
+R8
+R9
+!i113 1
+R10
+R11
+ncronometro@regressivo
+vcronometroRegressivo_vlg_vec_tst
+R13
+!i10b 1
+!s100 Gza2fYiB@BPk5Y>NLbodM1
+I4BMneJGjjo@2BEIF^Lf;N3
+R2
+R0
+w1653419709
+8cronometroRegressivoTeste2.vwf.vt
+FcronometroRegressivoTeste2.vwf.vt
+R12
+R6
+r1
+!s85 0
+31
+R14
+!s107 cronometroRegressivoTeste2.vwf.vt|
+!s90 -work|work|cronometroRegressivoTeste2.vwf.vt|
+!i113 1
+R10
+R11
+ncronometro@regressivo_vlg_vec_tst
+vplacarTime
+Z15 !s110 1653418449
+!i10b 1
+!s100 gX321LLc>6:m8;6RWLJ=70
+IFPo;DBzgU^J1oPd`kb`L_1
+R2
+R0
+w1653418448
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z16 !s108 1653418449.000000
+R8
+R9
+!i113 1
+R10
+R11
+nplacar@time
+vplacarTime_vlg_vec_tst
+R15
+!i10b 1
+!s100 jn0OB4LEJFmcM47lJAdFF0
+I_:]aLhzLb`aVSHmbkShe@0
+R2
+R0
+w1653418446
+Z17 8somadorSubtratorTeste2.vwf.vt
+Z18 FsomadorSubtratorTeste2.vwf.vt
+R12
+R6
+r1
+!s85 0
+31
+R16
+Z19 !s107 somadorSubtratorTeste2.vwf.vt|
+Z20 !s90 -work|work|somadorSubtratorTeste2.vwf.vt|
+!i113 1
+R10
+R11
+nplacar@time_vlg_vec_tst
+vplacarTimes
+Z21 !s110 1653419068
+!i10b 1
+!s100 9R^UDM;>mj5CDW<D1]IPA2
+Ic76E=l<deD97dQ6UU2Fe71
+R2
+R0
+w1653419067
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z22 !s108 1653419068.000000
+R8
+R9
+!i113 1
+R10
+R11
+nplacar@times
+vplacarTimes_vlg_vec_tst
+R21
+!i10b 1
+!s100 ^XgdNmN=iQQA2hiP6Q:iQ1
+I<`_YIf[^SDP4jJJ=mH5HN1
+R2
+R0
+w1653419065
+R17
+R18
+R12
+R6
+r1
+!s85 0
+31
+R22
+R19
+R20
+!i113 1
+R10
+R11
+nplacar@times_vlg_vec_tst
+vregistradorPontosTime
+Z23 !s110 1653418312
+!i10b 1
+!s100 UcoK3lEBlGd[5;`QXC[__1
+IJfe<C;[LXZeCO_KgZjjA02
+R2
+R0
+w1653418311
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z24 !s108 1653418312.000000
+R8
+R9
+!i113 1
+R10
+R11
+nregistrador@pontos@time
+vregistradorPontosTime_vlg_vec_tst
+R23
+!i10b 1
+!s100 GN<0cRSUiGhIMRiO<fMNl3
+I^=3JV1[FdH`?j:`68;C7<0
+R2
+R0
+w1653418309
+R17
+R18
+R12
+R6
+r1
+!s85 0
+31
+R24
+R19
+R20
+!i113 1
+R10
+R11
+nregistrador@pontos@time_vlg_vec_tst
